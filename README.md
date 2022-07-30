@@ -6,8 +6,9 @@
   <h3 align="center">Personal Website V3</h3>
 
   <p align="center">
-    The third iteration of <a href="https://lucaswinkler.dev/">lucaswinkler.dev</a>. This will be built using HTML, CSS and SCSS. In the future it will be ported over to <a href="https://reactjs.org/">React</a> and hosted with <a href="https://www.netlify.com/">Netlify</a>.
-    
+    The third iteration of <a href="https://lucaswinkler.dev/">lucaswinkler.dev</a>. This will be built using HTML, CSS and SCSS.
+    In the future it will be ported over to <a href="https://reactjs.org/">React</a> and hosted with <a href="https://www.netlify.com/">Netlify</a>.
+    <br/>
     Previous iterations: <a href="https://github.com/LucasWinkler/personal-site-v1">v1</a>, <a href="https://github.com/LucasWinkler/personal-site">v2</a>.
   </p>
 </p>
