@@ -18,9 +18,35 @@
 
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 2rem;
+  --fs-700: 3rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-600);
+  --fs-nav: var(--fs-400);
+  --fs-button: var(--fs-400);
 }
 
-/* Slightly Modified: https://piccalil.li/blog/a-modern-css-reset */
+/* Media Queries */
+
+/* Tablet */
+@media (min-width: 64em) {
+}
+
+/* Desktop */
+@media (min-width: 90em) {
+}
+
+/* Reset (Slightly modified): https://piccalil.li/blog/a-modern-css-reset */
 
 /* Box sizing rules */
 *,
