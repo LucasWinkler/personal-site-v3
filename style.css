@@ -1,8 +1,8 @@
 :root {
-  --clr-primary-300: #2f3dbb;
+  --clr-primary-400: #2f3dbb;
   --clr-primary-600: #20297f;
 
-  --clr-secondary-300: #c150ac;
+  --clr-secondary-400: #c150ac;
   --clr-secondary-600: #772a69;
 
   --clr-accent-200: #6874e8;
@@ -112,4 +112,106 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Utility */
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-secondary-400 {
+  color: var(--clr-secondary-400);
+}
+.text-primary-600 {
+  color: var(--clr-primary-600);
+}
+.text-secondary-600 {
+  color: var(--clr-secondary-600);
+}
+.text-accent-200 {
+  color: var(--clr-accent-200);
+}
+.text-accent-800 {
+  color: var(--clr-accent-800);
+}
+.text-accent-900 {
+  color: var(--clr-accent-900);
+}
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+.text-neutral-700 {
+  color: var(--clr-neutral-700);
+}
+.text-neutral-800 {
+  color: var(--clr-neutral-800);
+}
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-secondary-400 {
+  background-color: var(--clr-secondary-400);
+}
+.bg-primary-600 {
+  background-color: var(--clr-primary-600);
+}
+.bg-secondary-600 {
+  background-color: var(--clr-secondary-600);
+}
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+.bg-accent-800 {
+  background-color: var(--clr-accent-800);
+}
+.bg-accent-900 {
+  background-color: var(--clr-accent-900);
+}
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+.bg-neutral-700 {
+  background-color: var(--clr-neutral-700);
+}
+.bg-neutral-800 {
+  background-color: var(--clr-neutral-800);
+}
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-700 {
+  font-size: var(--fs-700);
 }
