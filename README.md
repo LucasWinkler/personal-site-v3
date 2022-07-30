@@ -5,7 +5,7 @@
   lucaswinkler.dev - v3
 </h1>
 <p align="center">
-  The third iteration of <a href="https://lucaswinkler.dev" target="_blank">lucaswinkler.dev</a> built with HTML, and SCSS.
+  The third iteration of <a href="https://lucaswinkler.dev" target="_blank">lucaswinkler.dev</a> built with HTML, and CSS.
 </p>
 <p align="center">
    This project will be ported over to <a href="https://reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a> in the near future.
