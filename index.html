@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="primary-header bg-neutral-700 text-neutral-100">
       <div class="container">
-        <a href="#" class="navigation-logo">Lucas Winkler</a>
+        <a href="#"><img src="public/images/logo.png" alt="Lucas Winkler" /></a>
         <nav class="primary-nav">
-          <ul class="nav-list">
+          <ul role="list" class="nav-list">
             <li><a href="#">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -28,12 +28,222 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="container"><h1>Hello there</h1></div>
+      <section id="hero" class="bg-neutral-700 text-neutral-100">
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <h1 class="fs-primary-heading fw-bold">
+                Creating captivating web experiences
+              </h1>
+              <p class="text-neutral-200">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ullamcorper diam mattis sit suspendisse elementum purus, sed.
+                Orci maecenas purus habitasse sit vitae.
+              </p>
+              <button class="button">See my work</button>
+              <button class="button" data-type="inverted">Resume</button>
+              <ul role="list" aria-label="social links">
+                <li>
+                  <a aria-label="linkedin" href="#"
+                    ><img
+                      src="public/icons/entypo-social_linkedin-with-circle.svg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a aria-label="github" href="#"
+                    ><img src="public/icons/akar-icons_github-fill.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+              <a href="#projects">
+                <img src="public/icons/bi_arrow-down.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <img src="public/images/hero.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-neutral-900 text-neutral-100">
+        <div class="container">
+          <h2 class="fs-secondary-heading fw-bold heading-underline">
+            My work
+          </h2>
+          <ul role="list" class="project-list">
+            <li class="even-columns">
+              <div>
+                <img
+                  src="/public/images/placeholder-project-image.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <span class="text-accent-200">01.</span>
+                <h3 class="fs-secondary-heading fw-bold">
+                  The Coolest Project Ever
+                </h3>
+                <p class="text-neutral-200">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
+                  amet fermentum libero at sit vitae vel. Amet, augue fermentum
+                  facilisis adipiscing.
+                </p>
+                <button class="button">See project</button>
+                <button class="button">See code</button>
+                <ul role="list" class="technologies">
+                  <li>React</li>
+                  <li>Node</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+            </li>
+            <li class="even-columns">
+              <div>
+                <img
+                  src="/public/images/placeholder-project-image.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <span class="text-secondary-400">02.</span>
+                <h3 class="fs-secondary-heading fw-bold">
+                  The Coolest Project Ever
+                </h3>
+                <p class="text-neutral-200">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
+                  amet fermentum libero at sit vitae vel. Amet, augue fermentum
+                  facilisis adipiscing.
+                </p>
+                <button class="button">See project</button>
+                <button class="button">See code</button>
+                <ul role="list" class="technologies">
+                  <li>React</li>
+                  <li>Node</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+            </li>
+            <li class="even-columns">
+              <div>
+                <img
+                  src="/public/images/placeholder-project-image.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <span class="text-accent-200">03.</span>
+                <h3 class="fs-secondary-heading fw-bold">
+                  The Coolest Project Ever
+                </h3>
+                <p class="text-neutral-200">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
+                  amet fermentum libero at sit vitae vel. Amet, augue fermentum
+                  facilisis adipiscing.
+                </p>
+                <button class="button">See project</button>
+                <button class="button">See code</button>
+                <ul role="list" class="technologies">
+                  <li>React</li>
+                  <li>Node</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="bg-neutral-700">
+        <div class="container">
+          <ul role="list">
+            <li><img src="public/images/react-logo.png" alt="react" /></li>
+            <li><img src="public/images/js-logo.png" alt="javascript" /></li>
+            <li><img src="public/images/sass-logo.png" alt="sass" /></li>
+            <li><img src="public/images/nodejs-logo.png" alt="nodejs" /></li>
+            <li>
+              <img src="public/images/dotnetcore-logo.png" alt="dotnetcore" />
+            </li>
+            <li><img src="public/images/sql-logo.png" alt="sql" /></li>
+            <li><img src="public/images/html-logo.png" alt="html" /></li>
+            <li><img src="public/images/css-logo.png" alt="css" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-neutral-900 text-neutral-100">
+        <div class="container">
+          <h2 class="fs-secondary-heading fw-bold heading-underline">
+            Get in touch!
+          </h2>
+          <div class="even-columns">
+            <div>
+              <form name="contact">
+                <label class="fw-bold" for="name">Name</label>
+                <input type="text" name="name" id="name" />
+
+                <label class="fw-bold" for="email">Email</label>
+                <input type="email" name="email" id="email" />
+
+                <label class="fw-bold" for="message">Name</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <button class="button">See my work</button>
+              </form>
+            </div>
+            <div>
+              <div class="vertical-line"></div>
+              <ul role="list" aria-label="contact methods">
+                <li>
+                  <a aria-label="phone" href="#"
+                    ><img
+                      src="public/icons/akar-icons_phone.svg"
+                      alt=""
+                    />(519)222-2831</a
+                  >
+                </li>
+                <li>
+                  <a aria-label="email" href="tel:+5192222831"
+                    ><img
+                      src="public/icons/carbon_email.svg"
+                      alt=""
+                    />lucaswinkler@gmail.com</a
+                  >
+                </li>
+              </ul>
+              <ul role="list" aria-label="social links">
+                <li>
+                  <a aria-label="linkedin" href="mailto:lucaswinkler@gmail.com"
+                    ><img
+                      src="public/icons/entypo-social_linkedin-with-circle.svg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a aria-label="github" href="#"
+                    ><img src="public/icons/akar-icons_github-fill.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
+
+    <footer class="bg-neutral-900 text-neutral-200">
+      <div class="container">
+        <div class="horizontal-line"></div>
+        <div class="even-columns">
+          <div><p>Designed & Built by Lucas Winkler</p></div>
+          <div><a href="#">Back to top</a></div>
+        </div>
+      </div>
     </footer>
 
     <script type="module" src="/main.js"></script>

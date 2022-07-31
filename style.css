@@ -1,15 +1,16 @@
 :root {
   --clr-primary-400: #2f3dbb;
-  --clr-primary-600: #20297f;
 
   --clr-secondary-400: #c150ac;
-  --clr-secondary-600: #772a69;
 
   --clr-accent-200: #6874e8;
+  --clr-accent-500: #20297f;
+  --clr-accent-600: #772a69;
   --clr-accent-800: #1c275e;
   --clr-accent-900: #2f182d;
 
   --clr-neutral-100: #ffffff;
+  --clr-neutral-200: #cccccc;
   --clr-neutral-700: #252630;
   --clr-neutral-800: #181920;
   --clr-neutral-900: #0f1014;
@@ -23,13 +24,14 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --fs-300: 0.875rem;
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375em;
   --fs-400: 1rem;
   --fs-500: 1.25rem;
   --fs-600: 2rem;
   --fs-700: 3rem;
 
-  --fs-body: var(--fs-400);
+  --fs-body: var(--fs-300);
   --fs-primary-heading: var(--fs-700);
   --fs-secondary-heading: var(--fs-600);
   --fs-nav: var(--fs-400);
@@ -40,6 +42,9 @@
 
 /* Tablet */
 @media (min-width: 64em) {
+  :root {
+    --fs-body: --fs-400;
+  }
 }
 
 /* Desktop */
@@ -121,14 +126,14 @@ svg {
 .text-secondary-400 {
   color: var(--clr-secondary-400);
 }
-.text-primary-600 {
-  color: var(--clr-primary-600);
-}
-.text-secondary-600 {
-  color: var(--clr-secondary-600);
-}
 .text-accent-200 {
   color: var(--clr-accent-200);
+}
+.text-accent-500 {
+  color: var(--clr-accent-500);
+}
+.text-accent-600 {
+  color: var(--clr-accent-600);
 }
 .text-accent-800 {
   color: var(--clr-accent-800);
@@ -138,6 +143,9 @@ svg {
 }
 .text-neutral-100 {
   color: var(--clr-neutral-100);
+}
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
 }
 .text-neutral-700 {
   color: var(--clr-neutral-700);
@@ -155,14 +163,14 @@ svg {
 .bg-secondary-400 {
   background-color: var(--clr-secondary-400);
 }
-.bg-primary-600 {
-  background-color: var(--clr-primary-600);
-}
-.bg-secondary-600 {
-  background-color: var(--clr-secondary-600);
-}
 .bg-accent-200 {
   background-color: var(--clr-accent-200);
+}
+.bg-accent-500 {
+  background-color: var(--clr-accent-500);
+}
+.bg-accent-600 {
+  background-color: var(--clr-accent-600);
 }
 .bg-accent-800 {
   background-color: var(--clr-accent-800);
@@ -172,6 +180,9 @@ svg {
 }
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
 }
 .bg-neutral-700 {
   background-color: var(--clr-neutral-700);
@@ -200,6 +211,9 @@ svg {
   font-size: var(--fs-secondary-heading);
 }
 
+.fs-200 {
+  font-size: var(--fs-300);
+}
 .fs-300 {
   font-size: var(--fs-300);
 }
@@ -214,4 +228,34 @@ svg {
 }
 .fs-700 {
   font-size: var(--fs-700);
+}
+
+.heading-underline {
+  text-decoration: none;
+  position: relative;
+}
+
+.heading-underline::after {
+  position: absolute;
+  content: '';
+  height: 6px;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  width: 2.5em;
+  background: var(--clr-primary-400);
+  border-radius: 7px;
+}
+
+.vertical-line {
+  height: 400px;
+  width: 3px;
+  background-color: var(--clr-neutral-800);
+  border-radius: 7px;
+}
+
+.horizontal-line {
+  height: 3px;
+  background-color: var(--clr-neutral-800);
+  border-radius: 7px;
 }
