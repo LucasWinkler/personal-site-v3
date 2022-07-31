@@ -4,6 +4,7 @@
   --clr-secondary-400: #c150ac;
 
   --clr-accent-200: #6874e8;
+  --clr-accent-400: #2b37aa;
   --clr-accent-500: #20297f;
   --clr-accent-600: #772a69;
   --clr-accent-800: #1c275e;
@@ -139,6 +140,9 @@ svg {
 .text-accent-200 {
   color: var(--clr-accent-200);
 }
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
 .text-accent-500 {
   color: var(--clr-accent-500);
 }
@@ -175,6 +179,9 @@ svg {
 }
 .bg-accent-200 {
   background-color: var(--clr-accent-200);
+}
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
 }
 .bg-accent-500 {
   background-color: var(--clr-accent-500);
@@ -252,7 +259,7 @@ svg {
 .container {
   /* 75em = 1200px */
   --max-width: 75em;
-  --horizontal-padding: 1rem;
+  --horizontal-padding: 2rem;
 
   width: min(var(--max-width), 100% - (var(--horizontal-padding) * 2));
   margin-inline: auto;
@@ -263,10 +270,21 @@ svg {
   gap: 1rem;
 }
 
+.even-columns.four-columns {
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
 @media (min-width: 64em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+  }
+
+  .even-columns.four-columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -308,6 +326,52 @@ body {
   color: var(--clr-neutral-100);
 }
 
+/* Button */
+
+.button {
+  border: 0;
+  border-radius: 100vmax;
+  padding: 1em 3em;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-button);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  line-height: 1;
+}
+
+.button[data-type='outline'] {
+  border: 1px solid var(--clr-neutral-100);
+  font-weight: var(--fw-regular);
+}
+
+.button[data-type='no-background'],
+.button[data-type='outline'] {
+  background-color: transparent;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-accent-400);
+}
+
+.button[data-type='outline']:hover,
+.button[data-type='outline']:focus-visible {
+  background-color: transparent;
+  border-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-200);
+}
+
+.button[data-type='no-background']:hover,
+.button[data-type='no-background']:focus-visible {
+  background-color: transparent;
+  border-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-200);
+}
+
+/* Hero */
+
 .hero-image {
   display: none;
 }
@@ -317,3 +381,17 @@ body {
     display: block;
   }
 }
+
+/* Skills */
+/* .flex-sb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+} */
+/* 
+@media (min-width: 64em) {
+  .flex-sb li {
+    flex-basis: auto;
+  }
+} */

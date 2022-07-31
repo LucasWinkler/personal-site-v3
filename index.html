@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Winkler</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,8 +39,14 @@
                 Ullamcorper diam mattis sit suspendisse elementum purus, sed.
                 Orci maecenas purus habitasse sit vitae.
               </p>
-              <button class="button">See my work</button>
-              <button class="button" data-type="inverted">Resume</button>
+              <button class="button">
+                <!-- <img src="/icons/ic_baseline-arrow-forward.svg" alt="" /> -->
+                See my work
+              </button>
+              <button class="button" data-type="no-background">
+                <!-- <img src="/icons/ic_baseline-download-for-offline.svg" alt="" /> -->
+                Resume
+              </button>
               <ul role="list" aria-label="Social links">
                 <li>
                   <a aria-label="Linkedin" href="#"
@@ -87,8 +92,8 @@
                   amet fermentum libero at sit vitae vel. Amet, augue fermentum
                   facilisis adipiscing.
                 </p>
-                <button class="button">See project</button>
-                <button class="button">See code</button>
+                <button class="button" data-type="outline">See project</button>
+                <button class="button" data-type="outline">See code</button>
                 <ul role="list" class="technologies">
                   <li>React</li>
                   <li>Node</li>
@@ -110,8 +115,8 @@
                   amet fermentum libero at sit vitae vel. Amet, augue fermentum
                   facilisis adipiscing.
                 </p>
-                <button class="button">See project</button>
-                <button class="button">See code</button>
+                <button class="button" data-type="outline">See project</button>
+                <button class="button" data-type="outline">See code</button>
                 <ul role="list" class="technologies">
                   <li>React</li>
                   <li>Node</li>
@@ -133,8 +138,8 @@
                   amet fermentum libero at sit vitae vel. Amet, augue fermentum
                   facilisis adipiscing.
                 </p>
-                <button class="button">See project</button>
-                <button class="button">See code</button>
+                <button class="button" data-type="outline">See project</button>
+                <button class="button" data-type="outline">See code</button>
                 <ul role="list" class="technologies">
                   <li>React</li>
                   <li>Node</li>
@@ -148,7 +153,7 @@
 
       <section id="skills" class="padding-block-700 bg-neutral-700">
         <div class="container">
-          <ul role="list">
+          <ul class="even-columns four-columns" role="list">
             <li><img src="/images/react-logo.png" alt="react" /></li>
             <li><img src="/images/js-logo.png" alt="javascript" /></li>
             <li><img src="/images/sass-logo.png" alt="sass" /></li>
