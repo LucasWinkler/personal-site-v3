@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="primary-header bg-neutral-700 text-neutral-100">
+    <header class="primary-header bg-neutral-700">
       <div class="container">
         <a href="#"><img src="/images/logo.png" alt="Lucas Winkler" /></a>
         <nav class="primary-nav">
-          <ul role="list" class="nav-list">
+          <ul aria-label="Primary" role="list" class="nav-list">
             <li><a href="#">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -28,7 +28,7 @@
       </div>
     </header>
     <main>
-      <section id="hero" class="bg-neutral-700 text-neutral-100">
+      <section id="hero" class="padding-block-900 bg-neutral-700">
         <div class="container">
           <div class="even-columns">
             <div>
@@ -42,16 +42,16 @@
               </p>
               <button class="button">See my work</button>
               <button class="button" data-type="inverted">Resume</button>
-              <ul role="list" aria-label="social links">
+              <ul role="list" aria-label="Social links">
                 <li>
-                  <a aria-label="linkedin" href="#"
+                  <a aria-label="Linkedin" href="#"
                     ><img
                       src="/icons/entypo-social_linkedin-with-circle.svg"
                       alt=""
                   /></a>
                 </li>
                 <li>
-                  <a aria-label="github" href="#"
+                  <a aria-label="Github" href="#"
                     ><img src="/icons/akar-icons_github-fill.svg" alt=""
                   /></a>
                 </li>
@@ -61,13 +61,13 @@
               </a>
             </div>
             <div>
-              <img src="/images/hero.png" alt="" />
+              <img class="hero-image" src="/images/hero.png" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="bg-neutral-900 text-neutral-100">
+      <section id="projects" class="padding-block-900 bg-neutral-900">
         <div class="container">
           <h2 class="fs-secondary-heading fw-bold heading-underline">
             My work
@@ -146,7 +146,7 @@
         </div>
       </section>
 
-      <section id="skills" class="bg-neutral-700">
+      <section id="skills" class="padding-block-700 bg-neutral-700">
         <div class="container">
           <ul role="list">
             <li><img src="/images/react-logo.png" alt="react" /></li>
@@ -163,14 +163,14 @@
         </div>
       </section>
 
-      <section id="contact" class="bg-neutral-900 text-neutral-100">
+      <section id="contact" class="padding-block-900 bg-neutral-900">
         <div class="container">
           <h2 class="fs-secondary-heading fw-bold heading-underline">
             Get in touch!
           </h2>
           <div class="even-columns">
             <div>
-              <form name="contact">
+              <form action="">
                 <label class="fw-bold" for="name">Name</label>
                 <input type="text" name="name" id="name" />
 
@@ -189,9 +189,9 @@
             </div>
             <div>
               <div class="vertical-line"></div>
-              <ul role="list" aria-label="contact methods">
+              <ul role="list" aria-label="Contact methods">
                 <li>
-                  <a aria-label="phone" href="#"
+                  <a aria-label="Phone" href="#"
                     ><img
                       src="/icons/akar-icons_phone.svg"
                       alt=""
@@ -199,7 +199,7 @@
                   >
                 </li>
                 <li>
-                  <a aria-label="email" href="tel:+5192222831"
+                  <a aria-label="Email" href="tel:+5192222831"
                     ><img
                       src="/icons/carbon_email.svg"
                       alt=""
@@ -207,16 +207,16 @@
                   >
                 </li>
               </ul>
-              <ul role="list" aria-label="social links">
+              <ul role="list" aria-label="Social links">
                 <li>
-                  <a aria-label="linkedin" href="mailto:lucaswinkler@gmail.com"
+                  <a aria-label="Linkedin" href="mailto:lucaswinkler@gmail.com"
                     ><img
                       src="/icons/entypo-social_linkedin-with-circle.svg"
                       alt=""
                   /></a>
                 </li>
                 <li>
-                  <a aria-label="github" href="#"
+                  <a aria-label="Github" href="#"
                     ><img src="/icons/akar-icons_github-fill.svg" alt=""
                   /></a>
                 </li>
@@ -227,7 +227,7 @@
       </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-200">
+    <footer class="padding-block-700 bg-neutral-900 text-neutral-200">
       <div class="container">
         <div class="horizontal-line"></div>
         <div class="even-columns">
