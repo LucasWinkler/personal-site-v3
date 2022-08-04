@@ -11,245 +11,268 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/app/scss/style.scss" />
   </head>
   <body>
-    <div class="grid">
-      <header class="primary-header">
-        <div class="container">
-          <a href="#"><img src="/images/logo.png" alt="Lucas Winkler" /></a>
-          <nav class="primary-nav">
-            <ul aria-label="Primary" role="list" class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+    <header class="header">
+      <nav class="flex flex-jc-sb" aria-label="primary">
+        <a class="header__logo" href="/">Lucas Winkler</a>
+        <a href="" class="hamburger">
+          <span></span><span></span><span></span>
+        </a>
+        <ul class="primary-nav__items">
+          <li class="primary-nav__item"><a href="#">Home</a></li>
+          <li class="primary-nav__item"><a href="#projects">Projects</a></li>
+          <li class="primary-nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero" class="hero">
+        <h1 class="hero__title">Creating captivating web experiences</h1>
+        <p class="hero_content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper
+          diam mattis sit suspendisse elementum purus, sed. Orci maecenas purus
+          habitasse sit vitae.
+        </p>
+        <div class="hero__buttons">
+          <button>See my work</button>
+          <button>Resume</button>
         </div>
-      </header>
-      <div class="test-image">
-        <img src="/images/hero.png" alt="" />
-      </div>
-      <main>
-        <section id="hero" class="padding-block-900">
-          <div class="container">
-            <div class="even-columns">
-              <div>
-                <h1 class="fs-primary-heading fw-bold">
-                  Creating captivating web experiences
-                </h1>
-                <p class="text-neutral-200">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Ullamcorper diam mattis sit suspendisse elementum purus, sed.
-                  Orci maecenas purus habitasse sit vitae.
-                </p>
-                <button class="button">
-                  <!-- <img src="/icons/ic_baseline-arrow-forward.svg" alt="" /> -->
-                  See my work
-                </button>
-                <button class="button" data-type="no-background">
-                  <!-- <img src="/icons/ic_baseline-download-for-offline.svg" alt="" /> -->
-                  Resume
-                </button>
-                <ul role="list" aria-label="Social links">
-                  <li>
-                    <a aria-label="Linkedin" href="#"
-                      ><img
-                        src="/icons/entypo-social_linkedin-with-circle.svg"
-                        alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a aria-label="Github" href="#"
-                      ><img src="/icons/akar-icons_github-fill.svg" alt=""
-                    /></a>
-                  </li>
-                </ul>
-                <a href="#projects">
-                  <img src="/icons/bi_arrow-down.svg" alt="" />
-                </a>
-              </div>
-            </div>
+        <ul class="hero__socials" role="list" aria-label="Social links">
+          <li class="hero__social">
+            <a
+              aria-label="Linkedin"
+              href="https://www.linkedin.com/in/lucas-winkler/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.96648 0.21228C4.57932 0.21228 0.21228 4.57932 0.21228 9.96648C0.21228 15.3536 4.57932 19.7207 9.96648 19.7207C15.3536 19.7207 19.7207 15.3536 19.7207 9.96648C19.7207 4.57932 15.3536 0.21228 9.96648 0.21228ZM7.57873 14.0094H5.60351V7.6529H7.57873V14.0094ZM6.57893 6.87257C5.95506 6.87257 5.55169 6.43058 5.55169 5.88394C5.55169 5.32612 5.96726 4.89734 6.60433 4.89734C7.2414 4.89734 7.63157 5.32612 7.64376 5.88394C7.64376 6.43058 7.2414 6.87257 6.57893 6.87257ZM14.7928 14.0094H12.8175V10.4867C12.8175 9.66674 12.531 9.10994 11.8167 9.10994C11.2711 9.10994 10.947 9.4869 10.8037 9.84963C10.7509 9.97867 10.7377 10.1616 10.7377 10.3434V14.0084H8.76143V9.67995C8.76143 8.8864 8.73603 8.22291 8.70961 7.65189H10.4257L10.5162 8.53485H10.5558C10.8159 8.12029 11.453 7.50862 12.5188 7.50862C13.8184 7.50862 14.7928 8.37939 14.7928 10.251V14.0094V14.0094Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="hero__social">
+            <a
+              aria-label="Github"
+              href="https://github.com/LucasWinkler"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9 0C4.0275 0 0 4.0275 0 9C0 12.9825 2.57625 16.3462 6.15375 17.5387C6.60375 17.6175 6.7725 17.3475 6.7725 17.1112C6.7725 16.8975 6.76125 16.1887 6.76125 15.435C4.5 15.8512 3.915 14.8837 3.735 14.3775C3.63375 14.1187 3.195 13.32 2.8125 13.1062C2.4975 12.9375 2.0475 12.5212 2.80125 12.51C3.51 12.4987 4.01625 13.1625 4.185 13.4325C4.995 14.7937 6.28875 14.4112 6.80625 14.175C6.885 13.59 7.12125 13.1962 7.38 12.9712C5.3775 12.7462 3.285 11.97 3.285 8.5275C3.285 7.54875 3.63375 6.73875 4.2075 6.10875C4.1175 5.88375 3.8025 4.96125 4.2975 3.72375C4.2975 3.72375 5.05125 3.4875 6.7725 4.64625C7.4925 4.44375 8.2575 4.3425 9.0225 4.3425C9.7875 4.3425 10.5525 4.44375 11.2725 4.64625C12.9937 3.47625 13.7475 3.72375 13.7475 3.72375C14.2425 4.96125 13.9275 5.88375 13.8375 6.10875C14.4113 6.73875 14.76 7.5375 14.76 8.5275C14.76 11.9812 12.6562 12.7462 10.6537 12.9712C10.98 13.2525 11.2613 13.7925 11.2613 14.6362C11.2613 15.84 11.25 16.8075 11.25 17.1112C11.25 17.3475 11.4187 17.6287 11.8687 17.5387C13.6554 16.9355 15.2079 15.7873 16.3077 14.2555C17.4076 12.7238 17.9995 10.8857 18 9C18 4.0275 13.9725 0 9 0Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="#projects">
+          <img src="/icons/bi_arrow-down.svg" alt="" />
+        </a>
+      </section>
+      <section id="projects" class="projects">
+        <article class="project">
+          <div class="project__image">
+            <img
+              src="/images/placeholder-project-image.png"
+              alt="Placeholder project image"
+            />
           </div>
-        </section>
-        <section id="projects" class="padding-block-900 bg-neutral-900">
-          <div class="container">
-            <h2 class="fs-secondary-heading fw-bold heading-underline">
-              My work
-            </h2>
-            <ul role="list" class="project-list">
-              <li class="even-columns">
-                <div>
-                  <img src="/images/placeholder-project-image.png" alt="" />
-                </div>
-                <div>
-                  <span class="text-accent-200">01.</span>
-                  <h3 class="fs-secondary-heading fw-bold">
-                    The Coolest Project Ever
-                  </h3>
-                  <p class="text-neutral-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                    amet fermentum libero at sit vitae vel. Amet, augue
-                    fermentum facilisis adipiscing.
-                  </p>
-                  <button class="button" data-type="outline">
-                    See project
-                  </button>
-                  <button class="button" data-type="outline">See code</button>
-                  <ul role="list" class="technologies">
-                    <li>React</li>
-                    <li>Node</li>
-                    <li>SCSS</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="even-columns">
-                <div>
-                  <img src="/images/placeholder-project-image.png" alt="" />
-                </div>
-                <div>
-                  <span class="text-secondary-400">02.</span>
-                  <h3 class="fs-secondary-heading fw-bold">
-                    The Coolest Project Ever
-                  </h3>
-                  <p class="text-neutral-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                    amet fermentum libero at sit vitae vel. Amet, augue
-                    fermentum facilisis adipiscing.
-                  </p>
-                  <button class="button" data-type="outline">
-                    See project
-                  </button>
-                  <button class="button" data-type="outline">See code</button>
-                  <ul role="list" class="technologies">
-                    <li>React</li>
-                    <li>Node</li>
-                    <li>SCSS</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="even-columns">
-                <div>
-                  <img src="/images/placeholder-project-image.png" alt="" />
-                </div>
-                <div>
-                  <span class="text-accent-200">03.</span>
-                  <h3 class="fs-secondary-heading fw-bold">
-                    The Coolest Project Ever
-                  </h3>
-                  <p class="text-neutral-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                    amet fermentum libero at sit vitae vel. Amet, augue
-                    fermentum facilisis adipiscing.
-                  </p>
-                  <button class="button" data-type="outline">
-                    See project
-                  </button>
-                  <button class="button" data-type="outline">See code</button>
-                  <ul role="list" class="technologies">
-                    <li>React</li>
-                    <li>Node</li>
-                    <li>SCSS</li>
-                  </ul>
-                </div>
-              </li>
+          <header class="project__header">
+            <span class="project__number">01.</span>
+            <h3 class="project__title">The Coolest Project Ever</h3>
+          </header>
+          <div class="project__body">
+            <p class="project__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non amet
+              fermentum libero at sit vitae vel. Amet, augue fermentum facilisis
+              adipiscing.
+            </p>
+            <ul class="project__stack" aria-label="Project stack">
+              <li class="project__tech">React</li>
+              <li class="project__tech">Node</li>
+              <li class="project__tech">SCSS</li>
             </ul>
           </div>
-        </section>
-
-        <section id="skills" class="padding-block-700 bg-neutral-700">
-          <div class="container">
-            <ul class="even-columns four-columns" role="list">
-              <li><img src="/images/react-logo.png" alt="react" /></li>
-              <li><img src="/images/js-logo.png" alt="javascript" /></li>
-              <li><img src="/images/sass-logo.png" alt="sass" /></li>
-              <li><img src="/images/nodejs-logo.png" alt="nodejs" /></li>
-              <li>
-                <img src="/images/dotnetcore-logo.png" alt="dotnetcore" />
-              </li>
-              <li><img src="/images/sql-logo.png" alt="sql" /></li>
-              <li><img src="/images/html-logo.png" alt="html" /></li>
-              <li><img src="/images/css-logo.png" alt="css" /></li>
-            </ul>
+          <div class="project__buttons">
+            <button>See project</button>
+            <button>See code</button>
           </div>
-        </section>
+        </article>
+      </section>
+      <section id="skills" class="skills">
+        <ul class="skills_list" role="list" aria-label="Skills">
+          <li class="skills__image">
+            <img src="/images/react-logo.png" alt="react" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/js-logo.png" alt="javascript" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/sass-logo.png" alt="sass" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/nodejs-logo.png" alt="nodejs" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/dotnetcore-logo.png" alt="dotnetcore" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/sql-logo.png" alt="sql" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/html-logo.png" alt="html" />
+          </li>
+          <li class="skills__image">
+            <img src="/images/css-logo.png" alt="css" />
+          </li>
+        </ul>
+      </section>
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Get in touch!</h2>
+        <form action="">
+          <label class="" for="name">Name</label>
+          <input type="text" name="name" id="name" />
 
-        <section id="contact" class="padding-block-900 bg-neutral-900">
-          <div class="container">
-            <h2 class="fs-secondary-heading fw-bold heading-underline">
-              Get in touch!
-            </h2>
-            <div class="even-columns">
-              <div>
-                <form action="">
-                  <label class="fw-bold" for="name">Name</label>
-                  <input type="text" name="name" id="name" />
+          <label class="" for="email">Email</label>
+          <input type="email" name="email" id="email" />
 
-                  <label class="fw-bold" for="email">Email</label>
-                  <input type="email" name="email" id="email" />
+          <label class="" for="message">Name</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <button class="contact__button">See my work</button>
+        </form>
+        <div class="vertical-line"></div>
+        <ul class="contact__methods" role="list" aria-label="Contact methods">
+          <li class="contact__method">
+            <a aria-label="Phone" href="#">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.036 4.1601L4.78066 1.55677C4.52066 1.25677 4.044 1.2581 3.742 1.56077L1.88733 3.41877C1.33533 3.97143 1.17733 4.7921 1.49666 5.4501C3.40441 9.40008 6.59003 12.5902 10.5373 14.5034C11.1947 14.8228 12.0147 14.6648 12.5667 14.1121L14.4387 12.2368C14.742 11.9334 14.7427 11.4541 14.44 11.1941L11.8267 8.95077C11.5533 8.7161 11.1287 8.74677 10.8547 9.02143L9.94533 9.9321C9.89878 9.98089 9.8375 10.0131 9.7709 10.0237C9.7043 10.0343 9.63606 10.0227 9.57666 9.99077C8.09029 9.13483 6.85732 7.90025 6.00333 6.41277C5.97135 6.35327 5.95977 6.28492 5.97036 6.21821C5.98096 6.15149 6.01315 6.0901 6.062 6.04343L6.96866 5.1361C7.24333 4.8601 7.27333 4.43343 7.036 4.15943V4.1601Z"
+                  stroke="white"
+                  stroke-opacity="0.75"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              (519)222-2831</a
+            >
+          </li>
+          <li class="contact__method">
+            <a aria-label="Email" href="tel:+5192222831">
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.375 0.9375H1.625C1.2769 0.9375 0.943064 1.07578 0.696922 1.32192C0.450781 1.56806 0.3125 1.9019 0.3125 2.25V12.75C0.3125 13.0981 0.450781 13.4319 0.696922 13.6781C0.943064 13.9242 1.2769 14.0625 1.625 14.0625H17.375C17.7231 14.0625 18.0569 13.9242 18.3031 13.6781C18.5492 13.4319 18.6875 13.0981 18.6875 12.75V2.25C18.6875 1.9019 18.5492 1.56806 18.3031 1.32192C18.0569 1.07578 17.7231 0.9375 17.375 0.9375ZM15.9312 2.25L9.5 6.69937L3.06875 2.25H15.9312ZM1.625 12.75V2.84719L9.12594 8.03813C9.23579 8.11433 9.3663 8.15517 9.5 8.15517C9.6337 8.15517 9.76421 8.11433 9.87406 8.03813L17.375 2.84719V12.75H1.625Z"
+                  fill="white"
+                  fill-opacity="0.75"
+                />
+              </svg>
+              lucaswinkler@gmail.com</a
+            >
+          </li>
+        </ul>
+        <ul class="contact__socials" role="list" aria-label="Social links">
+          <li class="contact__social">
+            <a
+              aria-label="Linkedin"
+              href="https://www.linkedin.com/in/lucas-winkler/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.96648 0.21228C4.57932 0.21228 0.21228 4.57932 0.21228 9.96648C0.21228 15.3536 4.57932 19.7207 9.96648 19.7207C15.3536 19.7207 19.7207 15.3536 19.7207 9.96648C19.7207 4.57932 15.3536 0.21228 9.96648 0.21228ZM7.57873 14.0094H5.60351V7.6529H7.57873V14.0094ZM6.57893 6.87257C5.95506 6.87257 5.55169 6.43058 5.55169 5.88394C5.55169 5.32612 5.96726 4.89734 6.60433 4.89734C7.2414 4.89734 7.63157 5.32612 7.64376 5.88394C7.64376 6.43058 7.2414 6.87257 6.57893 6.87257ZM14.7928 14.0094H12.8175V10.4867C12.8175 9.66674 12.531 9.10994 11.8167 9.10994C11.2711 9.10994 10.947 9.4869 10.8037 9.84963C10.7509 9.97867 10.7377 10.1616 10.7377 10.3434V14.0084H8.76143V9.67995C8.76143 8.8864 8.73603 8.22291 8.70961 7.65189H10.4257L10.5162 8.53485H10.5558C10.8159 8.12029 11.453 7.50862 12.5188 7.50862C13.8184 7.50862 14.7928 8.37939 14.7928 10.251V14.0094V14.0094Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="hero__social">
+            <a
+              aria-label="Github"
+              href="https://github.com/LucasWinkler"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9 0C4.0275 0 0 4.0275 0 9C0 12.9825 2.57625 16.3462 6.15375 17.5387C6.60375 17.6175 6.7725 17.3475 6.7725 17.1112C6.7725 16.8975 6.76125 16.1887 6.76125 15.435C4.5 15.8512 3.915 14.8837 3.735 14.3775C3.63375 14.1187 3.195 13.32 2.8125 13.1062C2.4975 12.9375 2.0475 12.5212 2.80125 12.51C3.51 12.4987 4.01625 13.1625 4.185 13.4325C4.995 14.7937 6.28875 14.4112 6.80625 14.175C6.885 13.59 7.12125 13.1962 7.38 12.9712C5.3775 12.7462 3.285 11.97 3.285 8.5275C3.285 7.54875 3.63375 6.73875 4.2075 6.10875C4.1175 5.88375 3.8025 4.96125 4.2975 3.72375C4.2975 3.72375 5.05125 3.4875 6.7725 4.64625C7.4925 4.44375 8.2575 4.3425 9.0225 4.3425C9.7875 4.3425 10.5525 4.44375 11.2725 4.64625C12.9937 3.47625 13.7475 3.72375 13.7475 3.72375C14.2425 4.96125 13.9275 5.88375 13.8375 6.10875C14.4113 6.73875 14.76 7.5375 14.76 8.5275C14.76 11.9812 12.6562 12.7462 10.6537 12.9712C10.98 13.2525 11.2613 13.7925 11.2613 14.6362C11.2613 15.84 11.25 16.8075 11.25 17.1112C11.25 17.3475 11.4187 17.6287 11.8687 17.5387C13.6554 16.9355 15.2079 15.7873 16.3077 14.2555C17.4076 12.7238 17.9995 10.8857 18 9C18 4.0275 13.9725 0 9 0Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-                  <label class="fw-bold" for="message">Name</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                  <button class="button">See my work</button>
-                </form>
-              </div>
-              <div>
-                <div class="vertical-line"></div>
-                <ul role="list" aria-label="Contact methods">
-                  <li>
-                    <a aria-label="Phone" href="#"
-                      ><img
-                        src="/icons/akar-icons_phone.svg"
-                        alt=""
-                      />(519)222-2831</a
-                    >
-                  </li>
-                  <li>
-                    <a aria-label="Email" href="tel:+5192222831"
-                      ><img
-                        src="/icons/carbon_email.svg"
-                        alt=""
-                      />lucaswinkler@gmail.com</a
-                    >
-                  </li>
-                </ul>
-                <ul role="list" aria-label="Social links">
-                  <li>
-                    <a
-                      aria-label="Linkedin"
-                      href="mailto:lucaswinkler@gmail.com"
-                      ><img
-                        src="/icons/entypo-social_linkedin-with-circle.svg"
-                        alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a aria-label="Github" href="#"
-                      ><img src="/icons/akar-icons_github-fill.svg" alt=""
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="padding-block-700 bg-neutral-900 text-neutral-200">
-        <div class="container">
-          <div class="horizontal-line"></div>
-          <div class="even-columns">
-            <div><p>Designed & Built by Lucas Winkler</p></div>
-            <div><a href="#">Back to top</a></div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script type="module" src="/main.js"></script>
+    <footer class="footer">
+      <div class="horizontal-line"></div>
+      <p>Designed & Built by Lucas Winkler</p>
+      <a href="#"
+        ><svg
+          width="9"
+          height="13"
+          viewBox="0 0 9 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.21934 13.1258C4.34366 13.1258 4.46289 13.0765 4.5508 12.9885C4.63871 12.9006 4.68809 12.7814 4.68809 12.6571V1.60115L7.63747 4.55146C7.72549 4.63948 7.84486 4.68893 7.96934 4.68893C8.09382 4.68893 8.2132 4.63948 8.30122 4.55146C8.38924 4.46344 8.43868 4.34407 8.43868 4.21959C8.43868 4.09511 8.38924 3.97573 8.30122 3.88771L4.55122 0.137713C4.50767 0.0940599 4.45595 0.059426 4.399 0.0357949C4.34205 0.0121639 4.281 0 4.21934 0C4.15768 0 4.09663 0.0121639 4.03969 0.0357949C3.98274 0.059426 3.93101 0.0940599 3.88747 0.137713L0.137467 3.88771C0.0938846 3.9313 0.0593132 3.98303 0.0357266 4.03998C0.0121399 4.09692 0 4.15795 0 4.21959C0 4.34407 0.0494483 4.46344 0.137467 4.55146C0.225486 4.63948 0.344865 4.68893 0.469342 4.68893C0.593819 4.68893 0.713198 4.63948 0.801217 4.55146L3.75059 1.60115V12.6571C3.75059 12.7814 3.79998 12.9006 3.88789 12.9885C3.97579 13.0765 4.09502 13.1258 4.21934 13.1258Z"
+            fill="white"
+            fill-opacity="0.75"
+          />
+        </svg>
+        Back to top</a
+      >
+    </footer>
+    <script type="module" src="/app/js/main.js"></script>
   </body>
 </html>

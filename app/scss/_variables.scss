@@ -1,0 +1,45 @@
+// Colours
+
+$clr-primary-400: #2f3dbb;
+
+$clr-secondary-400: #c150ac;
+
+$clr-accent-200: #6874e8;
+$clr-accent-400: #2b37aa;
+$clr-accent-500: #20297f;
+$clr-accent-600: #772a69;
+$clr-accent-800: #1c275e;
+$clr-accent-900: #2f182d;
+
+$clr-neutral-100: #ffffff;
+$clr-neutral-200: #cccccc;
+$clr-neutral-700: #252630;
+$clr-neutral-800: #181920;
+$clr-neutral-900: #0f1014;
+
+// Typography
+
+$ff-primary: 'Montserrat', sans-serif;
+
+$ff-body: $ff-primary;
+$ff-heading: $ff-primary;
+
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+$fs-200: 0.875rem; // 14px
+$fs-300: 0.9375rem; // 15px
+$fs-400: 1rem; // 16px
+$fs-500: 1.25rem; // 20px
+$fs-600: 2rem; // 32px
+$fs-700: 3rem; // 48px
+
+$fs-body: $fs-300;
+$fs-primary-heading: $fs-700;
+$fs-secondary-heading: $fs-600;
+$fs-nav: $fs-400;
+$fs-button: $fs-400;
+
+$lh-body: 1.5;
+// $lh-headings: ;
