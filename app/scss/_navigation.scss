@@ -1,0 +1,33 @@
+.nav {
+  padding-block: 22px;
+
+  &__logo {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+  }
+
+  &__menu {
+    height: 16px;
+
+    > span {
+      display: block;
+      width: 22px;
+      height: 3px;
+      background-color: (var(--clr-neutral-100));
+      border-radius: 3px;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__list {
+    &-item {
+      font-size: var(--fs-nav);
+    }
+  }
+
+  &__link {
+  }
+}

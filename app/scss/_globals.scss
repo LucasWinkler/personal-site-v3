@@ -1,13 +1,18 @@
 body {
-  font-family: $ff-primary;
-  line-height: $lh-body;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-200);
+  line-height: var(--lh-body);
 }
 
-.container {
-  $max-width: 75em; // 1200px
-  $horizontal-padding: 2rem;
+// Utility
 
-  width: min($max-width, 100% - $horizontal-padding * 2);
+.container {
+  --max-width: 75em; // 1200px
+  --horizontal-padding: 2rem;
+
+  width: min(var(--max-width), 100% - var(--horizontal-padding) * 2);
   margin-inline: auto;
 }
 
@@ -27,6 +32,10 @@ body {
   &-ai-c {
     align-items: center;
   }
+
+  &-g-1 {
+    gap: 1em;
+  }
 }
 
 .heading-underline {
@@ -42,27 +51,82 @@ body {
   height: 6px;
   width: 2.35em;
   margin: 0 auto;
-  background: $clr-primary-400;
+  background: var(--clr-primary-400);
   border-radius: 7px;
 }
 
 .vertical-line {
   height: 400px;
   width: 3px;
-  background-color: $clr-neutral-800;
+  background-color: var(--clr-neutral-800);
   border-radius: 7px;
 }
 
 .horizontal-line {
   height: 3px;
-  background-color: $clr-neutral-800;
+  background-color: var(--clr-neutral-800);
   border-radius: 7px;
 }
 
-.logo {
-  font-size: $fs-500;
-  font-weight: $fw-bold;
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semi-bold);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--clr-neutral-700);
+  color: white;
+
+  &__prepend {
+    margin-right: 0.75em;
+  }
+
+  &--primary {
+    background-color: var(--clr-primary-400);
+
+    &:hover {
+      background-color: var(--clr-accent-400);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-neutral-200);
+
+      svg > path {
+        fill: var(--clr-neutral-200);
+      }
+    }
+  }
+
+  &--tertiary {
+  }
+
+  &--outline {
+  }
+
+  &--unstyled {
+    display: block;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
 }
+
+// var(--navbar-height: 0rem;
+// .hero-height-calc {
+//   min-height: calc(100vh - var(--navbar-height));
+// }
 
 // .project {
 //   display: flex;
@@ -73,7 +137,7 @@ body {
 // }
 
 // .project:nth-child(even) > .project__number {
-//   color: $clr-secondary-400;
+//   color: var(--clr-secondary-400);
 // }
 
 // // FOR BOX BEHIND IMAGE

@@ -43,6 +43,13 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+/* Remove text-decoration on all anchor tags */
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
 /* Make images easier to work with */
 img,
 picture,
