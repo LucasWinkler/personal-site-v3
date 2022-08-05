@@ -1,3 +1,11 @@
 .hero {
   background-color: var(--clr-neutral-800);
+
+  &__image {
+    display: none;
+
+    @include breakpoint-up(tablet) {
+      display: block;
+    }
+  }
 }

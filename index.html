@@ -16,12 +16,12 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="nav | flex flex-jc-sb flex-ai-c" aria-label="Primary">
+        <nav class="nav" id="nav" aria-label="Primary">
           <a class="nav__logo" href="/">Lucas Winkler</a>
           <button
-            class="nav__menu | button button--unstyled"
+            class="nav__mobile-toggle | button button--unstyled"
             aria-expanded="false"
-            aria-controls="menu"
+            aria-controls="nav"
           >
             <span></span>
             <span></span>
@@ -51,7 +51,7 @@
               Ullamcorper diam mattis sit suspendisse elementum purus, sed. Orci
               maecenas purus habitasse sit vitae.
             </p>
-            <div class="hero__buttons | flex flex-g-1">
+            <div class="hero__buttons | flex flex-gap-1">
               <button class="button button--primary">
                 <span class="button__prepend"
                   ><svg
@@ -139,6 +139,7 @@
           </div>
           <div class="column">
             <svg
+              class="hero__image"
               width="533"
               height="387"
               viewBox="0 0 533 387"

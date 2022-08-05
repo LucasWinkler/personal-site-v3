@@ -1,7 +1,12 @@
 @import 'reset';
 @import 'variables';
-
+@import 'mixins';
 @import 'globals';
+
 @import 'header';
 @import 'navigation';
 @import 'hero';
+@import 'projects';
+@import 'skills';
+@import 'contact';
+@import 'footer';
