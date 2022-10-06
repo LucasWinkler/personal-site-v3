@@ -6,10 +6,6 @@ body {
 	line-height: var(--lh-body);
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 // Utility
 
 .container {
@@ -173,6 +169,17 @@ html {
 		cursor: pointer;
 		outline: inherit;
 	}
+}
+
+@include breakpoint-up(tablet) {
+	.display-tablet-flex {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.column {
+	flex-basis: 100%;
 }
 
 // var(--navbar-height: 0rem;

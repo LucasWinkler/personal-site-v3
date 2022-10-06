@@ -77,17 +77,16 @@
 	}
 }
 
-// Change typography for tablet
-@media (min-width: 64em) {
+// Change typography for tablets
+@media (min-width: 48em) {
 	:root {
-		--fs-primary-heading: var(--fs-700);
 		--fs-body: var(--fs-400);
 		--fs-button: var(--fs-400);
 	}
 }
 
 // Change typography for desktop
-@media (min-width: 90em) {
+@media (min-width: 64em) {
 	:root {
 		--fs-primary-heading: var(--fs-800);
 	}

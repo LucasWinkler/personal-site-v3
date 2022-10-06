@@ -1,11 +1,18 @@
 .hero {
 	background-color: var(--clr-neutral-800);
+	padding-block: var(--size-400);
+
+	@include breakpoint-up(tablet) {
+		padding-block: var(--size-800);
+	}
 
 	&__image {
 		display: none;
 
 		@include breakpoint-up(tablet) {
 			display: block;
+
+			margin-left: auto;
 		}
 	}
 
@@ -18,17 +25,17 @@
 
 	&__content {
 		margin-block: var(--size-400);
+		max-width: 35ch;
 	}
 
 	&__buttons {
-		margin-block: var(--size-400);
+		margin-block: var(--size-600);
 	}
 
 	&__socials {
 		display: flex;
 		gap: 1em;
-		padding-top: 0.5em;
-		padding-bottom: 2.5em;
+		margin-bottom: 2.5em;
 	}
 
 	&__social {
