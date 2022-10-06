@@ -1,24 +1,29 @@
 // Breakpoints
 
-// 428px, 1024px, 1440px,
+// TODO: need to fix add the rest of the breakpoitns in pixels
+// 428px, 1024px, 1440px
 $breakpoints-up: (
-  'tablet': 64em,
-  'desktop': 90em,
+	'mobile-medium': 22.5em,
+	'mobile-large': 30em,
+	'tablet': 64em,
+	'desktop': 90em,
 );
 
 $breakpoints-down: (
-  'mobile': 26.75em,
-  'tablet': 64em,
+	'mobile-small': 22.5em,
+	'mobile-medium': 26.5625em,
+	'mobile-large': 30em,
+	'tablet': 64em,
 );
 
 @mixin breakpoint-up($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
-    @content;
-  }
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
 }
 
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
-    @content;
-  }
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
 }

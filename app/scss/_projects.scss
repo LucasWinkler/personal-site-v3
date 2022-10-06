@@ -1,3 +1,9 @@
 .projects {
-  background-color: var(--clr-neutral-900);
+	background-color: var(--clr-neutral-900);
+	padding-block: var(--size-600);
+	&__title {
+		font-size: var(--fs-secondary-heading);
+		font-weight: var(--fw-bold);
+		color: var(--clr-neutral-100);
+	}
 }

@@ -1,126 +1,178 @@
 body {
-  font-family: var(--ff-primary);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-regular);
-  color: var(--clr-neutral-200);
-  line-height: var(--lh-body);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-regular);
+	color: var(--clr-neutral-200);
+	line-height: var(--lh-body);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 // Utility
 
 .container {
-  --max-width: 75em; // 1200px
-  --horizontal-padding: 2rem;
+	--max-width: 75em; // 1200px
+	--horizontal-padding: 2rem;
 
-  width: min(var(--max-width), 100% - var(--horizontal-padding) * 2);
-  margin-inline: auto;
+	width: min(var(--max-width), 100% - var(--horizontal-padding) * 2);
+	margin-inline: auto;
 }
 
+.padding-block-900 {
+	padding-block: var(--size-900);
+}
+
+.padding-block-700 {
+	padding-block: var(--size-700);
+}
+
+.padding-block-600 {
+	padding-block: var(--size-600);
+}
+.padding-block-500 {
+	padding-block: var(--size-500);
+}
+.padding-block-400 {
+	padding-block: var(--size-400);
+}
+.padding-block-300 {
+	padding-block: var(--size-300);
+}
+.padding-block-200 {
+	padding-block: var(--size-200);
+}
+.padding-block-100 {
+	padding-block: var(--size-100);
+}
 // Flexbox
 
 .flex {
-  display: flex;
+	display: flex;
 
-  &-jc-sb {
-    justify-content: space-between;
-  }
+	&-jc-sb {
+		justify-content: space-between;
+	}
 
-  &-jc-c {
-    justify-content: center;
-  }
+	&-jc-c {
+		justify-content: center;
+	}
 
-  &-ai-c {
-    align-items: center;
-  }
+	&-ai-c {
+		align-items: center;
+	}
 
-  &-gap-1 {
-    gap: 1em;
-  }
+	&-gap-1 {
+		gap: 1em;
+	}
 }
 
 .heading-underline {
-  text-decoration: none;
-  position: relative;
+	text-decoration: none;
+	position: relative;
 }
 
 .heading-underline::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  height: 6px;
-  width: 2.35em;
-  margin: 0 auto;
-  background: var(--clr-primary-400);
-  border-radius: 7px;
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	height: 6px;
+	width: 2.35em;
+	background: var(--clr-primary-400);
+	border-radius: 7px;
 }
 
 .vertical-line {
-  height: 400px;
-  width: 3px;
-  background-color: var(--clr-neutral-800);
-  border-radius: 7px;
+	height: 400px;
+	width: 3px;
+	background-color: var(--clr-neutral-800);
+	border-radius: 7px;
 }
 
 .horizontal-line {
-  height: 3px;
-  background-color: var(--clr-neutral-800);
-  border-radius: 7px;
+	height: 3px;
+	background-color: var(--clr-neutral-800);
+	border-radius: 7px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  padding: 0.65rem 1.5rem;
-  font-size: var(--fs-400);
-  font-weight: var(--fw-semi-bold);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  background-color: var(--clr-neutral-700);
-  color: white;
+	display: flex;
+	align-items: center;
+	padding: 0.4rem 1rem;
+	font-size: var(--fs-300);
+	font-weight: var(--fw-semi-bold);
+	border: 0;
+	border-radius: 50px;
+	cursor: pointer;
+	background-color: var(--clr-neutral-700);
+	color: white;
 
-  &__prepend {
-    margin-right: 0.75em;
-  }
+	&__text {
+		white-space: nowrap;
+	}
 
-  &--primary {
-    background-color: var(--clr-primary-400);
+	@include breakpoint-up(mobile-medium) {
+		padding: 0.4rem 1rem;
+	}
 
-    &:hover {
-      background-color: var(--clr-accent-400);
-    }
-  }
+	@include breakpoint-up(mobile-large) {
+		padding: 0.6rem 1.5rem;
+	}
 
-  &--secondary {
-    background-color: transparent;
+	&__prepend {
+		margin-right: 0.4em;
+		min-width: 1em;
+		font-size: 1.3em;
 
-    &:hover,
-    &:focus-visible {
-      color: var(--clr-neutral-200);
+		@include breakpoint-up(mobile-medium) {
+			margin-right: 0.35em;
+		}
+	}
 
-      svg > path {
-        fill: var(--clr-neutral-200);
-      }
-    }
-  }
+	&--primary {
+		background-color: var(--clr-primary-400);
 
-  &--tertiary {
-  }
+		&:hover {
+			background-color: var(--clr-accent-400);
+		}
+	}
 
-  &--outline {
-  }
+	&--secondary {
+		background-color: transparent;
+		padding: 0.6rem 0.8rem;
 
-  &--unstyled {
-    display: block;
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
+		&:hover,
+		&:focus-visible {
+			color: var(--clr-neutral-200);
+
+			svg > path {
+				fill: var(--clr-neutral-200);
+			}
+		}
+
+		@include breakpoint-up(mobile-medium) {
+			padding: 0.6rem 1.2rem;
+		}
+	}
+
+	&--tertiary {
+	}
+
+	&--outline {
+	}
+
+	&--unstyled {
+		display: block;
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+	}
 }
 
 // var(--navbar-height: 0rem;
