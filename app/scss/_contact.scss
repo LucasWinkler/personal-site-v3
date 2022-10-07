@@ -1,7 +1,14 @@
 .contact {
 	background-color: var(--clr-neutral-900);
-	padding-top: var(--size-600);
-	padding-bottom: var(--size-600);
+	padding-block: var(--size-600);
+
+	@include breakpoint-up(tablet-medium) {
+		padding-block: var(--size-800);
+	}
+
+	@include breakpoint-up(desktop-small) {
+		padding-block: var(--size-900);
+	}
 
 	&__title {
 		color: var(--clr-neutral-100);

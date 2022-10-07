@@ -20,11 +20,19 @@
 		display: flex;
 		justify-items: center;
 		align-items: center;
-		padding-top: var(--size-500);
-		padding-bottom: var(--size-500);
+		padding-block: var(--size-500);
+
 		font-size: var(--fs-footer);
 		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: 0.5rem;
+
+		@include breakpoint-up(tablet-medium) {
+			padding-block: var(--size-800);
+		}
+
+		@include breakpoint-up(desktop-small) {
+			padding-block: var(--size-900);
+		}
 	}
 }

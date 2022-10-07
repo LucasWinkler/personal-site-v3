@@ -8,6 +8,14 @@
 		color: var(--clr-neutral-100);
 		margin-bottom: var(--size-700);
 	}
+
+	@include breakpoint-up(tablet-medium) {
+		padding-block: var(--size-800);
+	}
+
+	@include breakpoint-up(desktop-small) {
+		padding-block: var(--size-900);
+	}
 }
 
 .project {
@@ -145,6 +153,7 @@
 		background: unset;
 		position: static;
 		align-items: flex-start;
+		padding-block: var(--size-600);
 		padding-left: 0;
 		padding-right: 0;
 
@@ -159,5 +168,9 @@
 		&:nth-child(odd) &__image::after {
 			background-color: var(--clr-accent-600);
 		}
+	}
+
+	@include breakpoint-up(desktop-small) {
+		padding-block: var(--size-800);
 	}
 }
