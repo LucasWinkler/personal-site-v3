@@ -8,3 +8,19 @@
 		color: var(--clr-neutral-100);
 	}
 }
+
+.project {
+	display: flex;
+
+	// &:nth-child(even) > &__image {
+	// 	order: 1;
+	// }
+
+	&__number {
+		color: var(--clr-secondary-400);
+	}
+
+	&:nth-child(even) &__number {
+		color: var(--clr-primary-400);
+	}
+}
