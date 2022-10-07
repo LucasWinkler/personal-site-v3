@@ -45,7 +45,7 @@
 			list-style: none;
 		}
 
-		@include breakpoint-up(tablet) {
+		@include breakpoint-up(tablet-medium) {
 			display: flex;
 		}
 	}
@@ -73,7 +73,7 @@
 			}
 		}
 
-		@include breakpoint-up(tablet) {
+		@include breakpoint-up(tablet-medium) {
 			display: none;
 		}
 	}

@@ -10,7 +10,7 @@
 	&__image {
 		display: none;
 
-		@include breakpoint-up(tablet) {
+		@include breakpoint-up(tablet-small) {
 			display: block;
 			margin-left: auto;
 		}

@@ -184,8 +184,15 @@ body {
 	}
 }
 
-@include breakpoint-up(tablet) {
-	.display-tablet-flex {
+@include breakpoint-up(tablet-small) {
+	.display-tablet-sm-flex {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@include breakpoint-up(tablet-medium) {
+	.display-tablet-md-flex {
 		display: flex;
 		flex-direction: row;
 	}
