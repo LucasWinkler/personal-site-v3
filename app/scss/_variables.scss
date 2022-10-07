@@ -31,14 +31,16 @@
 	--fs-300: 0.9375rem; // 15px
 	--fs-400: 1rem; // 16px
 	--fs-500: 1.25rem; // 20px
+	// need 24px for project title on bigger screens
 	--fs-550: 1.8rem; // 28px
 	--fs-600: 2rem; // 32px
 	--fs-700: 2.5rem; // 40px
 	--fs-800: 3rem; // 48px
 
 	--fs-body: var(--fs-300);
-	--fs-primary-heading: var(--fs-550);
-	--fs-secondary-heading: var(--fs-600);
+	--fs-hero-heading: var(--fs-550);
+	--fs-section-heading: var(--fs-600);
+	--fs-project-heading: var(--fs-500);
 	--fs-nav: var(--fs-400);
 	--fs-button: var(--fs-300);
 
@@ -59,21 +61,21 @@
 // Change typography for small phones
 @media (min-width: 22.5em) {
 	:root {
-		--fs-primary-heading: var(--fs-600);
+		--fs-hero-heading: var(--fs-600);
 	}
 }
 
 // Change typography for medium phones
 @media (min-width: 26.5625em) {
 	:root {
-		--fs-primary-heading: var(--fs-700);
+		--fs-hero-heading: var(--fs-700);
 	}
 }
 
 // Change typography for large phones
 @media (min-width: 30em) {
 	:root {
-		--fs-primary-heading: var(--fs-700);
+		--fs-hero-heading: var(--fs-700);
 	}
 }
 
@@ -88,6 +90,6 @@
 // Change typography for desktop
 @media (min-width: 64em) {
 	:root {
-		--fs-primary-heading: var(--fs-800);
+		--fs-hero-heading: var(--fs-800);
 	}
 }

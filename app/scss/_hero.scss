@@ -24,7 +24,7 @@
 	}
 
 	&__title {
-		font-size: var(--fs-primary-heading);
+		font-size: var(--fs-hero-heading);
 		color: var(--clr-neutral-100);
 		font-weight: var(--fw-bold);
 		line-height: var(--lh-headings);
@@ -36,6 +36,8 @@
 	}
 
 	&__buttons {
+		display: flex;
+		gap: 1em;
 		margin-block: var(--size-600);
 	}
 
