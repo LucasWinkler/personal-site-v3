@@ -3,8 +3,12 @@
 	padding-top: var(--size-300);
 	padding-bottom: var(--size-700);
 
-	@include breakpoint-up(tablet) {
+	@include breakpoint-up(tablet-medium) {
 		padding-block: var(--size-800);
+	}
+
+	@include breakpoint-up(desktop-small) {
+		padding-block: var(--size-900);
 	}
 
 	&__image {
