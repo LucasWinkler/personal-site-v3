@@ -93,6 +93,14 @@ body {
 	border-radius: 7px;
 }
 
+.block {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
 .button {
 	display: flex;
 	align-items: center;
@@ -195,6 +203,14 @@ body {
 	.display-tablet-md-flex {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.display-tablet-md-block {
+		display: block;
+	}
+
+	.hidden-tablet-md {
+		display: none;
 	}
 }
 

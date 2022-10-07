@@ -3,11 +3,12 @@
 	padding-block: var(--size-600);
 
 	@include breakpoint-up(tablet-medium) {
-		padding-block: var(--size-800);
-	}
+		&__wrapper {
+			display: flex;
+			gap: 5em;
+		}
 
-	@include breakpoint-up(desktop-small) {
-		padding-block: var(--size-900);
+		padding-block: var(--size-800);
 	}
 
 	&__title {
@@ -15,12 +16,21 @@
 		font-weight: var(--fw-bold);
 		font-size: var(--fs-section-heading);
 		margin-bottom: var(--size-600);
+
+		@include breakpoint-up(tablet-medium) {
+			margin-top: var(--size-400);
+		}
 	}
 
 	&__form {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: var(--size-400);
+		width: 100%;
+	}
+
+	&__info {
+		width: 100%;
 	}
 
 	&__label {
