@@ -107,6 +107,10 @@ body {
 
 	&__text {
 		white-space: nowrap;
+
+		&--fw-regular {
+			font-weight: var(--fw-regular);
+		}
 	}
 
 	@include breakpoint-up(mobile-medium) {
