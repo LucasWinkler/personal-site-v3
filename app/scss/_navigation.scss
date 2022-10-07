@@ -14,6 +14,7 @@
 		display: none;
 		gap: 2rem;
 		font-size: var(--fs-nav);
+		z-index: 2;
 
 		&[data-visible] {
 			display: flex;
