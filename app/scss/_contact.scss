@@ -1,7 +1,7 @@
 .contact {
 	background-color: var(--clr-neutral-900);
-	padding-block: var(--size-500);
-
+	padding-top: var(--size-600);
+	padding-bottom: var(--size-600);
 	&__title {
 		color: var(--clr-neutral-100);
 		font-weight: var(--fw-bold);
@@ -36,11 +36,12 @@
 	}
 
 	&__buttons {
-		margin-block: var(--size-200);
+		margin-block: var(--size-300);
 	}
 
 	&__methods {
-		margin-block: var(--size-300);
+		margin-top: var(--size-600);
+		margin-bottom: var(--size-400);
 	}
 
 	&__method {
