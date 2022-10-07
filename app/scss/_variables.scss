@@ -27,6 +27,7 @@
 	--fw-semi-bold: 600;
 	--fw-bold: 700;
 
+	--fs-100: 0.8125rem; // 13px
 	--fs-200: 0.875rem; // 14px
 	--fs-300: 0.9375rem; // 15px
 	--fs-400: 1rem; // 16px
@@ -43,6 +44,7 @@
 	--fs-project-heading: var(--fs-500);
 	--fs-nav: var(--fs-400);
 	--fs-button: var(--fs-300);
+	--fs-footer: var(--fs-100);
 
 	--lh-body: 1.625; // 26px
 	--lh-headings: 1.5; // 26px | 3 for 48px
@@ -69,6 +71,7 @@
 @media (min-width: 26.5625em) {
 	:root {
 		--fs-hero-heading: var(--fs-700);
+		--fs-footer: var(--fs-300);
 	}
 }
 

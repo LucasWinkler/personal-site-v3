@@ -94,14 +94,14 @@
 								<span class="button__text">Resume</span>
 							</button>
 						</div>
-						<ul class="hero__socials" role="list" aria-label="Social links">
-							<li class="hero__social">
+						<ul class="socials" role="list" aria-label="Social links">
+							<li class="socials__item">
 								<a
+									class="socials__link"
 									aria-label="Linkedin"
 									href="https://www.linkedin.com/in/lucas-winkler/"
 									rel="noopener noreferrer"
 									target="_blank"
-									class="testing"
 								>
 									<svg
 										width="1em"
@@ -117,8 +117,9 @@
 									</svg>
 								</a>
 							</li>
-							<li class="hero__social">
+							<li class="socials__item">
 								<a
+									class="socials__link"
 									aria-label="Github"
 									href="https://github.com/LucasWinkler"
 									rel="noopener noreferrer"
@@ -805,9 +806,11 @@
 						</div>
 					</form>
 					<!-- <div class="vertical-line"></div> -->
+
 					<ul class="contact__methods" role="list" aria-label="Contact methods">
+						<div class="horizontal-line"></div>
 						<li class="contact__method">
-							<a aria-label="Phone" href="#">
+							<a class="contact__link" aria-label="Phone" href="#">
 								<svg
 									width="1em"
 									height="1em"
@@ -828,7 +831,11 @@
 							>
 						</li>
 						<li class="contact__method">
-							<a aria-label="Email" href="tel:+5192222831">
+							<a
+								class="contact__link"
+								aria-label="Email"
+								href="tel:+5192222831"
+							>
 								<svg
 									width="1em"
 									height="1em"
@@ -846,9 +853,10 @@
 							>
 						</li>
 					</ul>
-					<ul class="contact__socials" role="list" aria-label="Social links">
-						<li class="contact__social">
+					<ul class="socials" role="list" aria-label="Social links">
+						<li class="socials__item">
 							<a
+								class="socials__link"
 								aria-label="Linkedin"
 								href="https://www.linkedin.com/in/lucas-winkler/"
 								rel="noopener noreferrer"
@@ -858,9 +866,9 @@
 									width="1em"
 									height="1em"
 									viewBox="0 0 20 20"
-									fill="none"
 									xmlns="http://www.w3.org/2000/svg"
 								>
+									<title>My LinkedIn</title>
 									<path
 										d="M9.96648 0.21228C4.57932 0.21228 0.21228 4.57932 0.21228 9.96648C0.21228 15.3536 4.57932 19.7207 9.96648 19.7207C15.3536 19.7207 19.7207 15.3536 19.7207 9.96648C19.7207 4.57932 15.3536 0.21228 9.96648 0.21228ZM7.57873 14.0094H5.60351V7.6529H7.57873V14.0094ZM6.57893 6.87257C5.95506 6.87257 5.55169 6.43058 5.55169 5.88394C5.55169 5.32612 5.96726 4.89734 6.60433 4.89734C7.2414 4.89734 7.63157 5.32612 7.64376 5.88394C7.64376 6.43058 7.2414 6.87257 6.57893 6.87257ZM14.7928 14.0094H12.8175V10.4867C12.8175 9.66674 12.531 9.10994 11.8167 9.10994C11.2711 9.10994 10.947 9.4869 10.8037 9.84963C10.7509 9.97867 10.7377 10.1616 10.7377 10.3434V14.0084H8.76143V9.67995C8.76143 8.8864 8.73603 8.22291 8.70961 7.65189H10.4257L10.5162 8.53485H10.5558C10.8159 8.12029 11.453 7.50862 12.5188 7.50862C13.8184 7.50862 14.7928 8.37939 14.7928 10.251V14.0094V14.0094Z"
 										fill="white"
@@ -868,8 +876,9 @@
 								</svg>
 							</a>
 						</li>
-						<li class="contact__social">
+						<li class="socials__item">
 							<a
+								class="socials__link"
 								aria-label="Github"
 								href="https://github.com/LucasWinkler"
 								rel="noopener noreferrer"
@@ -879,9 +888,9 @@
 									width="1em"
 									height="1em"
 									viewBox="0 0 18 18"
-									fill="none"
 									xmlns="http://www.w3.org/2000/svg"
 								>
+									<title>My GitHub</title>
 									<path
 										fill-rule="evenodd"
 										clip-rule="evenodd"
@@ -898,26 +907,28 @@
 
 		<footer class="footer">
 			<div class="container">
-				<!-- <div class="horizontal-line"></div> -->
-				<p>Designed & Built by Lucas Winkler</p>
-				<a href="#"
-					><svg
-						width="1em"
-						height="1em"
-						viewBox="0 0 9 13"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
+				<div class="horizontal-line"></div>
+				<div class="footer__wrapper">
+					<p class="footer__text">Designed & Built by Lucas Winkler</p>
+					<a class="footer__top" href="#"
+						><svg
+							width="1em"
+							height="1em"
+							viewBox="0 0 9 13"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M4.21934 13.1258C4.34366 13.1258 4.46289 13.0765 4.5508 12.9885C4.63871 12.9006 4.68809 12.7814 4.68809 12.6571V1.60115L7.63747 4.55146C7.72549 4.63948 7.84486 4.68893 7.96934 4.68893C8.09382 4.68893 8.2132 4.63948 8.30122 4.55146C8.38924 4.46344 8.43868 4.34407 8.43868 4.21959C8.43868 4.09511 8.38924 3.97573 8.30122 3.88771L4.55122 0.137713C4.50767 0.0940599 4.45595 0.059426 4.399 0.0357949C4.34205 0.0121639 4.281 0 4.21934 0C4.15768 0 4.09663 0.0121639 4.03969 0.0357949C3.98274 0.059426 3.93101 0.0940599 3.88747 0.137713L0.137467 3.88771C0.0938846 3.9313 0.0593132 3.98303 0.0357266 4.03998C0.0121399 4.09692 0 4.15795 0 4.21959C0 4.34407 0.0494483 4.46344 0.137467 4.55146C0.225486 4.63948 0.344865 4.68893 0.469342 4.68893C0.593819 4.68893 0.713198 4.63948 0.801217 4.55146L3.75059 1.60115V12.6571C3.75059 12.7814 3.79998 12.9006 3.88789 12.9885C3.97579 13.0765 4.09502 13.1258 4.21934 13.1258Z"
+								fill="white"
+								fill-opacity="0.75"
+							/>
+						</svg>
+						Back to top</a
 					>
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M4.21934 13.1258C4.34366 13.1258 4.46289 13.0765 4.5508 12.9885C4.63871 12.9006 4.68809 12.7814 4.68809 12.6571V1.60115L7.63747 4.55146C7.72549 4.63948 7.84486 4.68893 7.96934 4.68893C8.09382 4.68893 8.2132 4.63948 8.30122 4.55146C8.38924 4.46344 8.43868 4.34407 8.43868 4.21959C8.43868 4.09511 8.38924 3.97573 8.30122 3.88771L4.55122 0.137713C4.50767 0.0940599 4.45595 0.059426 4.399 0.0357949C4.34205 0.0121639 4.281 0 4.21934 0C4.15768 0 4.09663 0.0121639 4.03969 0.0357949C3.98274 0.059426 3.93101 0.0940599 3.88747 0.137713L0.137467 3.88771C0.0938846 3.9313 0.0593132 3.98303 0.0357266 4.03998C0.0121399 4.09692 0 4.15795 0 4.21959C0 4.34407 0.0494483 4.46344 0.137467 4.55146C0.225486 4.63948 0.344865 4.68893 0.469342 4.68893C0.593819 4.68893 0.713198 4.63948 0.801217 4.55146L3.75059 1.60115V12.6571C3.75059 12.7814 3.79998 12.9006 3.88789 12.9885C3.97579 13.0765 4.09502 13.1258 4.21934 13.1258Z"
-							fill="white"
-							fill-opacity="0.75"
-						/>
-					</svg>
-					Back to top</a
-				>
+				</div>
 			</div>
 		</footer>
 		<script type="module" src="/app/js/main.js"></script>
