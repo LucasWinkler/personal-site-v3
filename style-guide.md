@@ -1,4 +1,4 @@
-# Front-end Style Guide
+# Style Guide
 
 ## Layout
 
@@ -8,7 +8,7 @@ The designs were created to the following widths:
 - Tablet: 1024px
 - Desktop: 1440px
 
-## Colors
+## Colours
 
 ### Primary
 
@@ -35,9 +35,91 @@ The designs were created to the following widths:
 
 ## Typography
 
-### Body Copy
+### Body
 
 - Font size: 16px
+- Font weight: regular
+
+#### Mobile: 428px
+
+- Font size: 14px
+
+#### Tablet: 1024px
+
+- Font size: 16px
+
+#### Desktop: 1440px
+
+- Font size: 16px
+
+### H1
+
+- Font weight: Bold
+
+#### Mobile: 428px
+
+- Font size: 36px
+
+#### Tablet: 1024px
+
+- Font size: 40px
+
+#### Desktop: 1440px
+
+- Font size: 48px
+
+### H2
+
+- Font weight: Bold
+
+#### Mobile: 428px
+
+- Font size: 32px
+
+#### Tablet: 1024px
+
+- Font size: 32px
+
+#### Desktop: 1440px
+
+- Font size: 32px
+
+### H3
+
+- Font weight: Bold
+
+#### Mobile: 428px
+
+- Font size: 32px
+
+#### Tablet: 1024px
+
+- Font size: 32px
+
+#### Desktop: 1440px
+
+- Font size: 32px
+
+### Footer
+
+- Font weight: regular
+
+#### Mobile: 428px
+
+- Font size: 12px
+
+#### Tablet: 1024px
+
+- Font size: 14px
+
+#### Desktop: 1440px
+
+- Font size: 16px
+
+### Logo
+
+- Font size: 20px
+- Font weight: Bold
 
 ### Font
 

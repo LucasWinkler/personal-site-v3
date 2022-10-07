@@ -1,0 +1,44 @@
+.hero {
+	background-color: var(--clr-neutral-800);
+	padding-top: var(--size-300);
+	padding-bottom: var(--size-700);
+
+	@include breakpoint-up(tablet) {
+		padding-block: var(--size-800);
+	}
+
+	&__image {
+		display: none;
+
+		@include breakpoint-up(tablet) {
+			display: block;
+			margin-left: auto;
+		}
+	}
+
+	&__accent {
+		color: var(--clr-primary-400);
+
+		&--secondary {
+			color: var(--clr-secondary-400);
+		}
+	}
+
+	&__title {
+		font-size: var(--fs-hero-heading);
+		color: var(--clr-neutral-100);
+		font-weight: var(--fw-bold);
+		line-height: var(--lh-headings);
+	}
+
+	&__content {
+		margin-block: var(--size-400);
+		max-width: 35ch;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 1em;
+		margin-block: var(--size-600);
+	}
+}
