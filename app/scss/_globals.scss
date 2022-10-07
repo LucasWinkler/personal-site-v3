@@ -178,6 +178,10 @@ body {
 		cursor: pointer;
 		outline: inherit;
 	}
+
+	&--contact {
+		padding: 0.6rem 1.5rem;
+	}
 }
 
 @include breakpoint-up(tablet) {

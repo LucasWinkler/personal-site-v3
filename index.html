@@ -762,24 +762,49 @@
 			</section>
 			<section id="contact" class="contact">
 				<div class="container">
-					<h2 class="contact__title">Get in touch!</h2>
-					<form action="">
-						<label class="" for="name">Name</label>
-						<input type="text" name="name" id="name" />
+					<h2 class="contact__title heading-underline">Get in touch!</h2>
+					<form class="contact__form" action="">
+						<label class="contact__label" for="name">Name</label>
+						<input class="contact__input" type="text" name="name" id="name" />
 
-						<label class="" for="email">Email</label>
-						<input type="email" name="email" id="email" />
+						<label class="contact__label" for="email">Email</label>
+						<input
+							class="contact__input"
+							type="email"
+							name="email"
+							id="email"
+						/>
 
-						<label class="" for="message">Name</label>
+						<label class="contact__label" for="message">Message</label>
 						<textarea
+							class="contact__input contact__input--textarea"
 							name="message"
 							id="message"
 							cols="30"
-							rows="10"
+							rows="5"
 						></textarea>
-						<button class="contact__button">See my work</button>
+
+						<div class="contact__buttons">
+							<button class="button button--primary button--contact">
+								<span class="button__prepend"
+									><svg
+										width="1em"
+										height="1em"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M3.74499 8.99991L0.915828 1.72491C0.719161 1.21907 1.21249 0.734908 1.70083 0.907408L1.77833 0.939908L16.7783 8.43991C16.8751 8.48822 16.9576 8.56079 17.0179 8.65055C17.0782 8.7403 17.1142 8.84416 17.1223 8.95198C17.1305 9.05979 17.1105 9.16788 17.0644 9.26567C17.0182 9.36346 16.9475 9.44762 16.8592 9.50991L16.7783 9.55824L1.77833 17.0582C1.29249 17.3007 0.764161 16.8541 0.890828 16.3516L0.915828 16.2724L3.74499 8.99991L0.915828 1.72491L3.74499 8.99991ZM2.66833 2.78324L4.84333 8.37491H10.3658C10.5169 8.37491 10.6628 8.42961 10.7766 8.52888C10.8904 8.62815 10.9645 8.76528 10.985 8.91491L10.9908 8.99991C10.9908 9.15106 10.936 9.29709 10.8365 9.41093C10.7371 9.52477 10.5998 9.59872 10.45 9.61907L10.3658 9.62491H4.84166L2.66749 15.2166L15.1017 8.99991L2.66749 2.78324H2.66833Z"
+											fill="white"
+										/>
+									</svg>
+								</span>
+								<span class="button__text">Send message</span>
+							</button>
+						</div>
 					</form>
-					<div class="vertical-line"></div>
+					<!-- <div class="vertical-line"></div> -->
 					<ul class="contact__methods" role="list" aria-label="Contact methods">
 						<li class="contact__method">
 							<a aria-label="Phone" href="#">
@@ -873,7 +898,7 @@
 
 		<footer class="footer">
 			<div class="container">
-				<div class="horizontal-line"></div>
+				<!-- <div class="horizontal-line"></div> -->
 				<p>Designed & Built by Lucas Winkler</p>
 				<a href="#"
 					><svg
