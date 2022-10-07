@@ -146,6 +146,10 @@
 		position: static;
 		align-items: flex-start;
 
+		&:nth-child(odd) > &__content {
+			order: 1;
+		}
+
 		&:nth-child(odd) &__image::before {
 			background-color: var(--clr-secondary-400);
 		}
