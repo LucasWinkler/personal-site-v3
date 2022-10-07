@@ -148,7 +148,7 @@
 		padding-left: 0;
 		padding-right: 0;
 
-		&:nth-child(odd) > &__content {
+		&:nth-child(even) > &__content {
 			order: 1;
 		}
 
