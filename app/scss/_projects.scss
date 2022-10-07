@@ -145,6 +145,8 @@
 		background: unset;
 		position: static;
 		align-items: flex-start;
+		padding-left: 0;
+		padding-right: 0;
 
 		&:nth-child(odd) > &__content {
 			order: 1;
