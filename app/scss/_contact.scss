@@ -12,6 +12,7 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
+		margin-bottom: var(--size-400);
 	}
 
 	&__label {
@@ -39,6 +40,7 @@
 	}
 
 	&__methods {
+		margin-block: var(--size-300);
 	}
 
 	&__method {
@@ -46,10 +48,14 @@
 
 	&__link {
 		display: flex;
-		gap: 0.5em;
+		gap: 0.55em;
 		align-items: center;
 		color: var(--clr-neutral-200);
 		font-size: var(--fs-400);
 		text-decoration: underline;
+
+		svg {
+			font-size: 1.2em;
+		}
 	}
 }
