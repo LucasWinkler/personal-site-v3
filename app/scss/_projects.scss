@@ -15,10 +15,32 @@
 	flex-direction: column;
 	margin-block: var(--size-600);
 
+	&__content {
+		position: relative;
+	}
+
 	&__wrapper {
+		position: relative;
 		background-color: var(--clr-neutral-800);
+		// background: url('/public/images/placeholder-project-image.png') center/cover;
 		padding: 1.2em;
 		border-radius: 5px;
+
+		&::before {
+			content: ' ';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 5%;
+			border-radius: 5px;
+			background-image: url('/images/placeholder-project-image.png');
+			background-repeat: no-repeat;
+			background-position: 50% 0;
+			background-size: cover;
+		}
 	}
 
 	&__image {
