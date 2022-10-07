@@ -12,7 +12,6 @@
 
 .project {
 	display: flex;
-
 	flex-direction: column;
 	margin-block: var(--size-600);
 	// position: relative;
@@ -25,13 +24,21 @@
 	&__content {
 		position: relative;
 		z-index: 1;
+
+		@include breakpoint-up(tablet-medium) {
+			width: 100%;
+
+			background-color: var(--clr-neutral-800);
+			padding: 1.2em;
+			border-radius: 5px;
+		}
 	}
 
 	&__image {
 		position: absolute;
 		left: 0;
 		top: 0;
-		z-index: 0;
+		z-index: 2;
 		width: 100%;
 		height: 100%;
 
@@ -41,6 +48,45 @@
 			height: 100%;
 			filter: grayscale(100%) brightness(20%);
 			opacity: 20%;
+		}
+
+		@include breakpoint-up(tablet-medium) {
+			position: relative;
+
+			> img {
+				object-fit: contain;
+				width: 100%;
+				height: auto;
+				filter: grayscale(0%) brightness(100%);
+				opacity: 100%;
+				border-radius: 3px;
+			}
+
+			// FOR BOX BEHIND IMAGE
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				border-radius: 3px;
+			}
+
+			&::before {
+				top: 0.5em;
+				left: 0.5em;
+				background-color: var(--clr-primary-400);
+				z-index: 0;
+			}
+
+			&::after {
+				top: 1em;
+				left: 1em;
+				background-color: var(--clr-accent-500);
+				z-index: -1;
+			}
 		}
 	}
 
@@ -90,5 +136,22 @@
 
 	&:nth-child(even) &__number {
 		color: var(--clr-accent-200);
+	}
+
+	@include breakpoint-up(tablet-medium) {
+		flex-direction: row;
+		display: flex;
+		gap: 5em;
+		background: unset;
+		position: static;
+		align-items: flex-start;
+
+		&:nth-child(odd) &__image::before {
+			background-color: var(--clr-secondary-400);
+		}
+
+		&:nth-child(odd) &__image::after {
+			background-color: var(--clr-accent-600);
+		}
 	}
 }
