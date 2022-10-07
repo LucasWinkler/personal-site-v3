@@ -10,7 +10,7 @@ body {
 
 .container {
 	--max-width: 75em; // 1200px
-	--horizontal-padding: 2rem;
+	--horizontal-padding: 1.5rem;
 
 	width: min(var(--max-width), 100% - var(--horizontal-padding) * 2);
 	margin-inline: auto;
@@ -110,10 +110,6 @@ body {
 	}
 
 	@include breakpoint-up(mobile-medium) {
-		padding: 0.4rem 1rem;
-	}
-
-	@include breakpoint-up(mobile-large) {
 		padding: 0.6rem 1.5rem;
 	}
 

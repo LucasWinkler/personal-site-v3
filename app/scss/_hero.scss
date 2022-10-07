@@ -11,8 +11,15 @@
 
 		@include breakpoint-up(tablet) {
 			display: block;
-
 			margin-left: auto;
+		}
+	}
+
+	&__accent {
+		color: var(--clr-primary-400);
+
+		&--secondary {
+			color: var(--clr-secondary-400);
 		}
 	}
 
