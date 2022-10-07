@@ -142,6 +142,15 @@ body {
 			svg > path {
 				fill: var(--clr-neutral-200);
 			}
+
+			.button__prepend {
+				&--no-fill {
+					svg > path {
+						fill: none;
+						stroke: var(--clr-neutral-200);
+					}
+				}
+			}
 		}
 
 		@include breakpoint-up(mobile-medium) {
