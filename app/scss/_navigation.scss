@@ -49,13 +49,13 @@
 			}
 		}
 
-		&-item {
-			list-style: none;
-		}
-
 		@include breakpoint-up(tablet-medium) {
 			display: flex;
 		}
+	}
+
+	&__item {
+		list-style: none;
 	}
 
 	&__link {
