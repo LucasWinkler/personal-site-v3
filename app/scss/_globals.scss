@@ -137,6 +137,10 @@ body {
 		@include breakpoint-up(mobile-medium) {
 			margin-right: 0.35em;
 		}
+
+		&--small {
+			font-size: 1.1em;
+		}
 	}
 
 	&--primary {
