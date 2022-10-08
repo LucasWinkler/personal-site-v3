@@ -2,8 +2,26 @@
 	padding-block: var(--size-600);
 	background-color: var(--clr-neutral-800);
 
-	@include breakpoint-up(desktop-small) {
+	@include breakpoint-up(mobile-medium) {
+		padding-block: var(--size-600);
+	}
+
+	@include breakpoint-up(mobile-large) {
 		padding-block: var(--size-700);
+	}
+
+	@include breakpoint-up(tablet-small) {
+		padding-block: var(--size-800);
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__image {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
 	}
 
 	&__list {
@@ -12,12 +30,18 @@
 		grid-template-columns: repeat(4, 1fr);
 		justify-items: center;
 
+		@include breakpoint-up(mobile-large) {
+			gap: 1.5em;
+		}
+
+		@include breakpoint-up(tablet-small) {
+			gap: 2.5em;
+		}
+
 		@include breakpoint-up(desktop-small) {
 			grid-auto-flow: column;
 			grid-auto-columns: 1fr;
-			// display: flex;
-			// align-items: center;
-			// justify-content: space-between;
+			gap: 1em;
 		}
 	}
 }

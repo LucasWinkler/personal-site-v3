@@ -2,7 +2,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 22px;
+	padding-block: 1.375rem;
+
+	@include breakpoint-up(tablet-small) {
+		padding-block: var(--size-600);
+	}
+
+	@include breakpoint-up(tablet-medium) {
+		padding-block: var(--size-700);
+	}
 
 	&__logo {
 		font-size: var(--fs-500);

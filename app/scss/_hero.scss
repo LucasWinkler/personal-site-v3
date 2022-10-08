@@ -8,7 +8,7 @@
 	}
 
 	@include breakpoint-up(desktop-small) {
-		padding-block: var(--size-900);
+		padding-bottom: 7rem;
 	}
 
 	&__image {
