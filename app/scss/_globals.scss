@@ -237,6 +237,7 @@ body {
 
 	&__link {
 		position: relative;
+		display: inline-block;
 
 		&:hover,
 		&:focus-visible {
