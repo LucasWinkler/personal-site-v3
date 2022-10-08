@@ -10,20 +10,23 @@ navToggle.addEventListener('click', () => {
 	// header.toggleAttribute('data-overlay');
 });
 
+// Reveals elements on scroll
+// Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {
 	var reveals = document.querySelectorAll('.reveal');
 	for (var i = 0; i < reveals.length; i++) {
 		var windowHeight = window.innerHeight;
 		var elementTop = reveals[i].getBoundingClientRect().top;
-		var elementVisible = 50;
+		var elementVisible = 100;
 
 		if (elementTop < windowHeight - elementVisible) {
-			reveals[i].classList.add('active');
+			reveals[i].classList.add('reveal--active');
 		} else {
-			reveals[i].classList.remove('active');
+			reveals[i].classList.remove('reveal--active');
 		}
 	}
 }
-
 window.addEventListener('scroll', reveal);
+
+// Check the position of elements on load
 reveal();

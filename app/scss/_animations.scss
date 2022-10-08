@@ -1,11 +1,91 @@
+/*********************************************
+ * Reveal on scroll
+ *********************************************/
 .reveal {
 	position: relative;
-	transform: translateY(100px);
 	opacity: 0;
-	transition: 1s all ease-out;
+	transition: all 0.75s ease-out;
 
-	&.active {
+	&--active {
+		opacity: 1;
+
+		&.reveal--fade-top {
+			animation: fade-top 0.75s ease-out;
+		}
+
+		&.reveal--fade-bottom {
+			animation: fade-bottom 0.75s ease-out;
+		}
+
+		&.reveal--fade-left {
+			animation: fade-left 0.75s ease-out;
+		}
+
+		&.reveal--fade-right {
+			animation: fade-right 0.75s ease-out;
+		}
+
+		@include breakpoint-down(tablet-medium) {
+			&.reveal--fade-bottom-until-tablet-md {
+				animation: fade-bottom 0.75s ease-out;
+			}
+		}
+
+		@include breakpoint-up(tablet-medium) {
+			&.reveal--fade-left-at-tablet-md {
+				animation: fade-left 0.75s ease-out;
+			}
+
+			&.reveal--fade-right-at-tablet-md {
+				animation: fade-right 0.75s ease-out;
+			}
+		}
+	}
+}
+
+/*********************************************
+ * Animations for reveal on scroll
+ *********************************************/
+@keyframes fade-top {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
 		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-bottom {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-left {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-right {
+	0% {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
 		opacity: 1;
 	}
 }
