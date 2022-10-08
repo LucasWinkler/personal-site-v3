@@ -13,6 +13,18 @@
 
 		svg {
 			margin-right: 0.25rem;
+
+			path {
+				fill: var(--clr-neutral-200);
+			}
+		}
+
+		&:hover {
+			color: var(--clr-neutral-100);
+
+			svg > path {
+				fill: var(--clr-neutral-100);
+			}
 		}
 	}
 
@@ -21,7 +33,6 @@
 		justify-items: center;
 		align-items: center;
 		padding-block: var(--size-500);
-
 		font-size: var(--fs-footer);
 		flex-wrap: wrap;
 		justify-content: space-between;
