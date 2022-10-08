@@ -229,21 +229,36 @@ body {
 	&__item {
 		font-size: 1.6em;
 		padding: 0.3em;
-		border: 1px solid var(--clr-neutral-100);
-		border-radius: 50%;
+	}
 
-		a:hover,
-		a:focus-visible {
+	&__link {
+		position: relative;
+
+		&:hover,
+		&:focus-visible {
 			color: var(--clr-neutral-200);
 			border-color: var(--clr-neutral-200);
+
+			&::before {
+				border-color: var(--clr-neutral-200);
+			}
 
 			svg > path {
 				fill: var(--clr-neutral-200);
 			}
 		}
-	}
 
-	&__link {
+		&::before {
+			content: '';
+			width: calc(100% + 1rem);
+			height: calc(100% + 1rem);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 1px solid white;
+			border-radius: 50%;
+		}
 	}
 }
 
