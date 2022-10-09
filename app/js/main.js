@@ -21,7 +21,12 @@ function reveal() {
 
 		if (elementTop < windowHeight - elementVisible) {
 			reveals[i].classList.add('reveal--active');
-		} else {
+		}
+
+		// Separate the remove to it's own if statement to prevent
+		// reveal--active from constantly being added and removed on scroll
+    // due to elementTop changing on animation
+		if (!(elementTop < windowHeight - (elementVisible / 2))) {
 			reveals[i].classList.remove('reveal--active');
 		}
 	}
