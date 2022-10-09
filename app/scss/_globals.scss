@@ -46,8 +46,8 @@ body {
 .padding-block-100 {
 	padding-block: var(--size-100);
 }
-// Flexbox
 
+// Flexbox
 .flex {
 	display: flex;
 
@@ -65,6 +65,40 @@ body {
 
 	&-gap-1 {
 		gap: 1em;
+	}
+}
+
+.column {
+	flex-basis: 100%;
+}
+
+.block {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+@include breakpoint-up(tablet-small) {
+	.display-tablet-sm-flex-up {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@include breakpoint-up(tablet-medium) {
+	.display-tablet-md-flex-up {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.display-tablet-md-block-up {
+		display: block;
+	}
+
+	.hidden-tablet-md-up {
+		display: none;
 	}
 }
 
@@ -95,14 +129,6 @@ body {
 	height: 3px;
 	background-color: var(--clr-neutral-800);
 	border-radius: 7px;
-}
-
-.block {
-	display: block;
-}
-
-.hidden {
-	display: none;
 }
 
 .button {
@@ -200,32 +226,6 @@ body {
 	}
 }
 
-@include breakpoint-up(tablet-small) {
-	.display-tablet-sm-flex {
-		display: flex;
-		flex-direction: row;
-	}
-}
-
-@include breakpoint-up(tablet-medium) {
-	.display-tablet-md-flex {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.display-tablet-md-block {
-		display: block;
-	}
-
-	.hidden-tablet-md {
-		display: none;
-	}
-}
-
-.column {
-	flex-basis: 100%;
-}
-
 .socials {
 	display: flex;
 	gap: 1em;
@@ -237,7 +237,7 @@ body {
 
 	&__link {
 		position: relative;
-		display: inline-block;
+		display: inline-block; // Fixes bug on firefox
 
 		&:hover,
 		&:focus-visible {
@@ -266,26 +266,3 @@ body {
 		}
 	}
 }
-
-// var(--navbar-height: 0rem;
-// .hero-height-calc {
-//   min-height: calc(100vh - var(--navbar-height));
-// }
-
-// .project {
-//   display: flex;
-// }
-
-// .project:nth-child(even) > .project__image {
-//   order: 1;
-// }
-
-// .project:nth-child(even) > .project__number {
-//   color: var(--clr-secondary-400);
-// }
-
-// // FOR BOX BEHIND IMAGE
-// .project__image::after {
-//   content: '';
-//   position: absolute;
-// }

@@ -10,6 +10,9 @@ navToggle.addEventListener('click', () => {
 	// header.toggleAttribute('data-overlay');
 });
 
+// https://boosted.orange.com/v4-alpha/layout/responsive-utilities/
+// Use this to help rename responsive utility classes
+
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {

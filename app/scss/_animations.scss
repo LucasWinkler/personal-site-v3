@@ -26,17 +26,17 @@
 		}
 
 		@include breakpoint-down(tablet-medium) {
-			&.reveal--fade-bottom-until-tablet-md {
+			&.reveal--fade-bottom-tablet-md-down {
 				animation: fade-bottom 0.5s ease-out;
 			}
 		}
 
 		@include breakpoint-up(tablet-medium) {
-			&.reveal--fade-left-at-tablet-md {
+			&.reveal--fade-left-tablet-md-up {
 				animation: fade-left 0.75s ease-out;
 			}
 
-			&.reveal--fade-right-at-tablet-md {
+			&.reveal--fade-right-tablet-md-up {
 				animation: fade-right 0.75s ease-out;
 			}
 		}
@@ -89,3 +89,5 @@
 		opacity: 1;
 	}
 }
+
+// TODO: Staggered animations
