@@ -142,6 +142,7 @@ body {
 	cursor: pointer;
 	background-color: var(--clr-neutral-700);
 	color: white;
+	transition: all 0.25s ease;
 
 	&__text {
 		white-space: nowrap;
@@ -166,6 +167,10 @@ body {
 
 		&--small {
 			font-size: 1.1em;
+		}
+
+		svg > path {
+			transition: all 0.25s ease;
 		}
 	}
 
@@ -238,6 +243,11 @@ body {
 	&__link {
 		position: relative;
 		display: inline-block; // Fixes bug on firefox
+		transition: all 0.25s ease;
+
+		svg > path {
+			transition: all 0.25s ease;
+		}
 
 		&:hover,
 		&:focus-visible {
@@ -263,6 +273,7 @@ body {
 			transform: translate(-50%, -50%);
 			border: 1px solid white;
 			border-radius: 50%;
+			transition: all 0.25s ease;
 		}
 	}
 }
