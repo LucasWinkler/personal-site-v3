@@ -12,6 +12,14 @@
 	&--active {
 		opacity: 1;
 
+		&.reveal--staggered {
+			animation-name: animateIn;
+			animation-duration: 350ms;
+			animation-delay: calc(var(--animation-order) * 100ms);
+			animation-fill-mode: both;
+			animation-timing-function: ease-in-out;
+		}
+
 		&.reveal--fade-top {
 			animation: fade-top 0.75s ease-out;
 		}
@@ -49,6 +57,18 @@
 /*********************************************
  * Animations for reveal on scroll
  *********************************************/
+
+@keyframes animateIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.6) translateY(-8px);
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes fade-top {
 	0% {
 		transform: translateY(-100px);
