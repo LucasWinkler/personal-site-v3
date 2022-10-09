@@ -4,21 +4,30 @@
 .reveal {
 	position: relative;
 	opacity: 0;
+	animation-delay: calc(var(--animation-order) * 100ms);
 
 	&:not(&--active) {
-		transition: translate 0.25s var(--animation-timing),
-			opacity 0.25s var(--animation-timing);
+		transition: translate 0.3s var(--animation-timing),
+			opacity 0.3s var(--animation-timing);
 	}
 
 	&--active {
 		opacity: 1;
 
-		&.reveal--staggered {
-			animation-delay: calc(var(--animation-order) * 100ms);
+		&.reveal--staggered-random {
+			animation-delay: calc(random(10) * 100ms);
 		}
 
 		&.reveal--fade-up-quick {
+			// animation: fade-up-quick 0.3s var(--animation-timing);
 			animation-name: fade-up-quick;
+			animation-duration: 0.3s;
+			animation-fill-mode: both;
+			animation-timing-function: var(--animation-timing);
+		}
+
+		&.reveal--fade-in {
+			animation-name: fade-in;
 			animation-duration: 0.3s;
 			animation-fill-mode: both;
 			animation-timing-function: var(--animation-timing);
@@ -36,30 +45,41 @@
 		}
 
 		&.reveal--fade-left {
-			animation: fade-left 0.75s var(--animation-timing);
+			animation-name: fade-left;
+			animation-duration: 0.75s;
+			animation-fill-mode: both;
+			animation-timing-function: var(--animation-timing);
 		}
 
 		&.reveal--fade-right {
-			animation: fade-right 0.75s var(--animation-timing);
+			animation-name: fade-right;
+			animation-duration: 0.75s;
+			animation-fill-mode: both;
+			animation-timing-function: var(--animation-timing);
 		}
 
 		@include breakpoint-down(tablet-medium) {
 			&.reveal--fade-bottom-tablet-md-down {
-				animation: fade-bottom 0.5s var(--animation-timing);
+				animation-name: fade-bottom;
+				animation-duration: 0.5s;
+				animation-fill-mode: both;
+				animation-timing-function: var(--animation-timing);
 			}
 		}
 
 		@include breakpoint-up(tablet-medium) {
 			&.reveal--fade-left-tablet-md-up {
-				animation: fade-left 0.75s var(--animation-timing);
-				// animation-name: fade-left;
-				// animation-duration: 0.75s;
-				// animation-fill-mode: both;
-				// animation-timing-function: var(--animation-timing);
+				animation-name: fade-left;
+				animation-duration: 0.75s;
+				animation-fill-mode: both;
+				animation-timing-function: var(--animation-timing);
 			}
 
 			&.reveal--fade-right-tablet-md-up {
-				animation: fade-right 0.75s ease-out;
+				animation-name: fade-right;
+				animation-duration: 0.75s;
+				animation-fill-mode: both;
+				animation-timing-function: var(--animation-timing);
 			}
 		}
 	}
@@ -72,8 +92,18 @@
 //     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
 @keyframes fade-up-quick {
 	0% {
-		opacity: 0;
 		transform: translateY(20px);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
 	}
 
 	100% {
