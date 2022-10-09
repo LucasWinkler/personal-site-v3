@@ -4,7 +4,10 @@
 .reveal {
 	position: relative;
 	opacity: 0;
-	// transition: translate 0.75s ease-out, opacity 0.75s ease-out;
+
+	&:not(&--active) {
+		transition: translate 0.25s ease-out, opacity 0.25s ease-out;
+	}
 
 	&--active {
 		opacity: 1;
