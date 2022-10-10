@@ -55,6 +55,7 @@
 			height: 100%;
 			filter: grayscale(100%) brightness(20%);
 			opacity: 20%;
+			border-radius: 5px;
 		}
 
 		@include breakpoint-up(tablet-medium) {

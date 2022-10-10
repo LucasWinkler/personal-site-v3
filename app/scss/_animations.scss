@@ -155,3 +155,26 @@
 		opacity: 1;
 	}
 }
+
+/*********************************************
+ * Animations for hero image
+ *********************************************/
+#hand {
+	animation-name: hero-hand;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	// transform-origin: center;
+	// transform-box: fill box;
+}
+
+@keyframes hero-hand {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(8px);
+	}
+}
