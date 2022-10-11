@@ -51,6 +51,7 @@ navToggle.addEventListener('click', () => {
 		: navToggle.setAttribute('aria-expanded', true);
 	navList.toggleAttribute('data-visible');
 	header.toggleAttribute('data-overlay');
+	document.body.classList.toggle('overflow-hidden');
 });
 
 navLinks.forEach(navLink => {
@@ -58,6 +59,7 @@ navLinks.forEach(navLink => {
 		navToggle.setAttribute('aria-expanded', false);
 		navList.removeAttribute('data-visible');
 		header.removeAttribute('data-overlay');
+		document.body.classList.remove('overflow-hidden');
 	});
 });
 
@@ -68,6 +70,7 @@ window.onresize = function () {
 		navToggle.setAttribute('aria-expanded', false);
 		navList.removeAttribute('data-visible');
 		header.removeAttribute('data-overlay');
+		document.body.classList.remove('overflow-hidden');
 	}
 }
 
