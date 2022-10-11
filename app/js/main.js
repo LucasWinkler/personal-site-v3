@@ -50,13 +50,14 @@ navToggle.addEventListener('click', () => {
 		? navToggle.setAttribute('aria-expanded', false)
 		: navToggle.setAttribute('aria-expanded', true);
 	navList.toggleAttribute('data-visible');
-	// header.toggleAttribute('data-overlay');
+	header.toggleAttribute('data-overlay');
 });
 
 navLinks.forEach(navLink => {
 	navLink.addEventListener('click', () => {
 		navToggle.setAttribute('aria-expanded', false);
 		navList.removeAttribute('data-visible');
+		header.removeAttribute('data-overlay');
 	});
 });
 
