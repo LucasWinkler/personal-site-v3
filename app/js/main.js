@@ -11,7 +11,7 @@ const skillsItem = document.querySelectorAll('.skills__item');
 // function randomizeSkillsAnimationDelay() {
 // 	skillsItem.forEach(skill => {
 // 		skill.style.setProperty(
-// 			'--animation-order',
+// 			'--animation-delay',
 // 			getRandomIntFromRange(animationTimeRange)
 // 		);
 // 	});
@@ -30,12 +30,15 @@ function reveal() {
 			reveals[i].classList.add('reveal--active');
 		}
 
+		// DISABLED FOR: Bad user experience when interacting
+		// with the contact form.
+		//
 		// Separate the remove to it's own if statement to prevent
 		// reveal--active from constantly being added and removed on scroll
 		// due to elementTop changing on animation
-		if (!(elementTop < windowHeight)) {
-			reveals[i].classList.remove('reveal--active');
-		}
+		// if (!(elementTop < windowHeight)) {
+		// 	reveals[i].classList.remove('reveal--active');
+		// }
 	}
 }
 

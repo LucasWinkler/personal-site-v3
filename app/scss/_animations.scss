@@ -5,7 +5,7 @@
 .reveal {
 	position: relative;
 	opacity: 0;
-	animation-delay: calc(var(--animation-order) * 100ms);
+	animation-delay: calc(var(--animation-delay) * 100ms);
 
 	&:not(&--active) {
 		transition: translate 0.3s var(--animation-timing),
@@ -29,7 +29,7 @@
 
 		&.reveal--fade-in {
 			animation-name: fade-in;
-			animation-duration: 0.3s;
+			animation-duration: 0.65s;
 			animation-fill-mode: both;
 			animation-timing-function: var(--animation-timing);
 		}
