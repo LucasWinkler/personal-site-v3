@@ -159,22 +159,45 @@
 /*********************************************
  * Animations for hero image
  *********************************************/
+
 #hand {
 	animation-name: hero-hand;
-	animation-duration: 1.5s;
+	animation-duration: 8s;
 	animation-fill-mode: both;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-direction: alternate;
+	animation-delay: 1s;
 	// transform-origin: center;
 	// transform-box: fill box;
 }
 
+// @keyframes hero-hand {
+// 	0% {
+// 		transform: translateX(0);
+// 	}
+// 	100% {
+// 		transform: translateX(8px);
+// 	}
+// }
+
 @keyframes hero-hand {
 	0% {
-		transform: translateX(0);
+		transform: translateX(0) translateY(0);
+	}
+	30% {
+		transform: translateX(3px) translateY(1px);
+	}
+	40% {
+		transform: translateX(8px) translateY(0);
+	}
+	50% {
+		transform: translateX(0) translateY(-3px);
+	}
+	60% {
+		transform: translateX(5px) translateY(0);
 	}
 	100% {
-		transform: translateX(8px);
+		transform: translateX(0) translateY(0);
 	}
 }
