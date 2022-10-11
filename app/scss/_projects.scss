@@ -35,9 +35,10 @@
 		@include breakpoint-up(tablet-medium) {
 			width: 100%;
 			background-color: var(--clr-neutral-800);
-			padding: 1.2em;
+			padding: 1.6em;
 			border-radius: 5px;
 			max-width: 42ch;
+			margin-right: auto;
 		}
 	}
 
@@ -62,7 +63,7 @@
 			position: relative;
 			width: 100%;
 			margin-right: 1.2rem;
-			max-width: 40%;
+			max-width: 47.5%;
 
 			> img {
 				object-fit: contain;
@@ -103,7 +104,7 @@
 	&__number {
 		color: var(--clr-secondary-400);
 		font-size: var(--fs-400);
-		margin: 0.25em 0.25em 0 1.5em;
+		margin: 0 0.25em 0 1.5em;
 	}
 
 	&__title {
@@ -162,6 +163,7 @@
 		&:nth-child(even) > &__content {
 			order: 1;
 			margin-right: 0;
+			margin-left: auto;
 		}
 
 		&:nth-child(odd) &__image::before {
