@@ -100,6 +100,9 @@
 
 		&[aria-expanded='true'] {
 			z-index: 11;
+			position: fixed;
+			right: 23px;
+
 			> span {
 				width: 24px;
 				height: 2px;
