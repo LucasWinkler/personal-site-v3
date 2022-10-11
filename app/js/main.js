@@ -1,6 +1,7 @@
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');
+const navLinks = document.querySelectorAll('.nav__link');
 const skillsItem = document.querySelectorAll('.skills__item');
 // const animationTimeRange = [1, 5];
 
@@ -50,6 +51,13 @@ navToggle.addEventListener('click', () => {
 		: navToggle.setAttribute('aria-expanded', true);
 	navList.toggleAttribute('data-visible');
 	// header.toggleAttribute('data-overlay');
+});
+
+navLinks.forEach(navLink => {
+	navLink.addEventListener('click', () => {
+		navToggle.setAttribute('aria-expanded', false);
+		navList.removeAttribute('data-visible');
+	});
 });
 
 // Check the position of elements on load
