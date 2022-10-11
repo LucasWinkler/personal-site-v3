@@ -142,7 +142,7 @@ body {
 	cursor: pointer;
 	background-color: var(--clr-neutral-700);
 	color: white;
-	transition: all 0.25s ease;
+	transition: color 0.25s ease, background 0.25s ease;
 
 	&__text {
 		white-space: nowrap;
@@ -170,7 +170,8 @@ body {
 		}
 
 		svg > path {
-			transition: all 0.25s ease;
+			transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
+				stroke 0.25s ease;
 		}
 	}
 
@@ -243,10 +244,11 @@ body {
 	&__link {
 		position: relative;
 		display: inline-block; // Fixes bug on firefox
-		transition: all 0.25s ease;
+		transition: color 0.25s ease;
 
 		svg > path {
-			transition: all 0.25s ease;
+			transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
+				stroke 0.25s ease;
 		}
 
 		&:hover,
@@ -273,7 +275,8 @@ body {
 			transform: translate(-50%, -50%);
 			border: 1px solid white;
 			border-radius: 50%;
-			transition: all 0.25s ease;
+			transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
+				stroke 0.25s ease, border 0.25s ease;
 		}
 	}
 }

@@ -61,6 +61,16 @@ navLinks.forEach(navLink => {
 	});
 });
 
+window.onresize = function () {
+	var w = outerWidth;
+
+	if (w > 768) {
+		navToggle.setAttribute('aria-expanded', false);
+		navList.removeAttribute('data-visible');
+		header.removeAttribute('data-overlay');
+	}
+}
+
 // Check the position of elements on load
 reveal();
 // randomizeSkillsAnimationDelay();
