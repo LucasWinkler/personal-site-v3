@@ -31,7 +31,7 @@
 
 ## About
 
-Iteration 3 of my personal website which I built to help practice with HTML, CSS and JavaScript. I also wanted to design and build something that looked a lot better than iteration 2. When this project is full built I'm going to be porting it over to React.
+Iteration 3 of my personal website which I built to help practice with HTML, CSS and JavaScript. I also wanted to design and build something that looked a lot better than iteration 2. When this project is fully built I'm going to be porting it over to React.
 
 ## Getting Started
 
