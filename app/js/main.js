@@ -72,7 +72,16 @@ window.onresize = function () {
 		header.removeAttribute('data-overlay');
 		document.body.classList.remove('overflow-hidden');
 	}
-}
+};
+
+navList.addEventListener('click', function (e) {
+	if (e.offsetX < 0) {
+		navToggle.setAttribute('aria-expanded', false);
+		navList.removeAttribute('data-visible');
+		header.removeAttribute('data-overlay');
+		document.body.classList.remove('overflow-hidden');
+	}
+});
 
 // Check the position of elements on load
 reveal();
