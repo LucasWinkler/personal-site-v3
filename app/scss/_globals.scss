@@ -131,6 +131,10 @@ body {
 	border-radius: 7px;
 }
 
+.disabled-link {
+	pointer-events: none;
+}
+
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -211,6 +215,14 @@ body {
 
 		@include breakpoint-up(mobile-medium) {
 			padding: 0.6rem 0;
+		}
+
+		&.disabled-link {
+			color: var(--clr-neutral-300);
+
+			.button__prepend > svg > path {
+				stroke: var(--clr-neutral-300);
+			}
 		}
 	}
 

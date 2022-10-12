@@ -5,10 +5,16 @@
 	@include breakpoint-up(tablet-medium) {
 		&__wrapper {
 			display: flex;
-			gap: 5em;
+			gap: 4em;
 		}
 
 		padding-block: var(--size-800);
+	}
+
+	@include breakpoint-up(desktop-small) {
+		&__wrapper {
+			gap: 6em;
+		}
 	}
 
 	&__title {
