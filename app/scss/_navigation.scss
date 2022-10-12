@@ -97,7 +97,14 @@
 	}
 
 	&__mobile-toggle {
-		height: 16px;
+		height: 22px;
+		// background-color: red;
+		// Adding a larger clickable radius around the buttons (still need to rework nav menu)
+		padding-top: 0.8em;
+		padding-bottom: 1.5em;
+		padding-left: 0.2em;
+		padding-right: 0.2em;
+		border-radius: 0;
 
 		&:hover {
 			> span {
@@ -129,7 +136,7 @@
 			}
 
 			> span:nth-child(1) {
-				transform: rotate(45deg) translate(3px, 8px);
+				transform: rotate(45deg) translate(3px, 3px); // 3 8
 			}
 
 			> span:nth-child(2) {
@@ -137,7 +144,7 @@
 			}
 
 			> span:nth-child(3) {
-				transform: rotate(-45deg) translate(-1px, -4px);
+				transform: rotate(-45deg) translate(4px, -4px); // -1 -4
 			}
 		}
 
