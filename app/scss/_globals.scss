@@ -148,7 +148,7 @@ body {
   &::after {
     content: '';
     position: absolute;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     background-repeat: no-repeat;
     background-size: cover;
     // border: 1px solid red;
