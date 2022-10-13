@@ -22,8 +22,17 @@
 		height: 100%;
 		width: 100%;
 		object-fit: contain;
+		filter: grayscale(100%);
+		transition: filter 0.3s var(--animation-timing),
+			opacity 0.3s var(--animation-timing);
+		opacity: 25%;
 
 		// TODO: On hover show original colour instead of greyscale. Need to export from figma with original colours.
+
+		&:hover {
+			filter: grayscale(0);
+			opacity: 100%;
+		}
 	}
 
 	&__list {
