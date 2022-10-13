@@ -172,6 +172,13 @@ body {
 			height: 100%;
 			width: 100%;
 		}
+
+		@include breakpoint-up(desktop-medium) {
+			max-width: 520px;
+			max-height: 439px;
+			height: 100%;
+			width: 100%;
+		}
 	}
 
 	&--hero::after {
@@ -184,7 +191,7 @@ body {
 		opacity: 0.4;
 		background-image: url('/images/hero-right-circle-blue.png');
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 
 		@include breakpoint-up(tablet-small) {
 			opacity: 0.5;
