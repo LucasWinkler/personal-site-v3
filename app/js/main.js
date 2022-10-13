@@ -1,4 +1,3 @@
-// const FastAverageColor = require("fast-average-color").FastAverageColor;
 import { FastAverageColor } from 'fast-average-color';
 const fac = new FastAverageColor();
 
@@ -8,23 +7,9 @@ const navList = document.querySelector('.nav__list');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsItem = document.querySelectorAll('.skills__item');
 const skillsImages = document.querySelectorAll('.skills__image');
-	
 
-// const animationTimeRange = [1, 5];
-
-// function getRandomIntFromRange(range) {
-// 	return range[Math.floor(Math.random() * range.length)];
-// }
-
-// function randomizeSkillsAnimationDelay() {
-// 	skillsItem.forEach(skill => {
-// 		skill.style.setProperty(
-// 			'--animation-delay',
-// 			getRandomIntFromRange(animationTimeRange)
-// 		);
-// 	});
-// }
-
+// Sets the --skill-colour css custom property using the
+// average colour of the skill logo 
 skillsImages.forEach(skill => {
 	fac.getColorAsync(skill)
 		.then(color => {
@@ -39,26 +24,18 @@ function reveal() {
 	for (var i = 0; i < reveals.length; i++) {
 		var windowHeight = window.innerHeight;
 		var elementTop = reveals[i].getBoundingClientRect().top;
-		var elementVisible = 60;
+		var elementVisible = 60; // Offset for when revveal--active is applied
 
 		if (elementTop < windowHeight - elementVisible) {
 			reveals[i].classList.add('reveal--active');
 		}
-
-		// DISABLED FOR: Bad user experience when interacting
-		// with the contact form.
-		//
-		// Separate the remove to it's own if statement to prevent
-		// reveal--active from constantly being added and removed on scroll
-		// due to elementTop changing on animation
-		// if (!(elementTop < windowHeight)) {
-		// 	reveals[i].classList.remove('reveal--active');
-		// }
 	}
 }
 
+// Runs the reveal animation function on scroll
 window.addEventListener('scroll', reveal);
 
+// Toggles the nav menu
 navToggle.addEventListener('click', () => {
 	navList.hasAttribute('data-visible')
 		? navToggle.setAttribute('aria-expanded', false)
@@ -68,6 +45,7 @@ navToggle.addEventListener('click', () => {
 	document.body.classList.toggle('overflow-hidden');
 });
 
+// Closes nav menu when a nav link is clicked
 navLinks.forEach(navLink => {
 	navLink.addEventListener('click', () => {
 		navToggle.setAttribute('aria-expanded', false);
@@ -77,17 +55,19 @@ navLinks.forEach(navLink => {
 	});
 });
 
+// Closes nav menu when screen size gets bigger than a 768px
 window.onresize = function () {
-	var w = outerWidth;
+	let browserWidth = window.outerWidth;
 
-	if (w > 768) {
-		navToggle.setAttribute('aria-expanded', false);
-		navList.removeAttribute('data-visible');
-		header.removeAttribute('data-overlay');
-		document.body.classList.remove('overflow-hidden');
-	}
+	if (browserWidth > 768) {
+    navToggle.setAttribute('aria-expanded', false);
+    navList.removeAttribute('data-visible');
+    header.removeAttribute('data-overlay');
+    document.body.classList.remove('overflow-hidden');
+  }
 };
 
+// Checks if the user clicked outside of the mobile nav menu and if so closes the menu
 navList.addEventListener('click', function (e) {
 	if (e.offsetX < 0) {
 		navToggle.setAttribute('aria-expanded', false);
@@ -97,13 +77,8 @@ navList.addEventListener('click', function (e) {
 	}
 });
 
-
-// This might solve the issue where the hero paragraph reveals instantly.
 // Waits until everythings loaded before doing the initial reveal.
+// This might solve the issue where the hero paragraph reveals instantly.
 window.addEventListener('load', () => {
-  // Check the position of elements on load
   reveal();
 });
-
-
-// randomizeSkillsAnimationDelay();
