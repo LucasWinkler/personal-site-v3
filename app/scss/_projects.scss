@@ -27,6 +27,7 @@
 	padding: 1.2em;
 	border-radius: 5px;
 	position: relative;
+	z-index: 3;
 
 	&__content {
 		position: relative;
@@ -64,11 +65,13 @@
 			width: 100%;
 			margin-right: 1.2rem;
 			max-width: 47.5%;
+			aspect-ratio: 4/3;
 
 			> img {
-				object-fit: contain;
-				width: 100%;
-				height: auto;
+				// object-fit: contain;
+				// width: 100%;
+				// height: auto;
+				object-fit: cover;
 				filter: grayscale(0%) brightness(100%);
 				opacity: 100%;
 				border-radius: 3px;
@@ -154,7 +157,7 @@
 		display: flex;
 		gap: 5em;
 		background: unset;
-		position: static;
+		// position: static;
 		align-items: flex-start;
 		padding-block: var(--size-600);
 		padding-left: 0;

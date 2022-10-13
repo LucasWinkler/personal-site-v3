@@ -139,6 +139,71 @@ body {
 	overflow: hidden;
 }
 
+.background-circle {
+	&--relative {
+		position: relative;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		aspect-ratio: 1;
+		background-repeat: no-repeat;
+		background-size: cover;
+		// border: 1px solid red;
+		z-index: 0;
+	}
+
+	&--hero::before {
+		height: 239px;
+		width: 320px;
+		top: 0;
+		left: 0;
+		background-image: url('/images/hero-left-circle.svg');
+	}
+
+	&--hero::after {
+		width: 212px;
+		height: 734px;
+		right: 0;
+		top: 0;
+		background-image: url('/images/hero-right-circle.svg');
+	}
+
+	&--projects::before {
+		width: 228px;
+		height: 952px;
+		left: 0;
+		top: 0;
+		background-image: url('/images/projects-left-circle-blue.svg');
+	}
+
+	&--projects::after {
+		width: 265px;
+		height: 625px;
+		right: 0;
+		top: 0;
+		background-image: url('/images/projects-right-circle-purple.svg');
+	}
+
+	&--projects-2::before {
+		width: 291px;
+		height: 963px;
+		left: 0;
+		bottom: 0;
+		background-image: url('/images/projects-left-circle-purple.svg');
+	}
+
+	&--projects-2::after {
+		width: 265px;
+		height: 625px;
+		right: 0;
+		bottom: 0;
+		background-image: url('/images/projects-right-circle-blue.svg');
+	}
+}
+
 .button {
 	display: flex;
 	align-items: center;
