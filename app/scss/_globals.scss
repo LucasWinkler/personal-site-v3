@@ -212,7 +212,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: contain;
 
-		@include breakpoint-up(tablet-small) {
+		@include breakpoint-up(tablet-medium) {
 			opacity: 0.5;
 			height: 100%;
 			width: 100%;
@@ -231,7 +231,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: contain;
 
-		@include breakpoint-up(tablet-small) {
+		@include breakpoint-up(tablet-medium) {
 			opacity: 0.8;
 			height: 100%;
 			width: 100%;
@@ -250,7 +250,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 
-		@include breakpoint-up(tablet-small) {
+		@include breakpoint-up(tablet-medium) {
 			opacity: 0.8;
 			height: 100%;
 			width: 100%;
@@ -269,7 +269,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 
-		@include breakpoint-up(tablet-small) {
+		@include breakpoint-up(tablet-medium) {
 			opacity: 0.5;
 			height: 100%;
 			width: 100%;
