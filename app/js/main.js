@@ -97,6 +97,13 @@ navList.addEventListener('click', function (e) {
 	}
 });
 
-// Check the position of elements on load
-reveal();
+
+// This might solve the issue where the hero paragraph reveals instantly.
+// Waits until everythings loaded before doing the initial reveal.
+window.addEventListener('load', () => {
+  // Check the position of elements on load
+  reveal();
+});
+
+
 // randomizeSkillsAnimationDelay();
