@@ -1,8 +1,15 @@
+// const FastAverageColor = require("fast-average-color").FastAverageColor;
+import { FastAverageColor } from 'fast-average-color';
+const fac = new FastAverageColor();
+
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsItem = document.querySelectorAll('.skills__item');
+const skillsImages = document.querySelectorAll('.skills__image');
+	
+
 // const animationTimeRange = [1, 5];
 
 // function getRandomIntFromRange(range) {
@@ -17,6 +24,13 @@ const skillsItem = document.querySelectorAll('.skills__item');
 // 		);
 // 	});
 // }
+
+skillsImages.forEach(skill => {
+	fac.getColorAsync(skill)
+		.then(color => {
+			skill.style.setProperty('--skill-colour', color.hex + 'aa')
+		})
+});
 
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
