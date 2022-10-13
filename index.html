@@ -907,14 +907,13 @@
 								</ul>
 							</div>
 							<div class="project__links">
-								<span
-									title="No live demo for this project"
-									aria-label="No live demo for this project"
-								>
+								<div class="tooltipArea isActive">
 									<a
 										class="button button--secondary disabled-link"
 										href="javascript:void(0)"
 										title="Open the live website"
+										aria-disabled="true"
+										aria-describedby="disabledReason"
 									>
 										<span class="button__prepend button__prepend--no-fill">
 											<svg
@@ -937,7 +936,12 @@
 											>See project</span
 										>
 									</a>
-								</span>
+									<div role="tooltip" class="tooltipBox" id="disabledReason">
+										<span class="tooltipItself">
+											No live demo is available for this project.
+										</span>
+									</div>
+								</div>
 								<a
 									class="button button--secondary"
 									href="#to_github"
