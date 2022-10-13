@@ -3,6 +3,11 @@
 	padding-top: var(--size-300);
 	padding-bottom: var(--size-700);
 
+	// Make all children appear above the background circles
+	* {
+		z-index: 5;
+	}
+
 	@include breakpoint-up(tablet-medium) {
 		padding-block: var(--size-800);
 	}
@@ -17,6 +22,7 @@
 		@include breakpoint-up(tablet-small) {
 			display: block;
 			margin-left: auto;
+			z-index: 5;
 		}
 	}
 
