@@ -1,165 +1,165 @@
 .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-block: 1.375rem;
-	z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.375rem;
+  z-index: 10;
 
-	@include breakpoint-up(tablet-small) {
-		padding-block: var(--size-600);
-	}
+  @include breakpoint-up(tablet-small) {
+    padding-block: var(--size-600);
+  }
 
-	@include breakpoint-up(tablet-medium) {
-		padding-block: var(--size-700);
-	}
+  @include breakpoint-up(tablet-medium) {
+    padding-block: var(--size-700);
+  }
 
-	&__logo {
-		font-size: var(--fs-500);
-		font-weight: var(--fw-bold);
-		color: var(--clr-neutral-100);
-	}
+  &__logo {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+  }
 
-	&__list {
-		display: none;
-		gap: 2rem;
-		font-size: var(--fs-nav);
+  &__list {
+    display: none;
+    gap: 2rem;
+    font-size: var(--fs-nav);
 
-		&[data-visible] {
-			display: flex;
-			position: fixed;
-			right: 0;
-			top: 0;
-			background-color: var(--clr-neutral-700);
-			height: 100%;
-			width: 70%;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			gap: 7rem;
-			touch-action: none;
+    &[data-visible] {
+      display: flex;
+      position: fixed;
+      right: 0;
+      top: 0;
+      background-color: var(--clr-neutral-700);
+      height: 100%;
+      width: 70%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 7rem;
+      touch-action: none;
 
-			// Test anim for sliding nav menu in
-			// Only slides in not out. Might need to rework nav manu
-			animation-name: mobile-menu-slide-left;
-			animation-duration: 0.5s;
-			animation-timing-function: var(--animation-timing);
-			animation-direction: forwards;
-			animation-fill-mode: both;
+      // Test anim for sliding nav menu in
+      // Only slides in not out. Might need to rework nav manu
+      animation-name: mobile-menu-slide-left;
+      animation-duration: 0.5s;
+      animation-timing-function: var(--animation-timing);
+      animation-direction: forwards;
+      animation-fill-mode: both;
 
-			.nav__link {
-				font-size: var(--fs-500);
-				font-weight: var(--fw-semi-bold);
-				color: var(--clr-neutral-100);
-				padding: 2em 4em;
+      .nav__link {
+        font-size: var(--fs-500);
+        font-weight: var(--fw-semi-bold);
+        color: var(--clr-neutral-100);
+        padding: 2em 4em;
 
-				&:hover {
-					color: var(--clr-neutral-200);
-				}
-			}
+        &:hover {
+          color: var(--clr-neutral-200);
+        }
+      }
 
-			@include breakpoint-up(mobile-large) {
-				width: 50%;
-			}
+      @include breakpoint-up(mobile-large) {
+        width: 50%;
+      }
 
-			&::before {
-				content: '';
-				display: block;
-				position: absolute;
-				z-index: 9;
-				background: linear-gradient(
-					90deg,
-					rgba(0, 0, 0, 0) 0%,
-					rgba(0, 0, 0, 0.6) 100%
-				);
-				width: 100%;
-				height: 100%;
-				transform: translateX(-100%);
-				touch-action: none;
-			}
-		}
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 9;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        touch-action: none;
+      }
+    }
 
-		@include breakpoint-up(tablet-medium) {
-			display: flex;
-		}
-	}
+    @include breakpoint-up(tablet-medium) {
+      display: flex;
+    }
+  }
 
-	&__item {
-		list-style: none;
-	}
+  &__item {
+    list-style: none;
+  }
 
-	&__link {
-		color: var(--clr-neutral-100);
-		transition: color 0.25s ease;
+  &__link {
+    color: var(--clr-neutral-100);
+    transition: color 0.25s ease;
 
-		&:hover {
-			color: var(--clr-neutral-200);
-		}
-	}
+    &:hover {
+      color: var(--clr-neutral-200);
+    }
+  }
 
-	&__mobile-toggle {
-		height: 22px;
-		// background-color: red;
-		// Adding a larger clickable radius around the buttons (still need to rework nav menu)
-		padding-top: 0.8em;
-		padding-bottom: 1.5em;
-		padding-left: 0.2em;
-		padding-right: 0.2em;
-		border-radius: 0;
+  &__mobile-toggle {
+    height: 22px;
+    // background-color: red;
+    // Adding a larger clickable radius around the buttons (still need to rework nav menu)
+    padding-top: 0.8em;
+    padding-bottom: 1.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0;
 
-		&:hover {
-			> span {
-				background-color: (var(--clr-neutral-200));
-			}
-		}
-		> span {
-			display: block;
-			width: 22px;
-			height: 3px;
-			background-color: (var(--clr-neutral-100));
-			border-radius: 3px;
-			transition: background 0.2s ease;
+    &:hover {
+      > span {
+        background-color: (var(--clr-neutral-200));
+      }
+    }
+    > span {
+      display: block;
+      width: 22px;
+      height: 3px;
+      background-color: (var(--clr-neutral-100));
+      border-radius: 3px;
+      transition: background 0.2s ease;
 
-			&:not(:last-child) {
-				margin-bottom: 3px;
-			}
-		}
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
 
-		&[aria-expanded='true'] {
-			z-index: 11;
-			position: fixed;
-			right: 23px;
+    &[aria-expanded='true'] {
+      z-index: 11;
+      position: fixed;
+      right: 23px;
 
-			> span {
-				width: 24px;
-				height: 2px;
-				background-color: var(--clr-neutral-100);
-			}
+      > span {
+        width: 24px;
+        height: 2px;
+        background-color: var(--clr-neutral-100);
+      }
 
-			> span:nth-child(1) {
-				transform: rotate(45deg) translate(3px, 3px); // 3 8
-			}
+      > span:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 3px); // 3 8
+      }
 
-			> span:nth-child(2) {
-				opacity: 0;
-			}
+      > span:nth-child(2) {
+        opacity: 0;
+      }
 
-			> span:nth-child(3) {
-				transform: rotate(-45deg) translate(4px, -4px); // -1 -4
-			}
-		}
+      > span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px); // -1 -4
+      }
+    }
 
-		@include breakpoint-up(tablet-medium) {
-			display: none;
-		}
-	}
+    @include breakpoint-up(tablet-medium) {
+      display: none;
+    }
+  }
 }
 
 @keyframes mobile-menu-slide-left {
-	0% {
-		transform: translateX(100%);
-	}
+  0% {
+    transform: translateX(100%);
+  }
 
-	100% {
-		transform: translateX(0);
-	}
+  100% {
+    transform: translateX(0);
+  }
 }

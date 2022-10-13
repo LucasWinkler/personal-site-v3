@@ -3,87 +3,87 @@
  *********************************************/
 
 .reveal {
-	position: relative;
-	opacity: 0;
-	animation-delay: calc(var(--animation-delay) * 100ms);
+  position: relative;
+  opacity: 0;
+  animation-delay: calc(var(--animation-delay) * 100ms);
 
-	&:not(&--active) {
-		transition: translate 0.3s var(--animation-timing),
-			opacity 0.3s var(--animation-timing);
-	}
+  &:not(&--active) {
+    transition: translate 0.3s var(--animation-timing),
+      opacity 0.3s var(--animation-timing);
+  }
 
-	&--active {
-		opacity: 1;
+  &--active {
+    opacity: 1;
 
-		&.reveal--staggered-random {
-			animation-delay: calc(random(10) * 100ms);
-		}
+    &.reveal--staggered-random {
+      animation-delay: calc(random(10) * 100ms);
+    }
 
-		&.reveal--fade-up-quick {
-			// animation: fade-up-quick 0.3s var(--animation-timing);
-			animation-name: fade-up-quick;
-			animation-duration: 0.3s;
-			animation-fill-mode: both;
-			animation-timing-function: var(--animation-timing);
-		}
+    &.reveal--fade-up-quick {
+      // animation: fade-up-quick 0.3s var(--animation-timing);
+      animation-name: fade-up-quick;
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+      animation-timing-function: var(--animation-timing);
+    }
 
-		&.reveal--fade-in {
-			animation-name: fade-in;
-			animation-duration: 0.65s;
-			animation-fill-mode: both;
-			animation-timing-function: var(--animation-timing);
-		}
+    &.reveal--fade-in {
+      animation-name: fade-in;
+      animation-duration: 0.65s;
+      animation-fill-mode: both;
+      animation-timing-function: var(--animation-timing);
+    }
 
-		&.reveal--fade-top {
-			animation: fade-top 0.75s var(--animation-timing);
-		}
+    &.reveal--fade-top {
+      animation: fade-top 0.75s var(--animation-timing);
+    }
 
-		&.reveal--fade-bottom {
-			animation-name: fade-bottom;
-			animation-duration: 0.75s;
-			animation-fill-mode: both;
-			animation-timing-function: var(--animation-timing);
-		}
+    &.reveal--fade-bottom {
+      animation-name: fade-bottom;
+      animation-duration: 0.75s;
+      animation-fill-mode: both;
+      animation-timing-function: var(--animation-timing);
+    }
 
-		&.reveal--fade-left {
-			animation-name: fade-left;
-			animation-duration: 0.75s;
-			animation-fill-mode: both;
-			animation-timing-function: var(--animation-timing);
-		}
+    &.reveal--fade-left {
+      animation-name: fade-left;
+      animation-duration: 0.75s;
+      animation-fill-mode: both;
+      animation-timing-function: var(--animation-timing);
+    }
 
-		&.reveal--fade-right {
-			animation-name: fade-right;
-			animation-duration: 0.75s;
-			animation-fill-mode: both;
-			animation-timing-function: var(--animation-timing);
-		}
+    &.reveal--fade-right {
+      animation-name: fade-right;
+      animation-duration: 0.75s;
+      animation-fill-mode: both;
+      animation-timing-function: var(--animation-timing);
+    }
 
-		@include breakpoint-down(tablet-medium) {
-			&.reveal--fade-bottom-tablet-md-down {
-				animation-name: fade-bottom;
-				animation-duration: 0.5s;
-				animation-fill-mode: both;
-				animation-timing-function: var(--animation-timing);
-			}
-		}
+    @include breakpoint-down(tablet-medium) {
+      &.reveal--fade-bottom-tablet-md-down {
+        animation-name: fade-bottom;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-timing-function: var(--animation-timing);
+      }
+    }
 
-		@include breakpoint-up(tablet-medium) {
-			&.reveal--fade-left-tablet-md-up {
-				animation-name: fade-left;
-				animation-duration: 0.75s;
-				animation-fill-mode: both;
-				animation-timing-function: var(--animation-timing);
-			}
+    @include breakpoint-up(tablet-medium) {
+      &.reveal--fade-left-tablet-md-up {
+        animation-name: fade-left;
+        animation-duration: 0.75s;
+        animation-fill-mode: both;
+        animation-timing-function: var(--animation-timing);
+      }
 
-			&.reveal--fade-right-tablet-md-up {
-				animation-name: fade-right;
-				animation-duration: 0.75s;
-				animation-fill-mode: both;
-				animation-timing-function: var(--animation-timing);
-			}
-		}
-	}
+      &.reveal--fade-right-tablet-md-up {
+        animation-name: fade-right;
+        animation-duration: 0.75s;
+        animation-fill-mode: both;
+        animation-timing-function: var(--animation-timing);
+      }
+    }
+  }
 }
 
 /*********************************************
@@ -92,68 +92,68 @@
 //  transform: translateY(20px);
 //     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
 @keyframes fade-up-quick {
-	0% {
-		transform: translateY(20px);
-		opacity: 0;
-	}
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-top {
-	0% {
-		transform: translateY(-100px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-bottom {
-	0% {
-		transform: translateY(50px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-left {
-	0% {
-		transform: translateX(-100px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-right {
-	0% {
-		transform: translateX(100px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /*********************************************
@@ -161,15 +161,15 @@
  *********************************************/
 
 #hand {
-	animation-name: hero-hand;
-	animation-duration: 8s;
-	animation-fill-mode: both;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	animation-direction: alternate;
-	animation-delay: 1s;
-	// transform-origin: center;
-	// transform-box: fill box;
+  animation-name: hero-hand;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 1s;
+  // transform-origin: center;
+  // transform-box: fill box;
 }
 
 // @keyframes hero-hand {
@@ -182,22 +182,22 @@
 // }
 
 @keyframes hero-hand {
-	0% {
-		transform: translateX(0) translateY(0);
-	}
-	30% {
-		transform: translateX(3px) translateY(1px);
-	}
-	40% {
-		transform: translateX(8px) translateY(0);
-	}
-	50% {
-		transform: translateX(0) translateY(-3px);
-	}
-	60% {
-		transform: translateX(5px) translateY(0);
-	}
-	100% {
-		transform: translateX(0) translateY(0);
-	}
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  30% {
+    transform: translateX(3px) translateY(1px);
+  }
+  40% {
+    transform: translateX(8px) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(-3px);
+  }
+  60% {
+    transform: translateX(5px) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }

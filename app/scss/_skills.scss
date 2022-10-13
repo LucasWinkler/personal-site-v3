@@ -1,60 +1,60 @@
 .skills {
-	padding-block: var(--size-600);
-	background-color: var(--clr-neutral-800);
+  padding-block: var(--size-600);
+  background-color: var(--clr-neutral-800);
 
-	@include breakpoint-up(mobile-medium) {
-		padding-block: var(--size-600);
-	}
+  @include breakpoint-up(mobile-medium) {
+    padding-block: var(--size-600);
+  }
 
-	@include breakpoint-up(mobile-large) {
-		padding-block: var(--size-700);
-	}
+  @include breakpoint-up(mobile-large) {
+    padding-block: var(--size-700);
+  }
 
-	@include breakpoint-up(tablet-small) {
-		padding-block: var(--size-800);
-	}
+  @include breakpoint-up(tablet-small) {
+    padding-block: var(--size-800);
+  }
 
-	&__item {
-		text-align: center;
-	}
+  &__item {
+    text-align: center;
+  }
 
-	&__image {
-		height: 100%;
-		width: 100%;
-		object-fit: contain;
-		filter: grayscale(100%);
-		transition: filter 0.3s var(--animation-timing),
-			opacity 0.3s var(--animation-timing);
-		opacity: 25%;
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s var(--animation-timing),
+      opacity 0.3s var(--animation-timing);
+    opacity: 25%;
 
-		// TODO: On hover show original colour instead of greyscale. Need to export from figma with original colours.
+    // TODO: On hover show original colour instead of greyscale. Need to export from figma with original colours.
 
-		&:hover {
-			filter: grayscale(0);
-			opacity: 100%;
+    &:hover {
+      filter: grayscale(0);
+      opacity: 100%;
 
-			filter: drop-shadow(0 0 2em var(--skill-colour));
-		}
-	}
+      filter: drop-shadow(0 0 2em var(--skill-colour));
+    }
+  }
 
-	&__list {
-		display: grid;
-		gap: 1em;
-		grid-template-columns: repeat(4, 1fr);
-		justify-items: center;
+  &__list {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
 
-		@include breakpoint-up(mobile-large) {
-			gap: 1.5em;
-		}
+    @include breakpoint-up(mobile-large) {
+      gap: 1.5em;
+    }
 
-		@include breakpoint-up(tablet-small) {
-			gap: 2.5em;
-		}
+    @include breakpoint-up(tablet-small) {
+      gap: 2.5em;
+    }
 
-		@include breakpoint-up(desktop-small) {
-			grid-auto-flow: column;
-			grid-auto-columns: 1fr;
-			gap: 1em;
-		}
-	}
+    @include breakpoint-up(desktop-small) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      gap: 1em;
+    }
+  }
 }

@@ -1,50 +1,50 @@
 .footer {
-	background-color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-900);
 
-	&__text {
-		color: var(--clr-neutral-200);
-	}
+  &__text {
+    color: var(--clr-neutral-200);
+  }
 
-	&__top {
-		display: flex;
-		align-items: center;
-		color: var(--clr-neutral-200);
-		transition: all 0.25s ease;
+  &__top {
+    display: flex;
+    align-items: center;
+    color: var(--clr-neutral-200);
+    transition: all 0.25s ease;
 
-		svg {
-			margin-right: 0.25rem;
+    svg {
+      margin-right: 0.25rem;
 
-			path {
-				fill: var(--clr-neutral-200);
-				transition: fill 0.25s ease;
-			}
-		}
+      path {
+        fill: var(--clr-neutral-200);
+        transition: fill 0.25s ease;
+      }
+    }
 
-		&:hover {
-			color: var(--clr-neutral-100);
+    &:hover {
+      color: var(--clr-neutral-100);
 
-			svg > path {
-				fill: var(--clr-neutral-100);
-			}
-		}
-	}
+      svg > path {
+        fill: var(--clr-neutral-100);
+      }
+    }
+  }
 
-	&__wrapper {
-		display: flex;
-		justify-items: center;
-		align-items: center;
-		padding-block: var(--size-500);
-		font-size: var(--fs-footer);
-		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 0.5rem;
+  &__wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-block: var(--size-500);
+    font-size: var(--fs-footer);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
 
-		@include breakpoint-up(tablet-medium) {
-			padding-block: var(--size-800);
-		}
+    @include breakpoint-up(tablet-medium) {
+      padding-block: var(--size-800);
+    }
 
-		@include breakpoint-up(desktop-small) {
-			padding-block: var(--size-900);
-		}
-	}
+    @include breakpoint-up(desktop-small) {
+      padding-block: var(--size-900);
+    }
+  }
 }
