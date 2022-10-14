@@ -2,7 +2,7 @@
   padding-block: var(--size-600);
   background-color: var(--clr-neutral-800);
 
-  @include breakpoint-up(mobile-medium) {
+  @include breakpoint-up(mobile-small) {
     padding-block: var(--size-600);
   }
 

@@ -348,7 +348,7 @@ body {
     }
   }
 
-  @include breakpoint-up(mobile-medium) {
+  @include breakpoint-up(mobile-small) {
     padding: 0.6rem 1.5rem;
   }
 
@@ -357,7 +357,7 @@ body {
     min-width: 1em;
     font-size: 1.3em;
 
-    @include breakpoint-up(mobile-medium) {
+    @include breakpoint-up(mobile-small) {
       margin-right: 0.35em;
     }
 
@@ -401,7 +401,7 @@ body {
       }
     }
 
-    @include breakpoint-up(mobile-medium) {
+    @include breakpoint-up(mobile-small) {
       padding: 0.6rem 0;
     }
 

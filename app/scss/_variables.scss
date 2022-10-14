@@ -38,6 +38,8 @@
   --fs-600: 2rem; // 32px
   --fs-700: 2.5rem; // 40px
   --fs-800: 3rem; // 48px
+  --fs-850: 3.5rem; // 56px
+  --fs-900: 3.75rem; // 60px
 
   --fs-body: var(--fs-300);
   --fs-hero-heading: var(--fs-550);
@@ -65,14 +67,14 @@
 }
 
 // Change typography for small phones
-@media (min-width: 22.5em) {
+@include breakpoint-up(mobile-small) {
   :root {
     --fs-hero-heading: var(--fs-600);
   }
 }
 
 // Change typography for medium phones
-@media (min-width: 26.5625em) {
+@include breakpoint-up(mobile-medium) {
   :root {
     --fs-hero-heading: var(--fs-700);
     --fs-footer: var(--fs-300);
@@ -80,14 +82,14 @@
 }
 
 // Change typography for large phones
-@media (min-width: 30em) {
+@include breakpoint-up(mobile-large) {
   :root {
     --fs-hero-heading: var(--fs-700);
   }
 }
 
-// Change typography for tablets
-@media (min-width: 48em) {
+// Change typography for medium tablets
+@include breakpoint-up(tablet-medium) {
   :root {
     --fs-body: var(--fs-400);
     --fs-button: var(--fs-400);
@@ -95,8 +97,21 @@
 }
 
 // Change typography for desktop
-@media (min-width: 64em) {
+@include breakpoint-up(desktop-small) {
   :root {
     --fs-hero-heading: var(--fs-800);
+  }
+}
+
+// Inbetween small and medium desktops
+@media (min-width: 75em) {
+  :root {
+    --fs-hero-heading: var(--fs-850);
+  }
+}
+
+@include breakpoint-up(desktop-medium) {
+  :root {
+    --fs-hero-heading: var(--fs-900);
   }
 }
