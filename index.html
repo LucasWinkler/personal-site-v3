@@ -116,7 +116,6 @@
                 style="--animation-delay: 4"
                 aria-label="My Résumé"
                 href="/lucas_winkler-resume.pdf"
-                rel="noopener noreferrer"
                 target="_blank">
                 <span class="button__prepend">
                   <svg
@@ -637,48 +636,62 @@
             class="project reveal reveal--fade-left-tablet-md-up reveal--fade-bottom-tablet-md-down">
             <div class="project__content">
               <header class="project__header">
-                <h3 class="project__title">The Coolest Project Ever</h3>
+                <h3 class="project__title">Personal Website V3</h3>
                 <span class="project__number" aria-hidden="true">01.</span>
               </header>
               <div class="project__info">
                 <p class="project__description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                  amet fermentum libero at sit vitae vel. Amet, augue fermentum
-                  facilisis adipiscing.
+                  Iteration 3 of my personal website which features a clean
+                  design that I created using Figma. I wanted to be able to make
+                  something that stands out more than my last site while still
+                  being simple and easy to follow.
                 </p>
                 <ul class="project__stack" aria-label="Project stack">
-                  <li class="project__tech">React</li>
-                  <li class="project__tech">Node</li>
-                  <li class="project__tech">SCSS</li>
+                  <li class="project__tech">Vite</li>
+                  <li class="project__tech">HTML5</li>
+                  <li class="project__tech">SASS</li>
+                  <li class="project__tech">JS</li>
+                  <li class="project__tech">Fast-Average-Color</li>
                 </ul>
               </div>
               <div class="project__links">
+                <div class="tooltipArea isActive">
+                  <a
+                    class="button button--secondary disabled-link"
+                    title="Open the live website"
+                    role="link"
+                    aria-disabled="true"
+                    aria-describedby="project1DisabledReason">
+                    <span class="button__prepend button__prepend--no-fill">
+                      <svg
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8.3125 2.4375H1.4375V15.5625H14.5625V8.6875M14.5625 2.4375L7.6875 9.3125M11.4375 1.1875H15.8125V5.5625"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="button__text button__text--fw-regular">
+                      See project
+                    </span>
+                  </a>
+                  <div role="tooltip" class="tooltipBox" id="project_01">
+                    <span class="tooltipItself">
+                      Psst... You're looking at it.
+                    </span>
+                  </div>
+                </div>
                 <a
                   class="button button--secondary"
-                  href="#to_live_project"
-                  title="Open the live website">
-                  <span class="button__prepend button__prepend--no-fill">
-                    <svg
-                      width="17"
-                      height="17"
-                      viewBox="0 0 17 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M8.3125 2.4375H1.4375V15.5625H14.5625V8.6875M14.5625 2.4375L7.6875 9.3125M11.4375 1.1875H15.8125V5.5625"
-                        stroke="white"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                  <span class="button__text button__text--fw-regular">
-                    See project
-                  </span>
-                </a>
-                <a
-                  class="button button--secondary"
-                  href="#to_github"
+                  href="https://github.com/LucasWinkler/personal-site-v3"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   title="Open the github repository">
                   <span class="button__prepend">
                     <svg
@@ -702,8 +715,8 @@
             </div>
             <div class="project__image">
               <img
-                src="/images/placeholder-project-image.png"
-                alt="Image that is so cool"
+                src="/desktop-design-screenshot.png"
+                alt="Personal Website"
                 loading="lazy" />
             </div>
           </article>
@@ -730,6 +743,8 @@
                 <a
                   class="button button--secondary"
                   href="#to_live_project"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   title="Open the live website">
                   <span class="button__prepend button__prepend--no-fill">
                     <svg
@@ -753,6 +768,8 @@
                 <a
                   class="button button--secondary"
                   href="#to_github"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   title="Open the github repository">
                   <span class="button__prepend">
                     <svg
@@ -836,6 +853,8 @@
                 <a
                   class="button button--secondary"
                   href="#to_github"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   title="Open the github repository">
                   <span class="button__prepend">
                     <svg
@@ -999,10 +1018,17 @@
               <div class="horizontal-line hidden-tablet-md-up"></div>
               <ul class="contact__methods" aria-label="Contact methods">
                 <li class="contact__method reveal reveal--fade-up-quick">
+                  <p class="padding-block-200">
+                    Don't want to use this form?
+                    <br />
+                    Here's my contact info!
+                  </p>
                   <a
                     class="contact__link"
                     aria-label="Phone"
-                    href="tel:+15192222831">
+                    href="tel:+15192222831"
+                    rel="noopener noreferrer"
+                    target="_blank">
                     <svg
                       width="1em"
                       height="1em"
@@ -1024,7 +1050,9 @@
                   <a
                     class="contact__link"
                     aria-label="Email"
-                    href="mailto:lucaswinkler@gmail.com">
+                    href="mailto:lucaswinkler@gmail.com"
+                    rel="noopener noreferrer"
+                    target="_blank">
                     <svg
                       width="1em"
                       height="1em"
