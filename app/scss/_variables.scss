@@ -36,6 +36,7 @@
   --fs-500: 1.5rem; // 24px
   --fs-550: 1.8rem; // 28px
   --fs-600: 2rem; // 32px
+  // --fs-650: 2.25rem; // 36px
   --fs-700: 2.5rem; // 40px
   --fs-800: 3rem; // 48px
   --fs-850: 3.5rem; // 56px
@@ -88,15 +89,23 @@
   }
 }
 
+// Change typography for small tablets
+@include breakpoint-up(tablet-small) {
+  :root {
+    --fs-hero-heading: var(--fs-600);
+  }
+}
+
 // Change typography for medium tablets
 @include breakpoint-up(tablet-medium) {
   :root {
+    --fs-hero-heading: var(--fs-700);
     --fs-body: var(--fs-400);
     --fs-button: var(--fs-400);
   }
 }
 
-// Change typography for desktop
+// Change typography for small desktops
 @include breakpoint-up(desktop-small) {
   :root {
     --fs-hero-heading: var(--fs-800);
