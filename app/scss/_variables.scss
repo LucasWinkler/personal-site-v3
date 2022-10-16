@@ -109,6 +109,7 @@
 @include breakpoint-up(desktop-small) {
   :root {
     --fs-hero-heading: var(--fs-800);
+    --fs-section-heading: var(--fs-700);
   }
 }
 
