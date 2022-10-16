@@ -9,9 +9,6 @@
   The third iteration of <a href="https://lucaswinkler.dev" target="_blank"rel="noopener noreferrer">lucaswinkler.dev</a> built with HTML, and CSS.
 </p>
 <p align="center">
-   This project will be ported over to <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> in the near future. It is currently hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a> at <a href="https://lucaswinkler-v3.netlify.app/" rel="noopener noreferrer" target="_blank">lucas-winkler-v3.netlify.app</a> temporarily.
-</p>
-<p align="center">
   Previous iterations:
   <a href="https://github.com/LucasWinkler/personal-site-v1" target="_blank" rel="noopener noreferrer">v1</a>,
   <a href="https://github.com/LucasWinkler/personal-site" target="_blank" rel="noopener noreferrer">v2</a>
@@ -31,7 +28,7 @@
 
 ## About
 
-Iteration 3 of my personal website which I built to help practice with HTML, CSS and JavaScript. I also wanted to design and build something that looked a lot better than iteration 2. When this project is fully built I'm going to be porting it over to React.
+Iteration 3 of my personal website which I built to help practice with HTML, CSS and JavaScript. This website was fully designed by myself using Figma after I was done binge watching Design Course on YouTube. I wanted to redesign my website because iteration 2 was finished in 2020 and it's very outdated. I've recently gotten back into web development and I wanted to create something that looked great and responded great with different device sizes. This project is being hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a> and I'm using <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite</a> to help make development easier.
 
 ## Getting Started
 
