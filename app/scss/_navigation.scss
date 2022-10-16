@@ -14,7 +14,7 @@
   }
 
   &__logo {
-    font-size: var(--fs-500);
+    font-size: var(--fs-450);
     font-weight: var(--fw-bold);
     color: var(--clr-neutral-100);
   }
@@ -46,7 +46,7 @@
       animation-fill-mode: both;
 
       .nav__link {
-        font-size: var(--fs-500);
+        font-size: var(--fs-450);
         font-weight: var(--fw-semi-bold);
         color: var(--clr-neutral-100);
         padding: 2em 4em;
