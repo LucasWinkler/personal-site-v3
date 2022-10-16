@@ -13,7 +13,7 @@
   <a href="https://github.com/LucasWinkler/personal-site-v1" target="_blank" rel="noopener noreferrer">v1</a>,
   <a href="https://github.com/LucasWinkler/personal-site-v2" target="_blank" rel="noopener noreferrer">v2</a>
 
-[![https://www.lucaswinkler.dev/][desktop-design-screenshot]](https://www.lucaswinkler.dev/)
+[![https://www.lucaswinkler.dev/][personal-website-v3-screenshot]](https://www.lucaswinkler.dev/)
 
 </p>
 
@@ -84,4 +84,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucas-winkler/
-[desktop-design-screenshot]: ./public/images/desktop-design-screenshot.png
+[desktop-design-screenshot]: ./public/images/personal-website-v3-screenshot.png
