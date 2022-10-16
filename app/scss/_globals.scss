@@ -10,6 +10,10 @@ body {
   line-height: var(--lh-body);
 }
 
+strong {
+  font-weight: 600;
+}
+
 // Utility
 
 .container {
