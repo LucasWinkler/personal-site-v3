@@ -38,15 +38,37 @@ Follow these steps in order to get the website up and running locally on your ma
 
 - Clone or download the repository then navigate to the root directory
 
-- Run 'npm install' in the root directory to install all dependencies
+- Install all required dependencies
 
-- Run 'npm run dev' to host a local server or 'npm run devExposed' to expose the server to any device on your internet connection. This is good if you want to test on another device. The URL and port will be displayed in the terminal
+  ```sh
+  npm install
+  ```
+
+- Host a local development server
+
+  ```sh
+  npm run dev
+  ```
+
+- Host a local development server that is exposed to your network
+
+  ```sh
+  npm run devExposed
+  ```
 
 ### Production
 
-- Run 'npm run build' to build the application
+- Build the application for production
 
-- Run 'npm run preview' to start a local server that serves the built application. The terminal will display the URL and port
+  ```sh
+  npm run build
+  ```
+
+- Start a local server that serves the built application
+
+  ```sh
+  npm run preview
+  ```
 
 ## Contact
 
