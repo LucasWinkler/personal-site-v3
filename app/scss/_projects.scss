@@ -123,6 +123,15 @@
     justify-content: space-between;
   }
 
+  &__info {
+    padding-block: var(--size-400);
+  }
+
+  &__description {
+    max-width: 45ch;
+    margin-bottom: 1.2em;
+  }
+
   &__stack {
     display: flex;
     flex-wrap: wrap;
@@ -134,15 +143,6 @@
     background-color: var(--clr-neutral-700);
     padding: 0.5em 1em;
     border-radius: 5px;
-  }
-
-  &__info {
-    padding-block: var(--size-400);
-  }
-
-  &__description {
-    max-width: 45ch;
-    margin-bottom: 1.2em;
   }
 
   &__links {
