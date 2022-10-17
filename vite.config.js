@@ -17,6 +17,7 @@ export default defineConfig({
         description:
           'Lucas Winkler is a front-end developer who builds captivating web experiences.',
         theme_color: '#181920',
+        background_color: '#181920',
         icons: [
           {
             src: '/images/icons/icon-192.png',
