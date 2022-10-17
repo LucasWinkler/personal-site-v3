@@ -18,13 +18,13 @@ export default defineConfig({
           'Lucas Winkler is a front-end developer who builds captivating web experiences.',
         theme_color: '#181920',
         icons: [
-          // {
-          //   src: '/images/icons/chrome192.png',
-          //   sizes: '192x192',
-          //   type: 'image/png',
-          // },
           {
-            src: '/images/icons/favicon-512x512.png',
+            src: '/images/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/images/icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
           },
