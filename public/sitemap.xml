@@ -8,13 +8,26 @@
 
 <url>
   <loc>https://www.lucaswinkler.dev/</loc>
-  <lastmod>2022-10-16</lastmod>
+  <image:image>
+      <image:loc>https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.jpg</image:loc>
+    </image:image>
+  <lastmod>2022-10-17</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.lucaswinkler.dev/lucas_winkler-resume.pdf</loc>
   <lastmod>2022-10-16</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lucaswinkler.dev/#projects</loc>
+  <lastmod>2022-10-17</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.lucaswinkler.dev/#contact</loc>
+  <lastmod>2022-10-17</lastmod>
+  <priority>0.70</priority>
 </url>
 
 
