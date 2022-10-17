@@ -79,8 +79,9 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      filter: grayscale(80%) brightness(20%);
-      opacity: 20%;
+      // filter: grayscale(70%) brightness(20%);
+      // opacity: 20%;
+      opacity: 0;
       border-radius: 5px;
     }
 
