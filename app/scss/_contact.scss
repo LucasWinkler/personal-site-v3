@@ -90,8 +90,12 @@
   }
 
   &__methods {
-    margin-top: var(--size-600);
+    margin-top: var(--size-700);
     margin-bottom: var(--size-400);
+
+    @include breakpoint-up(mobile-small) {
+      margin-top: var(--size-800);
+    }
   }
 
   &__method {
