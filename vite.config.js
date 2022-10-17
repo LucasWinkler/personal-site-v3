@@ -20,14 +20,16 @@ export default defineConfig({
         background_color: '#181920',
         icons: [
           {
-            src: '/images/icons/icon-192.png',
+            src: '/images/icons/maskable-icon-192.png',
             sizes: '192x192',
             type: 'image/png',
+            purpose: 'maskable',
           },
           {
-            src: '/images/icons/icon-512.png',
+            src: '/images/icons/maskable-icon-512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'maskable',
           },
         ],
       },
