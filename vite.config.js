@@ -20,7 +20,6 @@ export default defineConfig({
         // background_color: '#181920',
         theme_color: '#12022c',
         background_color: '#12022c',
-        display: standalone,
         icons: [
           {
             src: '/images/icons/android-chrome-192x192.png',
