@@ -18,6 +18,10 @@
     padding-block: var(--size-800);
   }
 
+  @include breakpoint-up(desktop-small) {
+    padding-block: 5rem;
+  }
+
   @media (min-width: 75em) {
     padding-block: 8rem;
   }
