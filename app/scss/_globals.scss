@@ -174,142 +174,142 @@ strong {
   overflow: hidden;
 }
 
-.background-circle {
-  &--relative {
-    position: relative;
-  }
+// .background-circle {
+//   &--relative {
+//     position: relative;
+//   }
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    aspect-ratio: 1 / 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
-  }
+//   &::before,
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     aspect-ratio: 1 / 1;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     z-index: 0;
+//   }
 
-  &--hero::before {
-    max-width: 320px;
-    max-height: 239px;
-    height: 50%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.6;
-    background-image: url('/images/hero-left-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+//   &--hero::before {
+//     max-width: 320px;
+//     max-height: 239px;
+//     height: 50%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     opacity: 0.6;
+//     background-image: url('/images/hero-left-circle-purple.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
 
-    @include breakpoint-up(tablet-small) {
-      opacity: 0.8;
-      height: 100%;
-      width: 100%;
-    }
+//     @include breakpoint-up(tablet-small) {
+//       opacity: 0.8;
+//       height: 100%;
+//       width: 100%;
+//     }
 
-    @include breakpoint-up(desktop-medium) {
-      max-width: 520px;
-      max-height: 439px;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     @include breakpoint-up(desktop-medium) {
+//       max-width: 520px;
+//       max-height: 439px;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &--hero::after {
-    max-width: 264px;
-    max-height: 736px;
-    height: 100%;
-    width: 60%;
-    right: 0;
-    top: 0;
-    opacity: 0.4;
-    background-image: url('/images/hero-right-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+//   &--hero::after {
+//     max-width: 264px;
+//     max-height: 736px;
+//     height: 100%;
+//     width: 60%;
+//     right: 0;
+//     top: 0;
+//     opacity: 0.4;
+//     background-image: url('/images/hero-right-circle-blue.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-    @include breakpoint-up(tablet-small) {
-      opacity: 0.5;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     @include breakpoint-up(tablet-small) {
+//       opacity: 0.5;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &--projects::before {
-    max-width: 228px;
-    max-height: 952px;
-    height: 70%;
-    width: 40%;
-    left: 0;
-    top: 0;
-    opacity: 0.2;
-    background-image: url('/images/projects-left-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+//   &--projects::before {
+//     max-width: 228px;
+//     max-height: 952px;
+//     height: 70%;
+//     width: 40%;
+//     left: 0;
+//     top: 0;
+//     opacity: 0.2;
+//     background-image: url('/images/projects-left-circle-blue.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
 
-    @include breakpoint-up(tablet-medium) {
-      opacity: 0.5;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     @include breakpoint-up(tablet-medium) {
+//       opacity: 0.5;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &--projects::after {
-    max-width: 295px;
-    max-height: 625px;
-    height: 100%;
-    width: 60%;
-    right: 0;
-    top: 0;
-    opacity: 0.5;
-    background-image: url('/images/projects-right-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+//   &--projects::after {
+//     max-width: 295px;
+//     max-height: 625px;
+//     height: 100%;
+//     width: 60%;
+//     right: 0;
+//     top: 0;
+//     opacity: 0.5;
+//     background-image: url('/images/projects-right-circle-purple.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
 
-    @include breakpoint-up(tablet-medium) {
-      opacity: 0.8;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     @include breakpoint-up(tablet-medium) {
+//       opacity: 0.8;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &--projects-2::before {
-    max-width: 320px;
-    max-height: 912px;
-    height: 40%;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    opacity: 0.6;
-    background-image: url('/images/projects-left-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+//   &--projects-2::before {
+//     max-width: 320px;
+//     max-height: 912px;
+//     height: 40%;
+//     width: 100%;
+//     left: 0;
+//     bottom: 0;
+//     opacity: 0.6;
+//     background-image: url('/images/projects-left-circle-purple.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-    @include breakpoint-up(tablet-medium) {
-      opacity: 0.8;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     @include breakpoint-up(tablet-medium) {
+//       opacity: 0.8;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &--projects-2::after {
-    max-width: 295px;
-    max-height: 948px;
-    height: 60%;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    opacity: 0.2;
-    background-image: url('/images/projects-right-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+//   &--projects-2::after {
+//     max-width: 295px;
+//     max-height: 948px;
+//     height: 60%;
+//     width: 100%;
+//     right: 0;
+//     bottom: 0;
+//     opacity: 0.2;
+//     background-image: url('/images/projects-right-circle-blue.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-    @include breakpoint-up(tablet-medium) {
-      opacity: 0.5;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+//     @include breakpoint-up(tablet-medium) {
+//       opacity: 0.5;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
+// }
 
 .visually-hidden {
   position: absolute;
