@@ -184,8 +184,6 @@ strong {
     content: '';
     position: absolute;
     aspect-ratio: 1 / 1;
-    background-repeat: no-repeat;
-    background-size: cover;
     z-index: 0;
   }
 
@@ -197,9 +195,6 @@ strong {
     top: 0;
     left: 0;
     opacity: 0.6;
-    background-image: url('/images/hero-left-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: contain;
 
     @include breakpoint-up(tablet-small) {
       opacity: 0.8;
@@ -215,6 +210,12 @@ strong {
     }
   }
 
+  &--hero.background-circle--visible::before {
+    background-image: url('/images/hero-left-circle-purple.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &--hero::after {
     max-width: 264px;
     max-height: 736px;
@@ -223,15 +224,18 @@ strong {
     right: 0;
     top: 0;
     opacity: 0.4;
-    background-image: url('/images/hero-right-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 
     @include breakpoint-up(tablet-small) {
       opacity: 0.5;
       height: 100%;
       width: 100%;
     }
+  }
+
+  &--hero.background-circle--visible::after {
+    background-image: url('/images/hero-right-circle-blue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &--projects::before {
@@ -242,15 +246,18 @@ strong {
     left: 0;
     top: 0;
     opacity: 0.2;
-    background-image: url('/images/projects-left-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: contain;
 
     @include breakpoint-up(tablet-medium) {
       opacity: 0.5;
       height: 100%;
       width: 100%;
     }
+  }
+
+  &--projects.background-circle--visible::before {
+    background-image: url('/images/projects-left-circle-blue.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &--projects::after {
@@ -261,15 +268,18 @@ strong {
     right: 0;
     top: 0;
     opacity: 0.5;
-    background-image: url('/images/projects-right-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: contain;
 
     @include breakpoint-up(tablet-medium) {
       opacity: 0.8;
       height: 100%;
       width: 100%;
     }
+  }
+
+  &--projects.background-circle--visible::after {
+    background-image: url('/images/projects-right-circle-purple.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &--projects-2::before {
@@ -280,15 +290,18 @@ strong {
     left: 0;
     bottom: 0;
     opacity: 0.6;
-    background-image: url('/images/projects-left-circle-purple.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 
     @include breakpoint-up(tablet-medium) {
       opacity: 0.8;
       height: 100%;
       width: 100%;
     }
+  }
+
+  &--projects-2.background-circle--visible::before {
+    background-image: url('/images/projects-left-circle-purple.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &--projects-2::after {
@@ -299,15 +312,18 @@ strong {
     right: 0;
     bottom: 0;
     opacity: 0.2;
-    background-image: url('/images/projects-right-circle-blue.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 
     @include breakpoint-up(tablet-medium) {
       opacity: 0.5;
       height: 100%;
       width: 100%;
     }
+  }
+
+  &--projects-2.background-circle--visible::after {
+    background-image: url('/images/projects-right-circle-blue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

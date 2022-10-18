@@ -9,27 +9,26 @@ const skillsItem = document.querySelectorAll('.skills__item');
 const skillsImages = document.querySelectorAll('.skills__image');
 
 // Sets the --skill-colour css custom property using the
-// average colour of the skill logo 
+// average colour of the skill logo
 skillsImages.forEach(skill => {
-	fac.getColorAsync(skill)
-		.then(color => {
-			skill.style.setProperty('--skill-colour', color.hex + 'aa')
-		})
+  fac.getColorAsync(skill).then(color => {
+    skill.style.setProperty('--skill-colour', color.hex + 'aa');
+  });
 });
 
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {
-	var reveals = document.querySelectorAll('.reveal');
-	for (var i = 0; i < reveals.length; i++) {
-		var windowHeight = window.innerHeight;
-		var elementTop = reveals[i].getBoundingClientRect().top;
-		var elementVisible = 60; // Offset for when revveal--active is applied
+  var reveals = document.querySelectorAll('.reveal');
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 60; // Offset for when revveal--active is applied
 
-		if (elementTop < windowHeight - elementVisible) {
-			reveals[i].classList.add('reveal--active');
-		}
-	}
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add('reveal--active');
+    }
+  }
 }
 
 // Runs the reveal animation function on scroll
@@ -37,29 +36,29 @@ window.addEventListener('scroll', reveal);
 
 // Toggles the nav menu
 navToggle.addEventListener('click', () => {
-	navList.hasAttribute('data-visible')
-		? navToggle.setAttribute('aria-expanded', false)
-		: navToggle.setAttribute('aria-expanded', true);
-	navList.toggleAttribute('data-visible');
-	header.toggleAttribute('data-overlay');
-	document.body.classList.toggle('overflow-hidden');
+  navList.hasAttribute('data-visible')
+    ? navToggle.setAttribute('aria-expanded', false)
+    : navToggle.setAttribute('aria-expanded', true);
+  navList.toggleAttribute('data-visible');
+  header.toggleAttribute('data-overlay');
+  document.body.classList.toggle('overflow-hidden');
 });
 
 // Closes nav menu when a nav link is clicked
 navLinks.forEach(navLink => {
-	navLink.addEventListener('click', () => {
-		navToggle.setAttribute('aria-expanded', false);
-		navList.removeAttribute('data-visible');
-		header.removeAttribute('data-overlay');
-		document.body.classList.remove('overflow-hidden');
-	});
+  navLink.addEventListener('click', () => {
+    navToggle.setAttribute('aria-expanded', false);
+    navList.removeAttribute('data-visible');
+    header.removeAttribute('data-overlay');
+    document.body.classList.remove('overflow-hidden');
+  });
 });
 
 // Closes nav menu when screen size gets bigger than a 768px
 window.onresize = function () {
-	let browserWidth = window.outerWidth;
+  let browserWidth = window.outerWidth;
 
-	if (browserWidth > 768) {
+  if (browserWidth > 768) {
     navToggle.setAttribute('aria-expanded', false);
     navList.removeAttribute('data-visible');
     header.removeAttribute('data-overlay');
@@ -69,12 +68,36 @@ window.onresize = function () {
 
 // Checks if the user clicked outside of the mobile nav menu and if so closes the menu
 navList.addEventListener('click', function (e) {
-	if (e.offsetX < 0) {
-		navToggle.setAttribute('aria-expanded', false);
-		navList.removeAttribute('data-visible');
-		header.removeAttribute('data-overlay');
-		document.body.classList.remove('overflow-hidden');
-	}
+  if (e.offsetX < 0) {
+    navToggle.setAttribute('aria-expanded', false);
+    navList.removeAttribute('data-visible');
+    header.removeAttribute('data-overlay');
+    document.body.classList.remove('overflow-hidden');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var lazyBackgrounds = [].slice.call(
+    document.querySelectorAll('.background-circle')
+  );
+
+  if ('IntersectionObserver' in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('background-circle--visible');
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function (lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
 });
 
 // Waits until everythings loaded before doing the initial reveal.
