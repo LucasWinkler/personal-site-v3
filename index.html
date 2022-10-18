@@ -59,6 +59,13 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
     </noscript>
     <link rel="stylesheet" href="/app/scss/style.scss" />
+    <!-- Preload background-images from css to speed up loading -->
+    <link rel="preload" href="/images/hero-left-circle-purple.png" />
+    <link rel="preload" href="/images/hero-right-circle-blue.png" />
+    <link rel="preload" href="/images/project-left-circle-blue.png" />
+    <link rel="preload" href="/images/project-right-circle-purple.png" />
+    <link rel="preload" href="/images/project-left-circle-purple.png" />
+    <link rel="preload" href="/images/project-right-circle-blue.png" />
     <script type="module" src="/app/js/main.js" defer></script>
   </head>
   <body>
@@ -1365,7 +1372,7 @@
               class="contact__form"
               name="contact"
               method="POST"
-              data-netlify-recaptcha="true"
+              data-netlify-recaptcha="false"
               data-netlify="true">
               <label
                 class="contact__label reveal reveal--fade-up-quick"
@@ -1403,7 +1410,7 @@
                 cols="30"
                 rows="5"
                 required></textarea>
-              <div data-netlify-recaptcha="true"></div>
+              <div data-netlify-recaptcha="false"></div>
               <div class="contact__buttons">
                 <button
                   class="button button--primary button--contact reveal reveal--fade-up-quick">
