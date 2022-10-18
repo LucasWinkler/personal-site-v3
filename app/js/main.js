@@ -80,5 +80,5 @@ navList.addEventListener('click', function (e) {
 // Waits until everythings loaded before doing the initial reveal.
 // This might solve the issue where the hero paragraph reveals instantly.
 window.addEventListener('load', () => {
-  // reveal();
+  reveal();
 });
