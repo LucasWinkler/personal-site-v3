@@ -33,7 +33,7 @@ function reveal() {
 }
 
 // Runs the reveal animation function on scroll
-// window.addEventListener('scroll', reveal);
+window.addEventListener('scroll', reveal);
 
 // Toggles the nav menu
 navToggle.addEventListener('click', () => {

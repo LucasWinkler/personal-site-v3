@@ -1,18 +1,5 @@
 .skills {
-  // padding-block: var(--size-600);
   background-color: var(--clr-neutral-800);
-
-  // @include breakpoint-up(mobile-small) {
-  //   padding-block: var(--size-600);
-  // }
-
-  // @include breakpoint-up(mobile-large) {
-  //   padding-block: var(--size-700);
-  // }
-
-  // @include breakpoint-up(tablet-small) {
-  //   padding-block: var(--size-800);
-  // }
 
   &__item {
     height: 50px;
