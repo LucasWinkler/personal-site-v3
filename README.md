@@ -2,6 +2,10 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5b78ae9f-6887-468c-8cd3-33a2a05738dc/deploy-status)](https://app.netlify.com/sites/lucaswinkler/deploys)
 
+<br />
+ <a align="center" href="https://www.lucaswinkler.dev/">
+    <img align="center" src="/repo-icon.png" alt="LW logo" width="80" height="80">
+  </a>
 <h1 align="center">
   lucaswinkler.dev - v3
 </h1>
