@@ -225,7 +225,7 @@ strong {
     opacity: 0.4;
     background-image: url('/images/hero-right-circle-blue.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     @include breakpoint-up(tablet-small) {
       opacity: 0.5;
@@ -321,44 +321,6 @@ strong {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.tooltipBox {
-  position: absolute;
-  max-width: 250px;
-  bottom: 20%;
-
-  padding-bottom: 4px; /* use padding to preserve hover when moving cursor between the tooltip button and the tooltipItself */
-
-  opacity: 0;
-  visibility: hidden;
-
-  /* delay 250ms to give time to fade out */
-  transition: opacity 250ms, visibility 1ms 250ms;
-
-  .tooltipArea.isActive:hover &,
-  .tooltipArea.isActive:focus-within & {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 250ms;
-  }
-
-  .tooltipArea.isActive:hover & {
-    /* delay fadein 500ms to prevent accidental hovers */
-    transition: opacity 250ms 500ms;
-  }
-
-  .tooltipItself {
-    display: block;
-    background: var(--clr-primary-400);
-    color: var(--clr-neutral-100);
-    padding: 1.2rem 1rem;
-    font-size: var(--fs-300);
-    border-radius: 4px;
-    text-align: center;
-    -webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
-  }
 }
 
 .tooltip {
