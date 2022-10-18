@@ -33,7 +33,7 @@ function reveal() {
 }
 
 // Runs the reveal animation function on scroll
-window.addEventListener('scroll', reveal);
+// window.addEventListener('scroll', reveal);
 
 // Toggles the nav menu
 navToggle.addEventListener('click', () => {
@@ -80,5 +80,5 @@ navList.addEventListener('click', function (e) {
 // Waits until everythings loaded before doing the initial reveal.
 // This might solve the issue where the hero paragraph reveals instantly.
 window.addEventListener('load', () => {
-  reveal();
+  // reveal();
 });
