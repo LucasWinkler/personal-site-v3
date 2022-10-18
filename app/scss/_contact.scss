@@ -96,6 +96,10 @@
     @include breakpoint-up(mobile-small) {
       margin-top: var(--size-800);
     }
+
+    @include breakpoint-up(tablet-medium) {
+      margin-top: var(--size-600);
+    }
   }
 
   &__method {
