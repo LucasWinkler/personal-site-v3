@@ -463,6 +463,13 @@ strong {
       .button__prepend > svg > path {
         stroke: var(--clr-neutral-300);
       }
+
+      &--svg-fill {
+        .button__prepend > svg > path {
+          stroke: none;
+          fill: var(--clr-neutral-300);
+        }
+      }
     }
   }
 
