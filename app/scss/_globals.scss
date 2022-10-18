@@ -211,7 +211,7 @@ strong {
   }
 
   &--hero.background-circle--visible::before {
-    background-image: url('/images/hero-left-circle-purple.png');
+    background-image: url('/images/hero-left-circle-purple.webp');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -233,7 +233,7 @@ strong {
   }
 
   &--hero.background-circle--visible::after {
-    background-image: url('/images/hero-right-circle-blue.png');
+    background-image: url('/images/hero-right-circle-blue.webp');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -255,7 +255,7 @@ strong {
   }
 
   &--projects.background-circle--visible::before {
-    background-image: url('/images/projects-left-circle-blue.png');
+    background-image: url('/images/projects-left-circle-blue.webp');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -277,7 +277,7 @@ strong {
   }
 
   &--projects.background-circle--visible::after {
-    background-image: url('/images/projects-right-circle-purple.png');
+    background-image: url('/images/projects-right-circle-purple.webp');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -299,7 +299,7 @@ strong {
   }
 
   &--projects-2.background-circle--visible::before {
-    background-image: url('/images/projects-left-circle-purple.png');
+    background-image: url('/images/projects-left-circle-purple.webp');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -321,7 +321,7 @@ strong {
   }
 
   &--projects-2.background-circle--visible::after {
-    background-image: url('/images/projects-right-circle-blue.png');
+    background-image: url('/images/projects-right-circle-blue.webp');
     background-repeat: no-repeat;
     background-size: cover;
   }
