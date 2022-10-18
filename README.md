@@ -3,9 +3,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5b78ae9f-6887-468c-8cd3-33a2a05738dc/deploy-status)](https://app.netlify.com/sites/lucaswinkler/deploys)
 
 <br />
- <a align="center" href="https://www.lucaswinkler.dev/">
-    <img align="center" src="/repo-icon.png" alt="LW logo" width="80" height="80">
+<p align="center">
+ <a href="https://www.lucaswinkler.dev/">
+    <img src="/repo-icon.png" alt="LW logo" width="80" height="80">
   </a>
+</p>
+
 <h1 align="center">
   lucaswinkler.dev - v3
 </h1>
@@ -88,4 +91,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucas-winkler/
-[personal-website-v3-screenshot]: ./public/images/personal-website-v3-screenshot.png
+[personal-website-v3-screenshot]: ./public/images/personal-website-v3-screenshot.webp
