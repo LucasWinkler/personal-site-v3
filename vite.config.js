@@ -15,7 +15,7 @@ export default defineConfig({
         id: '/',
         short_name: 'Lucas Winkler',
         description:
-          'Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences. Come checkout my work!',
+          'Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences. Come see my work!',
         theme_color: '#12022c',
         background_color: '#12022c',
         display: 'standalone',
