@@ -60,22 +60,25 @@
     </noscript>
     <link rel="stylesheet" href="/app/scss/style.scss" />
     <!-- Preload background-images from css to speed up loading -->
-    <link rel="preload" as="image" href="/images/hero-left-circle-purple.png" />
-    <link rel="preload" as="image" href="/images/hero-right-circle-blue.png" />
     <link
-      rel="preload"
+      rel="prefetch"
+      as="image"
+      href="/images/hero-left-circle-purple.png" />
+    <link rel="prefetch" as="image" href="/images/hero-right-circle-blue.png" />
+    <link
+      rel="prefetch"
       as="image"
       href="/images/projects-left-circle-blue.png" />
     <link
-      rel="preload"
+      rel="prefetch"
       as="image"
       href="/images/projects-right-circle-purple.png" />
     <link
-      rel="preload"
+      rel="prefetch"
       as="image"
       href="/images/projects-left-circle-purple.png" />
     <link
-      rel="preload"
+      rel="prefetch"
       as="image"
       href="/images/projects-right-circle-blue.png" />
     <script type="module" src="/app/js/main.js" defer></script>
