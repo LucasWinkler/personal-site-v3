@@ -6,7 +6,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: false,
+        enabled: true,
       },
       includeAssets: ['favicon.ico', 'icons/**/*.{png,svg}'],
       manifest: {
