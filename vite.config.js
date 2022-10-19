@@ -8,7 +8,7 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
-      includeAssets: ['favicon.ico', 'icons/**/*.{png,svg}'],
+      includeAssets: ['favicon.ico', 'icons/**/*.{png,svg}, images/**/*.{png, svg, webp}'],
       manifest: {
         name: 'Lucas Winkler | Front-End Developer',
         start_url: '/',
