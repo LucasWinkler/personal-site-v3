@@ -77,6 +77,16 @@ Follow these steps in order to get the website up and running locally on your ma
   npm run preview
   ```
 
+## Credits
+
+Inspired by: Brittany Chiang @ https://github.com/bchiang7
+
+- Borrowed her custom easing for animations and slide up animaton style.
+
+Help from: Xander Drinnan @ https://github.com/xanderdrinnan
+
+- Pointed me in the right direction for tons of things and helped out with a lot of my issues
+
 ## Contact
 
 - [LinkedIn](https://linkedin.com/in/lucas-winkler)
