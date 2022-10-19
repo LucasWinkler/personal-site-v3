@@ -30,6 +30,7 @@
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Production](#production)
+- [Credits](#credits)
 - [Contact](#contact)
 - [License](#license)
 
