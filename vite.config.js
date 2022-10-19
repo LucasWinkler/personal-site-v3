@@ -8,7 +8,7 @@ export default defineConfig({
       devOptions: {
         enabled: false,
       },
-      includeAssets: ['**/*.{png}'],
+      includeAssets: ['favicon.ico', 'icons/**/*.{png,svg}'],
       manifest: {
         name: 'Lucas Winkler | Front-End Developer',
         start_url: '/',
@@ -21,18 +21,22 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: '/images/icons/android-chrome-144x144.png',
+            src: '/icons/android-chrome-144x144.png',
             sizes: '144x144',
             type: 'image/png',
           },
           {
-            src: '/images/icons/android-chrome-192x192.png',
+            src: '/icons/android-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png',
-            purpose: 'maskable',
           },
           {
-            src: '/images/icons/android-chrome-512x512.png',
+            src: '/icons/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/icons/android-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',

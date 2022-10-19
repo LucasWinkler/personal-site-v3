@@ -5,7 +5,7 @@
 <br />
 <p align="center">
  <a href="https://www.lucaswinkler.dev/">
-    <img src="/repo-icon.png" alt="LW logo" width="80" height="80">
+    <img src="/icons/repo-icon.png" alt="LW logo" width="80" height="80">
   </a>
 </p>
 
