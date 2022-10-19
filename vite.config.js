@@ -5,13 +5,13 @@ export default defineConfig({
   plugins: [
     VitePWA({
       workbox: {
-        globPatterns: ['**/*.{js,css,html,pdf,webp,svg,png}'],
+        globPatterns: ['**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}'],
       },
       registerType: 'autoUpdate',
       devOptions: {
         enabled: true,
       },
-      includeAssets: ['favicon.ico', '**/*.{png,svg,webp}'],
+      includeAssets: ['favicon.ico', 'icons/**/*.{png,svg,webp,jpg,jpeg}'],
       manifest: {
         name: 'Lucas Winkler | Front-End Dev',
         start_url: '/',

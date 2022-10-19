@@ -127,6 +127,73 @@
     <!-- Scripts -->
 
     <script type="module" src="/app/js/main.js" defer></script>
+
+    <!-- Person Schema -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://www.schema.org",
+        "@type": "Person",
+        "@id": "https://www.lucaswinkler.dev/#person",
+        "name": "Lucas Winkler",
+        "nationality": "Canadian",
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "ON",
+            "addressCountry": "Canada"
+          }
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Conestoga College",
+            "sameAs": "https://en.wikipedia.org/wiki/Conestoga_College"
+          }
+        ],
+        "gender": "Male",
+        "jobTitle": "Front-End Developer",
+        "url": "https://www.lucaswinkler.dev",
+        "image": "https://www.lucaswinkler.dev/images/me/jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "ON",
+          "addressCountry": "Canada"
+        },
+        "sameAs": [
+          "https://twitter.com/LucasJWinkler",
+          "https://www.linkedin.com/in/lucas-winkler",
+          "https://github.com/LucasWinkler"
+        ]
+      }
+    </script>
+
+    <!-- WebSite Schema -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.lucaswinkler.dev/#",
+        "url": "https://www.lucaswinkler.dev/",
+        "image": "https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png",
+        "inLanguage": "en-CA",
+        "author": "Lucas Winkler",
+        "keywords": "Lucas Winkler",
+        "accountablePerson": { "@id": "https://www.lucaswinkler.dev/#person" },
+        "about": { "@id": "https://www.lucaswinkler.dev/#person" },
+        "encodingFormat": [
+          "text/html",
+          "image/png",
+          "image/jpg",
+          "image/webp",
+          "image/svg",
+          "text/javascript",
+          "text/css"
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="header">
