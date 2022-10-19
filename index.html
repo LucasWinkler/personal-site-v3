@@ -41,6 +41,12 @@
       as="image"
       href="/images/hero-right-circle-blue.webp"
       type="image/webp" />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/images/undraw-programming-hero.svg"
+      type="image/svg+xml" />
 
     <!-- Google Font -->
 
@@ -89,9 +95,6 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml" />
     <meta name="theme-color" content="#181920" />
 
-    <link rel="preload" href="/app/scss/style.scss" as="style" />
-    <link rel="stylesheet" href="/app/scss/style.scss" />
-
     <!-- Open Graph -->
 
     <meta property="og:type" content="website" />
@@ -117,10 +120,6 @@
     <meta
       property="twitter:image"
       content="https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png" />
-
-    <!-- Scripts -->
-
-    <script type="module" src="/app/js/main.js" defer></script>
 
     <!-- Person Schema -->
 
@@ -188,6 +187,10 @@
         ]
       }
     </script>
+
+    <!-- Injected by Vite during build -->
+    <link rel="stylesheet" href="/app/scss/style.scss" />
+    <script type="module" src="/app/js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
