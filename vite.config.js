@@ -4,11 +4,14 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   plugins: [
     VitePWA({
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,pdf,webp,svg,png}'],
+      },
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: true,
+        enabled: false,
       },
-      includeAssets: ['favicon.ico', 'icons/**/*.{png,svg}, images/**/*.{png, svg, webp}'],
+      includeAssets: ['favicon.ico', '**/*.{png,svg,webp}'],
       manifest: {
         name: 'Lucas Winkler | Front-End Developer',
         start_url: '/',
