@@ -530,3 +530,31 @@ strong {
   cursor: not-allowed;
   opacity: 0.5;
 }
+
+.skip-navigation {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: var(--clr-primary-400);
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+  }
+}
