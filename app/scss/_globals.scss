@@ -166,10 +166,6 @@ strong {
   border-radius: 7px;
 }
 
-.disabled-link {
-  pointer-events: none;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -456,21 +452,6 @@ strong {
     @include breakpoint-up(mobile-small) {
       padding: 0.6rem 0;
     }
-
-    &.disabled-link {
-      color: var(--clr-neutral-300);
-
-      .button__prepend > svg > path {
-        stroke: var(--clr-neutral-300);
-      }
-
-      &--svg-fill {
-        .button__prepend > svg > path {
-          stroke: none;
-          fill: var(--clr-neutral-300);
-        }
-      }
-    }
   }
 
   &--tertiary {
@@ -542,4 +523,10 @@ strong {
         stroke 0.25s ease, border 0.25s ease;
     }
   }
+}
+
+.disabled-link {
+  // pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
