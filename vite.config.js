@@ -13,7 +13,7 @@ export default defineConfig({
       },
       includeAssets: ['favicon.ico', '**/*.{png,svg,webp}'],
       manifest: {
-        name: 'Lucas Winkler | Front-End Developer',
+        name: 'Lucas Winkler | Front-End Dev',
         start_url: '/',
         id: '/',
         short_name: 'Lucas Winkler',
