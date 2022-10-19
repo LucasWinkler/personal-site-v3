@@ -9,7 +9,7 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: false,
+        enabled: true,
       },
       includeAssets: ['favicon.ico', '**/*.{png,svg,webp}'],
       manifest: {
