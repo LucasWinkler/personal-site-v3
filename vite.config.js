@@ -5,7 +5,10 @@ export default defineConfig({
   plugins: [
     VitePWA({
       workbox: {
-        globPatterns: ['**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}'],
+        globPatterns: [
+          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
+          'sitemap.xml',
+        ],
       },
       registerType: 'autoUpdate',
       devOptions: {
