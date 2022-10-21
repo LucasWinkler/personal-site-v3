@@ -84,6 +84,10 @@ window.onresize = function () {
   }
 };
 
+window.onresize = function () {
+  reveal();
+};
+
 // Checks if the user clicked outside of the mobile nav menu and if so closes the menu
 navList.addEventListener('click', function (e) {
   if (e.offsetX < 0) {
