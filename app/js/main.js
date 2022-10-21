@@ -39,9 +39,9 @@ window.addEventListener('scroll', reveal);
 function toggleFloatingCta() {
   let contactTop = contact.getBoundingClientRect().top;
   let windowHeight = window.innerHeight;
-  let offset = 120;
+  let offset = 20;
 
-  if (contactTop < windowHeight - offset) {
+  if (contactTop < windowHeight + offset) {
     floatingCta.classList.add('floating-cta--hidden');
     console.log('hidden');
   } else {

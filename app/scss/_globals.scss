@@ -117,10 +117,10 @@ strong {
 
 @include breakpoint-up(mobile-small) {
   .floating-cta {
-    position: fixed;
+    position: fixed !important;
     z-index: 9;
-    right: 1em;
-    bottom: 1em;
+    right: 2rem;
+    bottom: 2rem;
     background-color: var(--clr-primary-400);
     padding: 1rem;
     border-radius: 100%;
@@ -129,31 +129,31 @@ strong {
     opacity: 1;
 
     > svg {
-      height: 2em;
-      width: 2em;
+      height: 1.5rem;
+      width: 1.5rem;
     }
 
     &:hover {
       transform: scale(1.125);
     }
 
+    @include breakpoint-up(tablet-small) {
+      padding: 1rem;
+
+      > svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
     @include breakpoint-up(desktop-small) {
-      right: 2em;
-      bottom: 2em;
+      right: 2rem;
+      bottom: 2rem;
     }
 
     @include breakpoint-up(desktop-medium) {
-      right: 4em;
-      bottom: 4em;
-    }
-    @include breakpoint-up(desktop-small) {
-      right: 2em;
-      bottom: 2em;
-    }
-
-    @include breakpoint-up(desktop-medium) {
-      right: 4em;
-      bottom: 4em;
+      right: 4rem;
+      bottom: 4rem;
     }
 
     &--hidden {
