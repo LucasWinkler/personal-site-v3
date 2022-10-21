@@ -25,10 +25,12 @@
   &__image {
     display: none;
 
-    @include breakpoint-up(tablet-small) {
+    @include breakpoint-up(tablet-medium) {
       display: block;
       margin-left: auto;
       z-index: 5;
+      width: 100%;
+      height: auto;
     }
   }
 
