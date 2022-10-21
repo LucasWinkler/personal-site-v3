@@ -9,11 +9,17 @@
   }
 
   @include breakpoint-up(tablet-medium) {
-    padding-block: var(--size-800);
+    padding-top: var(--size-800);
+    padding-bottom: 6rem;
   }
 
   @include breakpoint-up(desktop-small) {
     padding-bottom: 7rem;
+  }
+
+  @include breakpoint-up(desktop-medium) {
+    padding-top: 5rem;
+    padding-bottom: 8em;
   }
 
   &__image {
