@@ -1,9 +1,11 @@
 .contact {
   background-color: var(--clr-neutral-900);
-  padding-block: var(--size-700);
+  padding-top: var(--size-700);
+  padding-bottom: var(--size-600);
 
   @include breakpoint-up(mobile-small) {
-    padding-block: var(--size-800);
+    padding-top: var(--size-800);
+    padding-bottom: var(--size-600);
   }
 
   @include breakpoint-up(tablet-medium) {
@@ -90,11 +92,12 @@
   }
 
   &__methods {
-    margin-top: var(--size-700);
+    margin-top: var(--size-600);
     margin-bottom: var(--size-400);
 
     @include breakpoint-up(mobile-small) {
-      margin-top: var(--size-800);
+      margin-top: var(--size-700);
+      margin-bottom: var(--size-500);
     }
 
     @include breakpoint-up(tablet-medium) {
@@ -109,9 +112,10 @@
 
   &__description {
     font-size: var(--fs-400);
+    color: var(--clr-neutral-100);
 
     @include breakpoint-up(desktop-small) {
-      font-size: var(--fs-500);
+      font-size: var(--fs-450);
     }
   }
 
