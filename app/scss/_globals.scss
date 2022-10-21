@@ -112,7 +112,55 @@ strong {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+@include breakpoint-up(mobile-small) {
+  .floating-cta {
+    position: fixed;
+    z-index: 9;
+    right: 1em;
+    bottom: 1em;
+    background-color: var(--clr-primary-400);
+    padding: 1rem;
+    border-radius: 100%;
+    transition: all 0.3s var(--animation-timing);
+    color: var(--clr-neutral-100);
+    opacity: 1;
+
+    > svg {
+      height: 2em;
+      width: 2em;
+    }
+
+    &:hover {
+      transform: scale(1.125);
+    }
+
+    @include breakpoint-up(desktop-small) {
+      right: 2em;
+      bottom: 2em;
+    }
+
+    @include breakpoint-up(desktop-medium) {
+      right: 4em;
+      bottom: 4em;
+    }
+    @include breakpoint-up(desktop-small) {
+      right: 2em;
+      bottom: 2em;
+    }
+
+    @include breakpoint-up(desktop-medium) {
+      right: 4em;
+      bottom: 4em;
+    }
+
+    &--hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
 @include breakpoint-up(tablet-small) {

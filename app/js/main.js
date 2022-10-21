@@ -4,8 +4,9 @@ const fac = new FastAverageColor();
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');
+const floatingCta = document.querySelector('.floating-cta');
+const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
-const skillsItem = document.querySelectorAll('.skills__item');
 const skillsImages = document.querySelectorAll('.skills__image');
 
 // Sets the --skill-colour css custom property using the
@@ -19,13 +20,14 @@ skillsImages.forEach(skill => {
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {
-  var reveals = document.querySelectorAll('.reveal');
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 60; // Offset for when revveal--active is applied
+  let reveals = document.querySelectorAll('.reveal');
 
-    if (elementTop < windowHeight - elementVisible) {
+  for (var i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let offset = 60;
+
+    if (elementTop < windowHeight - offset) {
       reveals[i].classList.add('reveal--active');
     }
   }
@@ -33,6 +35,22 @@ function reveal() {
 
 // Runs the reveal animation function on scroll
 window.addEventListener('scroll', reveal);
+
+function toggleFloatingCta() {
+  let contactTop = contact.getBoundingClientRect().top;
+  let windowHeight = window.innerHeight;
+  let offset = 120;
+
+  if (contactTop < windowHeight - offset) {
+    floatingCta.classList.add('floating-cta--hidden');
+    console.log('hidden');
+  } else {
+    floatingCta.classList.remove('floating-cta--hidden');
+    console.log('visible');
+  }
+}
+
+window.addEventListener('scroll', toggleFloatingCta);
 
 // Toggles the nav menu
 navToggle.addEventListener('click', () => {
