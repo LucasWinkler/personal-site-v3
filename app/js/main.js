@@ -36,6 +36,14 @@ function reveal() {
 // Runs the reveal animation function on scroll
 window.addEventListener('scroll', reveal);
 
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= header.offsetHeight / 2) {
+    header.classList.add('header--scrolled');
+  } else {
+    header.classList.remove('header--scrolled');
+  }
+});
+
 function toggleFloatingCta() {
   let contactTop = contact.getBoundingClientRect().top;
   let windowHeight = window.innerHeight;
@@ -43,10 +51,8 @@ function toggleFloatingCta() {
 
   if (contactTop < windowHeight + offset) {
     floatingCta.classList.add('floating-cta--hidden');
-    console.log('hidden');
   } else {
     floatingCta.classList.remove('floating-cta--hidden');
-    console.log('visible');
   }
 }
 
