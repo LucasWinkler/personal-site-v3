@@ -205,7 +205,6 @@
     display: flex;
     gap: 5em;
     background: unset;
-    // position: static;
     align-items: flex-start;
     padding-block: var(--size-600);
     padding-left: 0;
@@ -217,11 +216,11 @@
       margin-left: auto;
     }
 
-    &:nth-child(odd) &__image::before {
+    &:nth-child(odd) &__image-wrapper::before {
       background-color: var(--clr-secondary-400);
     }
 
-    &:nth-child(odd) &__image::after {
+    &:nth-child(odd) &__image-wrapper::after {
       background-color: var(--clr-accent-600);
     }
   }
