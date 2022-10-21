@@ -47,6 +47,7 @@
       );
 
       background-size: 1000%;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: animated_text 7s ease-in-out infinite;

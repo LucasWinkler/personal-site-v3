@@ -56,7 +56,7 @@ navLinks.forEach(navLink => {
 
 // Closes nav menu when screen size gets bigger than a 768px
 window.onresize = function () {
-  let browserWidth = window.outerWidth;
+  let browserWidth = window.innerWidth;
 
   if (browserWidth > 768) {
     navToggle.setAttribute('aria-expanded', false);
