@@ -41,12 +41,33 @@
       margin-bottom: var(--size-800);
     }
   }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint-up(mobile-small) {
+      gap: 5rem;
+    }
+
+    @include breakpoint-up(tablet-medium) {
+      gap: 8rem;
+    }
+
+    @include breakpoint-up(desktop-small) {
+      gap: 9rem;
+    }
+
+    @media (min-width: 75em) {
+      gap: 10rem;
+    }
+  }
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  margin-block: var(--size-600);
   background-color: var(--clr-neutral-800);
   border-radius: 5px;
   position: relative;
@@ -228,7 +249,7 @@
     gap: 5em;
     background: unset;
     align-items: flex-start;
-    padding-block: var(--size-600);
+    // padding-block: var(--size-600);
     padding-left: 0;
     padding-right: 0;
 
@@ -248,6 +269,6 @@
   }
 
   @include breakpoint-up(desktop-small) {
-    padding-block: var(--size-800);
+    // padding-block: var(--size-800);
   }
 }
