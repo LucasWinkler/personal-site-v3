@@ -9,7 +9,7 @@ export default defineConfig({
     VitePWA({
       workbox: {
         globPatterns: [
-          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg,ico}',
+          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
           'sitemap.xml',
         ],
       },
