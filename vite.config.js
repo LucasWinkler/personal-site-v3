@@ -7,7 +7,7 @@ export default defineConfig({
       workbox: {
         globPatterns: [
           '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
-          'sitemap.xml',
+          'sitemap.xml, favicon.ico',
         ],
       },
       registerType: 'autoUpdate',
