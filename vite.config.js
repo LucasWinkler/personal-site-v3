@@ -2,12 +2,15 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  build: {
+    sourcemap: process.env.SOURCE_MAP === 'true',
+  },
   plugins: [
     VitePWA({
       workbox: {
         globPatterns: [
-          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
-          'sitemap.xml, favicon.ico',
+          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg,ico}',
+          'sitemap.xml',
         ],
       },
       registerType: 'autoUpdate',
@@ -27,22 +30,22 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: '/icons/android-chrome-144x144.png',
+            src: 'icons/android-chrome-144x144.png',
             sizes: '144x144',
             type: 'image/png',
           },
           {
-            src: '/icons/android-chrome-192x192.png',
+            src: 'icons/android-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/icons/android-chrome-512x512.png',
+            src: 'icons/android-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/icons/android-chrome-512x512.png',
+            src: 'icons/android-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
