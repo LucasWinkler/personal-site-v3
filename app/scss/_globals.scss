@@ -396,24 +396,21 @@ strong {
     max-width: 250px;
     bottom: 20%;
 
-    padding-bottom: 4px; /* use padding to preserve hover when moving cursor between the tooltip button and the tooltipItself */
-
+    padding-bottom: 4px;
     opacity: 0;
     visibility: hidden;
 
-    /* delay 250ms to give time to fade out */
-    transition: opacity 250ms, visibility 1ms 250ms;
+    transition: opacity 0.25s, visibility 1ms 0.25s;
 
     .tooltip.tooltip--active:hover &,
     .tooltip.tooltip--active:focus-within & {
       opacity: 1;
       visibility: visible;
-      transition: opacity 250ms;
+      transition: opacity 0.25s;
     }
 
     .tooltip.tooltip--active:hover & {
-      /* delay fadein 500ms to prevent accidental hovers */
-      transition: opacity 250ms 500ms;
+      transition: opacity 0.25s 0.5s;
     }
 
     .tooltip__text {
@@ -525,12 +522,6 @@ strong {
     }
   }
 
-  &--tertiary {
-  }
-
-  &--outline {
-  }
-
   &--unstyled {
     display: block;
     background: none;
@@ -617,7 +608,7 @@ strong {
 .skip-navigation {
   left: -999px;
   position: absolute;
-  top: auto;
+  top: 0;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -627,17 +618,17 @@ strong {
   &:active {
     color: #fff;
     background-color: var(--clr-primary-400);
-    left: auto;
-    top: auto;
-    width: 30%;
+    left: 50%;
+    top: 0;
+    width: auto;
     height: auto;
     overflow: auto;
-    margin: 10px 35%;
-    padding: 5px;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 15px;
     border: none;
     text-align: center;
     font-size: 1.2em;
     z-index: 999;
+    transform: translateX(-50%);
   }
 }
