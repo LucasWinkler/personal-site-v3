@@ -8,6 +8,7 @@ const floatingCta = document.querySelector('.floating-cta');
 const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
+let lastScrollY = window.scrollY;
 
 // Sets the --skill-colour css custom property using the
 // average colour of the skill logo
@@ -37,11 +38,24 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= header.offsetHeight / 2) {
-    header.classList.add('header--scrolled');
-  } else {
+  // if (window.scrollY >= header.offsetHeight / 2) {
+  //   header.classList.add('header--scrolled');
+  // } else {
+  //   header.classList.remove('header--scrolled');
+  // }
+  // console.log('lastScrollY', lastScrollY);
+  // console.log('currentScrollY', window.scrollY);
+
+  if (
+    lastScrollY < window.scrollY ||
+    window.scrollY <= header.offsetHeight / 2
+  ) {
     header.classList.remove('header--scrolled');
+  } else {
+    header.classList.add('header--scrolled');
   }
+
+  lastScrollY = window.scrollY;
 });
 
 function toggleFloatingCta() {
