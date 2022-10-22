@@ -93,19 +93,20 @@ navLinks.forEach(navLink => {
 });
 
 // Closes nav menu when screen size gets bigger than a 768px
-window.onresize = function () {
+function checkBrowserWidth() {
   let browserWidth = window.innerWidth;
 
-  if (browserWidth > 768) {
+  if (browserWidth >= 768) {
     navToggle.setAttribute('aria-expanded', false);
     navList.removeAttribute('data-visible');
     header.removeAttribute('data-overlay');
     document.body.classList.remove('overflow-hidden');
   }
-};
+}
 
 window.onresize = function () {
   reveal();
+  checkBrowserWidth();
 };
 
 // Checks if the user clicked outside of the mobile nav menu and if so closes the menu
