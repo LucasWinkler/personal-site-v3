@@ -151,7 +151,7 @@
 
     &[aria-expanded='true'] {
       z-index: 11;
-      position: fixed;
+      position: sticky;
       right: 23px;
 
       > span {
