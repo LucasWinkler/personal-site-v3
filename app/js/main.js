@@ -37,26 +37,19 @@ function reveal() {
 // Runs the reveal animation function on scroll
 window.addEventListener('scroll', reveal);
 
-window.addEventListener('scroll', () => {
-  // if (window.scrollY >= header.offsetHeight / 2) {
-  //   header.classList.add('header--scrolled');
-  // } else {
-  //   header.classList.remove('header--scrolled');
-  // }
-  // console.log('lastScrollY', lastScrollY);
-  // console.log('currentScrollY', window.scrollY);
+// Make header/nav sticky when scrolling up only
+// window.addEventListener('scroll', () => {
+//   if (
+//     lastScrollY < window.scrollY ||
+//     window.scrollY <= header.offsetHeight / 2
+//   ) {
+//     header.classList.remove('header--scrolled');
+//   } else {
+//     header.classList.add('header--scrolled');
+//   }
 
-  if (
-    lastScrollY < window.scrollY ||
-    window.scrollY <= header.offsetHeight / 2
-  ) {
-    header.classList.remove('header--scrolled');
-  } else {
-    header.classList.add('header--scrolled');
-  }
-
-  lastScrollY = window.scrollY;
-});
+//   lastScrollY = window.scrollY;
+// });
 
 function toggleFloatingCta() {
   let contactTop = contact.getBoundingClientRect().top;
