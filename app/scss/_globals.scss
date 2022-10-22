@@ -131,10 +131,15 @@ strong {
     > svg {
       height: 1.5rem;
       width: 1.5rem;
+      transition: all 0.3s var(--animation-timing);
     }
 
     &:hover {
       transform: scale(1.125);
+
+      > svg {
+        transform: rotateY(180deg);
+      }
     }
 
     @include breakpoint-up(tablet-small) {
