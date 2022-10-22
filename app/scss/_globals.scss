@@ -134,11 +134,13 @@ strong {
       transition: all 0.3s var(--animation-timing);
     }
 
-    &:hover {
-      transform: scale(1.125);
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover {
+        transform: scale(1.125);
 
-      > svg {
-        transform: rotateY(180deg);
+        > svg {
+          transform: rotateY(180deg);
+        }
       }
     }
 
@@ -439,10 +441,12 @@ strong {
   cursor: pointer;
   background-color: var(--clr-neutral-700);
   color: white;
-  transition: color 0.25s ease, background 0.25s ease;
+  transition: color 0.3s var(--animation-timing),
+    background 0.3s var(--animation-timing);
 
   &__text {
     white-space: nowrap;
+    transition: transform 0.3s var(--animation-timing);
 
     &--fw-regular {
       font-weight: var(--fw-regular);
@@ -457,6 +461,7 @@ strong {
     margin-right: 0.4em;
     min-width: 1em;
     font-size: 1.3em;
+    transition: transform 0.3s var(--animation-timing);
 
     @include breakpoint-up(mobile-small) {
       margin-right: 0.35em;
@@ -467,15 +472,28 @@ strong {
     }
 
     svg > path {
-      transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
-        stroke 0.25s ease;
+      transition: color 0.3s var(--animation-timing),
+        background 0.3s var(--animation-timing),
+        fill 0.3s var(--animation-timing), stroke 0.3s var(--animation-timing),
+        transform 0.3s var(--animation-timing);
     }
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover:not(.disabled-link) {
+      .button__prepend {
+        transform: translateX(3rem) rotateX(90deg);
+      }
+
+      .button__text {
+        transform: translateX(-0.5rem);
+      }
+    }
+  }
   &--primary {
     background-color: var(--clr-primary-400);
 
-    &:hover {
+    &:hover:not(.disabled-link) {
       background-color: var(--clr-accent-400);
     }
   }
@@ -484,8 +502,8 @@ strong {
     background-color: transparent;
     padding: 0.6rem 0;
 
-    &:hover,
-    &:focus-visible {
+    &:hover:not(.disabled-link),
+    &:focus-visible:not(.disabled-link) {
       color: var(--clr-neutral-200);
 
       svg > path {
@@ -531,21 +549,29 @@ strong {
 
 .socials {
   display: flex;
-  gap: 1em;
+  gap: 2em;
+  padding-left: 0.45em;
 
   &__item {
     font-size: 1.6em;
-    padding: 0.3em;
+    transition: scale 0.3s var(--animation-timing);
+
+    &:hover {
+      scale: 1.05;
+    }
   }
 
   &__link {
     position: relative;
-    display: inline-block; // Fixes bug on firefox
-    transition: color 0.25s ease;
+    display: inline-block;
+    transition: color 0.3s var(--animation-timing);
 
-    svg > path {
-      transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
-        stroke 0.25s ease;
+    svg,
+    path {
+      transition: color 0.3s var(--animation-timing),
+        background 0.3s var(--animation-timing),
+        fill 0.3s var(--animation-timing), stroke 0.3s var(--animation-timing),
+        transform 0.3s var(--animation-timing);
     }
 
     &:hover,
@@ -557,8 +583,10 @@ strong {
         border-color: var(--clr-neutral-200);
       }
 
-      svg > path {
-        fill: var(--clr-neutral-200);
+      svg {
+        > path {
+          fill: var(--clr-neutral-200);
+        }
       }
     }
 
@@ -572,8 +600,10 @@ strong {
       transform: translate(-50%, -50%);
       border: 1px solid white;
       border-radius: 50%;
-      transition: color 0.25s ease, background 0.25s ease, fill 0.25s ease,
-        stroke 0.25s ease, border 0.25s ease;
+      transition: color 0.3s var(--animation-timing),
+        background 0.3s var(--animation-timing),
+        fill 0.3s var(--animation-timing), stroke 0.3s var(--animation-timing),
+        border 0.3s var(--animation-timing);
     }
   }
 }
