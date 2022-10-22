@@ -48,21 +48,21 @@
   flex-direction: column;
   margin-block: var(--size-600);
   background-color: var(--clr-neutral-800);
-  padding: 1.2em;
+  // padding: 1.2em;
   border-radius: 5px;
   position: relative;
   z-index: 3;
-  gap: 1.5rem;
+  // gap: 1.5rem;
 
   &__content {
     position: relative;
     z-index: 3;
     order: 1;
+    padding: 1.6rem;
 
     @include breakpoint-up(tablet-medium) {
       width: 100%;
       background-color: var(--clr-neutral-800);
-      padding: 1.6em;
       border-radius: 5px;
       max-width: 48ch;
       margin-right: auto;
