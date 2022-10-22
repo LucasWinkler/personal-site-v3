@@ -5,7 +5,7 @@
 <br />
 <p align="center">
  <a href="https://www.lucaswinkler.dev/">
-    <img src="./public/icons/apple-touch-icon-precomposed.png" alt="LW logo" width="80" height="80">
+    <img src="./public/apple-touch-icon-precomposed.png" alt="LW logo" width="80" height="80">
   </a>
 </p>
 
