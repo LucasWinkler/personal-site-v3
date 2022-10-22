@@ -16,22 +16,7 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.lucaswinkler.dev/lucas_winkler-resume.pdf</loc>
-  <lastmod>2022-10-22</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.lucaswinkler.dev/#projects</loc>
-  <lastmod>2022-10-22</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.lucaswinkler.dev/#skills</loc>
-  <lastmod>2022-10-22</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.lucaswinkler.dev/#contact</loc>
+  <loc>https://www.lucaswinkler.dev/lucas-winkler-resume.pdf</loc>
   <lastmod>2022-10-22</lastmod>
   <priority>0.80</priority>
 </url>
