@@ -6,6 +6,12 @@
   publish = "dist"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
+[[redirect]]
+  from = "https://lucaswinkler.netlify.app/*"
+  to = "new_api/api.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
