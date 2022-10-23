@@ -6,9 +6,10 @@
   publish = "dist"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
-[[redirect]]
+[[redirects]]
   from = "https://lucaswinkler.netlify.app/*"
   to = "https://www.lucaswinkler.dev/:splat"
+  force = true
   status = 301
 
 [[redirects]]
