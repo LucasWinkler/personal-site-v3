@@ -8,9 +8,8 @@
 
 [[redirect]]
   from = "https://lucaswinkler.netlify.app/*"
-  to = "new_api/api.html"
+  to = "https://www.lucaswinkler.dev/:splat"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/*"
