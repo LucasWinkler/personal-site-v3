@@ -11,7 +11,19 @@
   <loc>https://www.lucaswinkler.dev/</loc>
   <image:image>
       <image:loc>https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png</image:loc>
-    </image:image>
+  </image:image>
+  <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
+    <DataObject type="document">
+      <Attribute name="title">Lucas Winkler — Front-End Developer</Attribute>
+      <Attribute name="author">Lucas Winkler</Attribute>
+      <Attribute name="description">Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences.</Attribute>
+    </DataObject>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png" />
+      <Attribute name="width" value="1440" />
+      <Attribute name="height" value="755" />
+    </DataObject>
+  </PageMap>
   <lastmod>2022-10-23</lastmod>
   <priority>1.00</priority>
 </url>
