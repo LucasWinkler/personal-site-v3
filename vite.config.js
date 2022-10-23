@@ -11,6 +11,7 @@ export default defineConfig({
         globPatterns: [
           '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
           'sitemap.xml',
+          'robots.txt',
         ],
       },
       registerType: 'autoUpdate',
