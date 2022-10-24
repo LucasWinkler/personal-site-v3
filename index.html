@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <!-- Standard tags -->
 
@@ -74,8 +74,13 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="theme-color" content="#181920" />
 
-    <!-- Open Graph -->
+    <!-- New Icons -->
 
+    <!-- Twitter/Open Graph Cards -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lucasjwinkler" />
+    <meta name="twitter:creator" content="@lucasjwinkler" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.lucaswinkler.dev/" />
     <meta property="og:title" content="Lucas Winkler — Front-End Developer" />
@@ -85,20 +90,9 @@
     <meta
       property="og:image"
       content="https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.lucaswinkler.dev/" />
-
-    <!-- Twitter -->
-
     <meta
-      property="twitter:title"
-      content="Lucas Winkler — Front-End Developer" />
-    <meta
-      property="twitter:description"
-      content="Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences." />
-    <meta
-      property="twitter:image"
-      content="https://www.lucaswinkler.dev/images/personal-website-v3-screenshot.png" />
+      property="og:image:alt"
+      content="Desktop screenshot of lucaswinkler.dev hero section." />
 
     <!-- Person Schema -->
 
@@ -545,7 +539,7 @@
                 class="button button--secondary reveal reveal--fade-up-quick"
                 style="--animation-delay: 4"
                 aria-label="My Résumé"
-                href="./lucas-winklers-resume.pdf"
+                href="/lucas-winklers-resume.pdf"
                 target="_blank">
                 <span class="button__prepend">
                   <svg

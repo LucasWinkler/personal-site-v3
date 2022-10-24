@@ -7,18 +7,25 @@ export default defineConfig({
   },
   plugins: [
     VitePWA({
+      devOptions: {
+        enabled: true,
+      },
       workbox: {
         globPatterns: [
-          '**/*.{js,css,html,pdf,webp,svg,png,jpg,jpeg}',
+          '**/*.{js,css,html,webp,svg,png,jpg,jpeg,ico}',
           'sitemap.xml',
           'robots.txt',
+          'browserconfig.xml',
+          'manifest.webmanifest',
+          'lucas-winklers-resume.pdf',
         ],
       },
       registerType: 'autoUpdate',
-      devOptions: {
-        enabled: false,
-      },
-      includeAssets: ['favicon.ico', '**/*.{png,svg,webp,jpg,jpeg}'],
+      includeAssets: [
+        '**/*.{png,svg,webp,jpg,jpeg,ico}',
+        'lucas-winklers-resume.pdf',
+        'manifest.webmanifest',
+      ],
       manifest: {
         name: 'Lucas Winkler | Front-End Dev',
         start_url: '/',
