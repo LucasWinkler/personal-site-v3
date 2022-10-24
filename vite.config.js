@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [
     VitePWA({
       devOptions: {
-        enabled: true,
+        enabled: false,
       },
       workbox: {
         runtimeCaching: [
