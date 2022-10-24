@@ -1,49 +1,54 @@
 [build.environment]
-  NPM_FLAGS = "--prefix=/dev/null"
-  NODE_VERSION = "14"
+NODE_VERSION = "14"
+NPM_FLAGS = "--prefix=/dev/null"
 
 [build]
-  publish = "dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+publish = "dist"
 
 [[redirects]]
-  from = "https://w.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
+force = true
+from = "https://w.lucaswinkler.dev/*"
+status = 301
+to = "https://www.lucaswinkler.dev/:splat"
 
 [[redirects]]
-  from = "https://ww.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
-  
+
+force = true
+from = "https://ww.lucaswinkler.dev/*"
+status = 301
+to = "https://www.lucaswinkler.dev/:splat"
 [[redirects]]
-  from = "https://wwww.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
+force = true
+from = "https://wwww.lucaswinkler.dev/*"
+status = 301
+to = "https://www.lucaswinkler.dev/:splat"
 
 [[redirects]]
-  from = "https://lucaswinkler.netlify.app/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
+force = true
+from = "https://lucaswinkler.netlify.app/*"
+status = 301
+to = "https://www.lucaswinkler.dev/:splat"
 
 [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+from = "/*"
+status = 200
+to = "/index.html"
+
+[[redirects]]
+from = "/*"
+status = 404
+to = "/404.html"
 
 [[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
+for = "/manifest.webmanifest"
+[headers.values]
+Content-Type = "application/manifest+json"
 
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    cache-control = '''
+for = "/assets/*"
+[headers.values]
+cache-control = '''
     max-age=31536000,
     immutable
     '''
