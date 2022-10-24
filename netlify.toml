@@ -29,6 +29,7 @@
 [[redirects]]
   from = "/*"
   to = "/404.html"
+  force = true
   status = 404
 
 [[headers]]
