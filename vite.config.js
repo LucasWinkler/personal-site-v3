@@ -59,7 +59,7 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       includeAssets: [
-        '**/*.{png,svg,webp,jpg,jpeg,ico,html}',
+        '**/*.{png,svg,webp,jpg,jpeg,ico}',
         'lucas-winklers-resume.pdf',
         'manifest.webmanifest',
       ],
