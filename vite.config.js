@@ -1,9 +1,16 @@
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { resolve } from 'path';
 
 export default defineConfig({
   build: {
     sourcemap: process.env.SOURCE_MAP === 'true',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        notFound: resolve(__dirname, '404.html'),
+      },
+    },
   },
   plugins: [
     VitePWA({

@@ -428,7 +428,7 @@ strong {
 }
 
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 0.4rem 1rem;
   font-size: var(--fs-300);
@@ -539,7 +539,7 @@ strong {
 }
 
 .socials {
-  display: flex;
+  display: inline-flex;
   gap: 2em;
   padding-left: 0.45em;
 

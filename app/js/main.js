@@ -52,6 +52,11 @@ window.addEventListener('scroll', reveal);
 // });
 
 function toggleFloatingCta() {
+  if (typeof contact == 'undefined' || contact == null) {
+    console.log('no contact');
+    return;
+  }
+
   let contactTop = contact.getBoundingClientRect().top;
   let windowHeight = window.innerHeight;
   let offset = 20;
