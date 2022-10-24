@@ -9,25 +9,21 @@
 [[redirects]]
   from = "https://w.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
-  force = true
   status = 301
 
 [[redirects]]
   from = "https://ww.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
-  force = true
   status = 301
   
 [[redirects]]
   from = "https://wwww.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
-  force = true
   status = 301
 
 [[redirects]]
   from = "https://lucaswinkler.netlify.app/*"
   to = "https://www.lucaswinkler.dev/:splat"
-  force = true
   status = 301
 
 [[redirects]]
