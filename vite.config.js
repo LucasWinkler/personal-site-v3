@@ -32,90 +32,90 @@ export default defineConfig({
   },
   plugins: [
     rewriteSlashToIndexHtml(),
-    // VitePWA({
-    //   devOptions: {
-    //     enabled: false,
-    //   },
-    //   workbox: {
-    //     runtimeCaching: [
-    //       {
-    //         urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-    //         handler: 'CacheFirst',
-    //         options: {
-    //           cacheName: 'google-fonts-cache',
-    //           expiration: {
-    //             maxEntries: 10,
-    //             maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-    //           },
-    //           cacheableResponse: {
-    //             statuses: [0, 200],
-    //           },
-    //         },
-    //       },
-    //       {
-    //         urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-    //         handler: 'CacheFirst',
-    //         options: {
-    //           cacheName: 'gstatic-fonts-cache',
-    //           expiration: {
-    //             maxEntries: 10,
-    //             maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
-    //           },
-    //           cacheableResponse: {
-    //             statuses: [0, 200],
-    //           },
-    //         },
-    //       },
-    //     ],
-    //     globPatterns: [
-    //       '**/*.{js,css,html,webp,svg,png,jpg,jpeg,ico}',
-    //       'sitemap.xml',
-    //       'robots.txt',
-    //       'browserconfig.xml',
-    //       'manifest.webmanifest',
-    //       'lucas-winklers-resume.pdf',
-    //     ],
-    //   },
-    //   registerType: 'autoUpdate',
-    //   includeAssets: [
-    //     '**/*.{png,svg,webp,jpg,jpeg,ico}',
-    //     'lucas-winklers-resume.pdf',
-    //     'manifest.webmanifest',
-    //   ],
-    //   manifest: {
-    //     name: 'Lucas Winkler | Front-End Dev',
-    //     start_url: '/',
-    //     id: '/',
-    //     short_name: 'Lucas Winkler',
-    //     description:
-    //       'Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences.',
-    //     theme_color: '#12022c',
-    //     background_color: '#12022c',
-    //     display: 'standalone',
-    //     icons: [
-    //       {
-    //         src: 'android-chrome-144x144.png',
-    //         sizes: '144x144',
-    //         type: 'image/png',
-    //       },
-    //       {
-    //         src: 'android-chrome-192x192.png',
-    //         sizes: '192x192',
-    //         type: 'image/png',
-    //       },
-    //       {
-    //         src: 'android-chrome-512x512.png',
-    //         sizes: '512x512',
-    //         type: 'image/png',
-    //       },
-    //       {
-    //         src: 'android-chrome-512x512.png',
-    //         sizes: '512x512',
-    //         type: 'image/png',
-    //         purpose: 'maskable',
-    //       },
-    //     ],
-    //   },
-    // }),
+    VitePWA({
+      devOptions: {
+        enabled: false,
+      },
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'gstatic-fonts-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
+        globPatterns: [
+          '**/*.{js,css,html,webp,svg,png,jpg,jpeg,ico}',
+          'sitemap.xml',
+          'robots.txt',
+          'browserconfig.xml',
+          'manifest.webmanifest',
+          'lucas-winklers-resume.pdf',
+        ],
+      },
+      registerType: 'autoUpdate',
+      includeAssets: [
+        '**/*.{png,svg,webp,jpg,jpeg,ico}',
+        'lucas-winklers-resume.pdf',
+        'manifest.webmanifest',
+      ],
+      manifest: {
+        name: 'Lucas Winkler | Front-End Dev',
+        start_url: '/',
+        id: '/',
+        short_name: 'Lucas Winkler',
+        description:
+          'Lucas Winkler is a front-end developer based in Canada, Ontario who builds captivating web experiences.',
+        theme_color: '#12022c',
+        background_color: '#12022c',
+        display: 'standalone',
+        icons: [
+          {
+            src: 'android-chrome-144x144.png',
+            sizes: '144x144',
+            type: 'image/png',
+          },
+          {
+            src: 'android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: 'android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
+      },
+    }),
   ],
 });
