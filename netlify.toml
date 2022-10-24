@@ -30,11 +30,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
-
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
