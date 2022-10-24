@@ -10,27 +10,30 @@
   from = "https://w.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://ww.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
   status = 301
+  force = true
   
 [[redirects]]
   from = "https://wwww.lucaswinkler.dev/*"
   to = "https://www.lucaswinkler.dev/:splat"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://lucaswinkler.netlify.app/*"
   to = "https://www.lucaswinkler.dev/:splat"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
-  to = "/404.html"
-  force = true
-  status = 404
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/manifest.webmanifest"
