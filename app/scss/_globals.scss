@@ -127,7 +127,7 @@ strong {
     border-radius: 100%;
     transition: all 0.3s var(--animation-timing);
     color: var(--clr-neutral-100);
-    opacity: 1;
+    opacity: 0.85;
 
     > svg {
       height: 1.5rem;
@@ -138,6 +138,7 @@ strong {
     @media (prefers-reduced-motion: no-preference) {
       &:hover {
         transform: scale(1.125);
+        opacity: 1;
 
         > svg {
           transform: rotateY(180deg);
