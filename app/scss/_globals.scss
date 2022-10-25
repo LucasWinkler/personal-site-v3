@@ -643,16 +643,33 @@ strong {
   &--hero-1 {
     top: -6.5rem;
     left: 0;
+
+    @include breakpoint-up(tablet-small) {
+    }
   }
 
   &--hero-2 {
     bottom: 0;
     right: 0;
+    opacity: 0.3;
+
+    @include breakpoint-up(tablet-small) {
+      bottom: 0;
+    }
+
+    @include breakpoint-up(tablet-medium) {
+      bottom: 0;
+    }
+
+    @include breakpoint-up(dekstop-small) {
+      bottom: 0;
+    }
   }
 
   &--projects-1 {
     top: 0;
     left: 0;
+    opacity: 0.3;
   }
 
   &--projects-2 {
@@ -668,11 +685,13 @@ strong {
   &--projects-4 {
     right: 0;
     bottom: 0;
+    opacity: 0.3;
   }
 
   &--contact-1 {
     top: 0;
     left: 0;
+    opacity: 0.3;
   }
 
   &--contact-2 {
