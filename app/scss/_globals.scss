@@ -116,6 +116,10 @@ strong {
   display: none !important;
 }
 
+.floating-cta {
+  display: none;
+}
+
 @include breakpoint-up(mobile-small) {
   .floating-cta {
     position: fixed !important;
@@ -128,6 +132,7 @@ strong {
     transition: all 0.3s var(--animation-timing);
     color: var(--clr-neutral-100);
     opacity: 0.85;
+    display: unset;
 
     > svg {
       height: 1.5rem;
