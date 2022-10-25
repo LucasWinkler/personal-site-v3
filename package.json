@@ -8,9 +8,13 @@
     "devExposed": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "webp": "simple-webp-converter"
+    "webp": "simple-webp-converter",
+    "test:chrome": "npx playwright test --headed --browser=chromium",
+    "test:firefox": "npx playwright test --headed --browser=firefox",
+    "test:safari": "npx playwright test --headed --browser=webkit"
   },
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "simple-webp-converter": "^1.0.3",
     "vite": "^3.0.0",
     "vite-plugin-pwa": "^0.13.1"
