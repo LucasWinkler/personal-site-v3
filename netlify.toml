@@ -31,6 +31,12 @@
   force = true
 
 [[redirects]]
+  from = "/lucas_winkler-resume.pdf"
+  to = "/lucas-winklers-resume.pdf"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
