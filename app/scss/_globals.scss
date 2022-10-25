@@ -634,3 +634,17 @@ strong {
     transform: translateX(-50%);
   }
 }
+
+.bg-circle {
+  position: absolute;
+
+  &--hero-1 {
+    top: 0;
+    left: 0;
+  }
+
+  &--hero-2 {
+    bottom: 0;
+    right: 0;
+  }
+}
