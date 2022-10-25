@@ -4,11 +4,6 @@
   padding-bottom: var(--size-700);
   position: relative;
 
-  // Make all children appear above the background circles
-  * {
-    z-index: 5;
-  }
-
   @include breakpoint-up(tablet-medium) {
     padding-top: var(--size-800);
     padding-bottom: 6rem;
