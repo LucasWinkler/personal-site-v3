@@ -637,14 +637,46 @@ strong {
 
 .bg-circle {
   position: absolute;
+  opacity: 0.5;
+  overflow: hidden;
 
   &--hero-1 {
-    top: 0;
+    top: -6.5rem;
     left: 0;
   }
 
   &--hero-2 {
     bottom: 0;
+    right: 0;
+  }
+
+  &--projects-1 {
+    top: 0;
+    left: 0;
+  }
+
+  &--projects-2 {
+    top: 0;
+    right: 0;
+  }
+
+  &--projects-3 {
+    left: 0;
+    bottom: 0;
+  }
+
+  &--projects-4 {
+    right: 0;
+    bottom: 0;
+  }
+
+  &--contact-1 {
+    top: 0;
+    left: 0;
+  }
+
+  &--contact-2 {
+    top: 0;
     right: 0;
   }
 }
