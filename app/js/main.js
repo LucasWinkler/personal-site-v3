@@ -2,22 +2,22 @@ import { FastAverageColor } from 'fast-average-color';
 const fac = new FastAverageColor();
 
 const header = document.querySelector('.header');
-const hero = document.querySelector('.hero');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');
 const floatingCta = document.querySelector('.floating-cta');
 const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
-let lastScrollY = window.scrollY;
 
 // Sets the --skill-colour css custom property using the
 // average colour of the skill logo
-skillsImages.forEach(skill => {
-  fac.getColorAsync(skill).then(color => {
-    skill.style.setProperty('--skill-colour', color.hex + 'aa');
+function getAllSkillImageColour() {
+  skillsImages.forEach(skill => {
+    fac.getColorAsync(skill).then(color => {
+      skill.style.setProperty('--skill-colour', color.hex + 'aa');
+    });
   });
-});
+}
 
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
@@ -35,38 +35,16 @@ function reveal() {
   }
 }
 
-// Runs the reveal animation function on scroll
-window.addEventListener('scroll', reveal);
-
-// // Make header/nav sticky when scrolling up only
-// window.addEventListener('scroll', () => {
-//   if (
-//     lastScrollY < window.scrollY ||
-//     window.scrollY <= header.offsetHeight / 2
-//   ) {
-//     header.classList.remove('header--scrolled');
-//   } else {
-//     header.classList.add('header--scrolled');
-//   }
-
-//   lastScrollY = window.scrollY;
-// });
-
-// Make header/nav sticky when past the hero
-window.addEventListener('scroll', () => {
-  if (typeof hero == 'undefined' || hero == null) {
-    return;
-  }
-
-  if (hero.offsetHeight < window.scrollY) {
+// Checks if the browser has been scrolled to change the header/nav styling
+function checkBrowserScrolled() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     header.classList.add('header--scrolled');
   } else {
     header.classList.remove('header--scrolled');
   }
+}
 
-  lastScrollY = window.scrollY;
-});
-
+// Toggles floaing email cta when past the contact top
 function toggleFloatingCta() {
   if (typeof contact == 'undefined' || contact == null) {
     return;
@@ -82,8 +60,6 @@ function toggleFloatingCta() {
     floatingCta.classList.remove('floating-cta--hidden');
   }
 }
-
-window.addEventListener('scroll', toggleFloatingCta);
 
 // Toggles the nav menu
 navToggle.addEventListener('click', () => {
@@ -117,11 +93,6 @@ function checkBrowserWidth() {
   }
 }
 
-window.onresize = function () {
-  reveal();
-  checkBrowserWidth();
-};
-
 // Checks if the user clicked outside of the mobile nav menu and if so closes the menu
 navList.addEventListener('click', function (e) {
   if (e.offsetX < 0) {
@@ -132,6 +103,7 @@ navList.addEventListener('click', function (e) {
   }
 });
 
+// Lazy loads the background circles
 document.addEventListener('DOMContentLoaded', function () {
   var lazyBackgrounds = [].slice.call(
     document.querySelectorAll('.background-circle')
@@ -156,8 +128,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Waits until everythings loaded before doing the initial reveal.
-// This might solve the issue where the hero paragraph reveals instantly.
+// Removes anchor hash from url
+header.addEventListener('click', () => {
+  setTimeout(() => {
+    history.replaceState(
+      '',
+      document.title,
+      window.location.origin + window.location.pathname + window.location.search
+    );
+  }, 5);
+});
+
+window.addEventListener('scroll', () => {
+  toggleFloatingCta();
+  reveal();
+  checkBrowserScrolled();
+});
+
+window.addEventListener('resize', function () {
+  reveal();
+  checkBrowserWidth();
+});
+
 window.addEventListener('load', () => {
   reveal();
+  checkBrowserScrolled();
+  getAllSkillImageColour();
 });

@@ -1,13 +1,13 @@
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s var(--animation-timing);
   background-color: transparent;
 
   &--scrolled {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: var(--clr-neutral-800);
     box-shadow: 0 0 3rem rgba(0, 0, 0, 0.9);
   }
