@@ -2,6 +2,7 @@ import { FastAverageColor } from 'fast-average-color';
 const fac = new FastAverageColor();
 
 const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');
 const floatingCta = document.querySelector('.floating-cta');
@@ -37,7 +38,7 @@ function reveal() {
 // Runs the reveal animation function on scroll
 window.addEventListener('scroll', reveal);
 
-// Make header/nav sticky when scrolling up only
+// // Make header/nav sticky when scrolling up only
 // window.addEventListener('scroll', () => {
 //   if (
 //     lastScrollY < window.scrollY ||
@@ -51,9 +52,23 @@ window.addEventListener('scroll', reveal);
 //   lastScrollY = window.scrollY;
 // });
 
+// Make header/nav sticky when past the hero
+window.addEventListener('scroll', () => {
+  if (typeof hero == 'undefined' || hero == null) {
+    return;
+  }
+
+  if (hero.offsetHeight < window.scrollY) {
+    header.classList.add('header--scrolled');
+  } else {
+    header.classList.remove('header--scrolled');
+  }
+
+  lastScrollY = window.scrollY;
+});
+
 function toggleFloatingCta() {
   if (typeof contact == 'undefined' || contact == null) {
-    console.log('no contact');
     return;
   }
 
