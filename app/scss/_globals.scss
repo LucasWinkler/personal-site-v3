@@ -400,6 +400,7 @@ strong {
   display: inline-flex;
   gap: 2em;
   padding-left: 0.45em;
+  z-index: 5;
 
   &__item {
     font-size: 1.6em;
@@ -491,56 +492,155 @@ strong {
   }
 }
 
-.bg-circle {
-  position: absolute;
-  opacity: 0.8;
-  overflow: hidden;
-
-  &--hero-1 {
-    top: -6.5rem;
-    left: 0;
+.background-circle {
+  &--relative {
+    position: relative;
   }
 
-  &--hero-2 {
-    bottom: -7rem;
-    right: 0rem;
-    opacity: 0.3;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    z-index: 0;
+  }
 
-    @include breakpoint-up(desktop-small) {
-      bottom: 0;
+  &--hero::before {
+    max-width: 320px;
+    max-height: 239px;
+    height: 50%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+
+    @include breakpoint-up(tablet-small) {
+      opacity: 0.8;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include breakpoint-up(desktop-medium) {
+      max-width: 520px;
+      max-height: 439px;
+      height: 100%;
+      width: 100%;
     }
   }
 
-  &--projects-1 {
-    top: 0;
-    left: 0;
-    opacity: 0.3;
+  &--hero.background-circle--visible::before {
+    background-image: url('/images/hero-left-circle-purple.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  &--projects-2 {
-    top: 0;
+  &--hero::after {
+    max-width: 264px;
+    max-height: 736px;
+    height: 100%;
+    width: 60%;
     right: 0;
+    top: 0;
+    opacity: 0.4;
+
+    @include breakpoint-up(tablet-small) {
+      opacity: 0.5;
+      height: 100%;
+      width: 100%;
+    }
   }
 
-  &--projects-3 {
+  &--hero.background-circle--visible::after {
+    background-image: url('/images/hero-right-circle-blue.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--projects::before {
+    max-width: 228px;
+    max-height: 952px;
+    height: 70%;
+    width: 40%;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+
+    @include breakpoint-up(tablet-medium) {
+      opacity: 0.5;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &--projects.background-circle--visible::before {
+    background-image: url('/images/projects-left-circle-blue.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--projects::after {
+    max-width: 295px;
+    max-height: 625px;
+    height: 100%;
+    width: 60%;
+    right: 0;
+    top: 0;
+    opacity: 0.5;
+
+    @include breakpoint-up(tablet-medium) {
+      opacity: 0.8;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &--projects.background-circle--visible::after {
+    background-image: url('/images/projects-right-circle-purple.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--projects-2::before {
+    max-width: 320px;
+    max-height: 912px;
+    height: 40%;
+    width: 100%;
     left: 0;
     bottom: 0;
+    opacity: 0.6;
+
+    @include breakpoint-up(tablet-medium) {
+      opacity: 0.8;
+      height: 100%;
+      width: 100%;
+    }
   }
 
-  &--projects-4 {
+  &--projects-2.background-circle--visible::before {
+    background-image: url('/images/projects-left-circle-purple.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--projects-2::after {
+    max-width: 295px;
+    max-height: 948px;
+    height: 60%;
+    width: 100%;
     right: 0;
-    bottom: 7rem;
-    opacity: 0.3;
+    bottom: 0;
+    opacity: 0.2;
+
+    @include breakpoint-up(tablet-medium) {
+      opacity: 0.5;
+      height: 100%;
+      width: 100%;
+    }
   }
 
-  &--contact-1 {
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-  }
-
-  &--contact-2 {
-    top: 0;
-    right: 0;
+  &--projects-2.background-circle--visible::after {
+    background-image: url('/images/projects-right-circle-blue.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

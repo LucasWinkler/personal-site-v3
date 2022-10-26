@@ -2,7 +2,6 @@
   background-color: var(--clr-neutral-900);
   padding-block: var(--size-700);
   overflow: hidden;
-  position: relative;
 
   @include breakpoint-up(mobile-small) {
     padding-block: var(--size-800);

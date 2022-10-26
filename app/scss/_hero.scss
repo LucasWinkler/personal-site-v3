@@ -2,7 +2,6 @@
   background-color: var(--clr-neutral-800);
   padding-top: var(--size-300);
   padding-bottom: var(--size-700);
-  position: relative;
 
   @include breakpoint-up(tablet-medium) {
     padding-top: var(--size-800);
@@ -21,6 +20,7 @@
   &__image {
     display: none;
 
+    z-index: 5;
     @include breakpoint-up(tablet-medium) {
       display: block;
       margin-left: auto;
@@ -71,16 +71,19 @@
     color: var(--clr-neutral-100);
     font-weight: var(--fw-bold);
     line-height: var(--lh-headings);
+    z-index: 5;
   }
 
   &__content {
     margin-block: var(--size-400);
     max-width: 40ch;
+    z-index: 5;
   }
 
   &__buttons {
     display: flex;
     gap: 1em;
     margin-block: var(--size-600);
+    z-index: 5;
   }
 }
