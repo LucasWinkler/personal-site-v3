@@ -33,7 +33,7 @@ export default defineConfig({
   plugins: [
     rewriteSlashToIndexHtml(),
     VitePWA({
-      selfDestroying: false,
+      selfDestroying: true,
       devOptions: {
         enabled: false,
       },
