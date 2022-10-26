@@ -128,16 +128,6 @@ strong {
   color: var(--clr-neutral-100);
   opacity: 0.85;
 
-  @include breakpoint-down(mobile-small) {
-    pointer-events: none;
-    opacity: 0;
-    transform: translateY(20px) scaleX(0.2) scaleY(0.5);
-  }
-
-  @include breakpoint-up(mobile-small) {
-    display: unset;
-  }
-
   > svg {
     height: 1.5rem;
     width: 1.5rem;
