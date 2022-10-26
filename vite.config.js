@@ -45,7 +45,6 @@ export default defineConfig({
           '**/*.{js,css,html,webp,svg,png,jpg,jpeg,ico}',
           'sitemap.xml',
           'robots.txt',
-          'browserconfig.xml',
           'manifest.webmanifest',
           'lucas-winklers-resume.pdf',
         ],
