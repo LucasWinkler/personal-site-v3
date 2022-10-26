@@ -9,6 +9,28 @@ const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
 
+// function validateEmail(email) {
+//   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.trim())) {
+//     return true;
+//   }
+
+//   return false;
+// }
+
+// function validateContactForm() {
+//   if (nameInput.value.trim() === '') {
+//     setInputError(nameInput, 'A name must be provided.');
+//   }
+
+//   if (emailInput.value.trim() === '') {
+//     setInputError(emailInput, 'An email must be provided.');
+//   }
+
+//   if (messageInput.value.trim() === '') {
+//     setInputError(messageInput, 'A message must be provided.');
+//   }
+// }
+
 // Sets the --skill-colour css custom property using the
 // average colour of the skill logo
 function getAllSkillImageColour() {
