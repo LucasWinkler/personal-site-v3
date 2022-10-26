@@ -2,8 +2,15 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  appType: 'mpa',
   build: {
     sourcemap: process.env.SOURCE_MAP === 'true',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        pageNotFound: resolve(__dirname, '404.html'),
+      },
+    },
   },
   plugins: [
     VitePWA({
@@ -89,3 +96,20 @@ export default defineConfig({
     }),
   ],
 });
+
+const rewriteSlashToIndexHtml = () => {
+  return {
+    name: 'rewrite-slash-to-index-html',
+    apply: 'serve',
+    enforce: 'post',
+    configureServer(server) {
+      // rewrite / as index.html
+      server.middlewares.use('/', (req, _, next) => {
+        if (req.url === '/') {
+          req.url = '/index.html';
+        }
+        next();
+      });
+    },
+  };
+};
