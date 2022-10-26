@@ -33,10 +33,10 @@ export default defineConfig({
   plugins: [
     rewriteSlashToIndexHtml(),
     VitePWA({
+      selfDestroying: false,
       devOptions: {
         enabled: false,
       },
-      selfDestroying: true,
       workbox: {
         runtimeCaching: [
           {
