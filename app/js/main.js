@@ -31,6 +31,31 @@ const skillsImages = document.querySelectorAll('.skills__image');
 //   }
 // }
 
+// {
+//   document.querySelectorAll('input').forEach(e => {
+//     e.addEventListener(
+//       'blur',
+//       e.classList.add('contact__input--touched'),
+//       false
+//     );
+//     e.addEventListener(
+//       'keydown',
+//       e.classList.add('contact__input--touched'),
+//       false
+//     );
+//   });
+// }
+
+{
+  let f = function () {
+    this.classList.add('contact__input--touched');
+  };
+  document.querySelectorAll('input, textarea').forEach(e => {
+    e.addEventListener('blur', f, false);
+    e.addEventListener('keydown', f, false);
+  });
+}
+
 // Sets the --skill-colour css custom property using the
 // average colour of the skill logo
 function getAllSkillImageColour() {

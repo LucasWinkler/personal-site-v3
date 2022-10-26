@@ -80,7 +80,8 @@
     border-radius: 5px;
     padding: 0.4em 1em;
     color: var(--clr-neutral-200);
-    transition: all 0.3s var(--animation-timing);
+    transition: all 0.3s var(--animation-timing),
+      outline-offset 0.1s var(--animation-timing);
     outline: none;
 
     &--textarea {
@@ -92,22 +93,21 @@
     }
 
     &:focus {
-      border: 1px solid var(--clr-neutral-100);
+      outline: 1px dashed var(--clr-neutral-300);
+      outline-offset: 2px;
     }
 
-    &:valid {
+    &--touched:required:valid {
       border: 1px solid var(--clr-accent-200);
-      outline: none;
     }
 
-    &:not(:placeholder-shown):invalid {
+    &--touched:required:invalid {
       border: 1px dashed var(--clr-accent-300);
-      outline: none;
-    }
 
-    &:not(:placeholder-shown):invalid + .contact__error {
-      opacity: 1;
-      pointer-events: all;
+      & + .contact__error {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 
