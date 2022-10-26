@@ -117,64 +117,67 @@ strong {
 }
 
 .floating-cta {
-  display: none;
-}
+  position: fixed !important;
+  z-index: 9;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: var(--clr-primary-400);
+  padding: 1rem;
+  border-radius: 100%;
+  transition: all 0.3s var(--animation-timing);
+  color: var(--clr-neutral-100);
+  opacity: 0.85;
 
-@include breakpoint-up(mobile-small) {
-  .floating-cta {
-    position: fixed !important;
-    z-index: 9;
-    right: 2rem;
-    bottom: 2rem;
-    background-color: var(--clr-primary-400);
-    padding: 1rem;
-    border-radius: 100%;
-    transition: all 0.3s var(--animation-timing);
-    color: var(--clr-neutral-100);
-    opacity: 0.85;
+  @include breakpoint-down(mobile-small) {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(20px) scaleX(0.2) scaleY(0.5);
+  }
+
+  @include breakpoint-up(mobile-small) {
     display: unset;
+  }
 
-    > svg {
-      height: 1.5rem;
-      width: 1.5rem;
-      transition: all 0.3s var(--animation-timing);
-    }
+  > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: all 0.3s var(--animation-timing);
+  }
 
-    @media (prefers-reduced-motion: no-preference) {
-      &:hover {
-        transform: scale(1.125);
-        opacity: 1;
-
-        > svg {
-          transform: rotateY(180deg);
-        }
-      }
-    }
-
-    @include breakpoint-up(tablet-small) {
-      padding: 1rem;
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: scale(1.125);
+      opacity: 1;
 
       > svg {
-        height: 2rem;
-        width: 2rem;
+        transform: rotateY(180deg);
       }
     }
+  }
 
-    @include breakpoint-up(desktop-small) {
-      right: 2rem;
-      bottom: 2rem;
-    }
+  @include breakpoint-up(tablet-small) {
+    padding: 1rem;
 
-    @include breakpoint-up(desktop-medium) {
-      right: 4rem;
-      bottom: 4rem;
+    > svg {
+      height: 2rem;
+      width: 2rem;
     }
+  }
 
-    &--hidden {
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(20px) scaleX(0.2) scaleY(0.5);
-    }
+  @include breakpoint-up(desktop-small) {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  @include breakpoint-up(desktop-medium) {
+    right: 4rem;
+    bottom: 4rem;
+  }
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scaleX(0.2) scaleY(0.5);
   }
 }
 
