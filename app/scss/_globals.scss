@@ -173,6 +173,7 @@ strong {
     &--hidden {
       opacity: 0;
       pointer-events: none;
+      transform: translateY(20px) scaleX(0.2) scaleY(0.5);
     }
   }
 }
@@ -495,9 +496,6 @@ strong {
   &--hero-1 {
     top: -6.5rem;
     left: 0;
-
-    @include breakpoint-up(tablet-small) {
-    }
   }
 
   &--hero-2 {
@@ -530,10 +528,6 @@ strong {
     right: 0;
     bottom: 7rem;
     opacity: 0.3;
-
-    @include breakpoint-up(desktop-small) {
-      bottom: 0;
-    }
   }
 
   &--contact-1 {

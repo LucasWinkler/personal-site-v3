@@ -148,10 +148,12 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', function () {
   reveal();
   checkBrowserWidth();
+  toggleFloatingCta();
 });
 
 window.addEventListener('load', () => {
   reveal();
   checkBrowserScrolled();
   getAllSkillImageColour();
+  toggleFloatingCta();
 });
