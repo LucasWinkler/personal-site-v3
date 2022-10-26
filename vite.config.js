@@ -14,6 +14,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    rewriteSlashToIndexHtml(),
     VitePWA({
       devOptions: {
         enabled: false,
