@@ -13,9 +13,9 @@ const skillsImages = document.querySelectorAll('.skills__image');
 // average colour of the skill logo
 function getAllSkillImageColour() {
   skillsImages.forEach(skill => {
-    fac.getColorAsync(skill).then(color => {
-      skill.style.setProperty('--skill-colour', color.hex + 'aa');
-    });
+    const skillColour = fac.getColor(skill, { algorithm: 'simple' });
+
+    skill.style.setProperty('--skill-colour', skillColour.hex + 'bb');
   });
 }
 
