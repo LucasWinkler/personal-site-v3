@@ -36,6 +36,7 @@ export default defineConfig({
       devOptions: {
         enabled: false,
       },
+      selfDestroying: true,
       workbox: {
         runtimeCaching: [
           {
