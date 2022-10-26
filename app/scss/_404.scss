@@ -29,10 +29,11 @@
     max-width: 30ch;
   }
 
-  &__actions {
+  &__buttons {
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-block: 1.5rem;
+    gap: 1.5rem;
   }
 
   &__divider {
