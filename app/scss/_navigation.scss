@@ -8,22 +8,26 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: var(--fs-400);
-    font-weight: var(--fw-semi-bold);
-    color: var(--clr-neutral-100);
+    gap: 1.1rem;
 
     > svg {
       max-width: 48px;
 
-      @include breakpoint-up(mobile-medium) {
+      @include breakpoint-up(tablet-medium) {
         gap: 1rem;
-        max-width: 60px;
+        max-width: 56px;
       }
     }
 
-    @include breakpoint-up(mobile-medium) {
-      font-size: var(--fs-450);
+    &-name {
+      font-size: var(--fs-400);
+      font-weight: var(--fw-semi-bold);
+      color: var(--clr-neutral-100);
+
+      @include breakpoint-up(mobile-medium) {
+        font-size: var(--fs-450);
+        // font-size: 1.125rem;
+      }
     }
   }
 

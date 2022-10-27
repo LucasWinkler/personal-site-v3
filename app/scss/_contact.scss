@@ -80,11 +80,11 @@
     border-radius: 5px;
     padding: 0.4em 1em;
     color: var(--clr-neutral-200);
+    outline: 0px dashed transparent;
+    outline-offset: 0;
     transition: all 0.3s var(--animation-timing),
       outline-offset 0.1s var(--animation-timing),
       outline 0.1s var(--animation-timing);
-    outline: 0px dashed transparent;
-    outline-offset: 0;
 
     &--textarea {
       resize: none;
@@ -101,6 +101,7 @@
 
     &--touched:required:invalid {
       border: 1px dashed var(--clr-accent-300);
+      border-spacing: 100px;
 
       & + .contact__error {
         opacity: 1;
