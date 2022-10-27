@@ -497,6 +497,7 @@ strong {
     position: absolute;
     aspect-ratio: 1 / 1;
     z-index: 0;
+    pointer-events: none;
   }
 
   &--hero::before {
