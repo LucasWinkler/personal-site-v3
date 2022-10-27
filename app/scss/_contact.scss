@@ -1,11 +1,11 @@
 .contact {
   background-color: var(--clr-neutral-900);
   padding-top: var(--size-700);
-  padding-bottom: var(--size-600);
+  padding-bottom: var(--size-500);
 
   @include breakpoint-up(mobile-small) {
     padding-top: var(--size-800);
-    padding-bottom: var(--size-600);
+    padding-bottom: var(--size-500);
   }
 
   @include breakpoint-up(tablet-medium) {
@@ -124,16 +124,20 @@
   }
 
   &__methods {
-    margin-top: var(--size-600);
-    margin-bottom: var(--size-400);
+    margin-top: var(--size-500);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     @include breakpoint-up(mobile-small) {
-      margin-top: var(--size-700);
-      margin-bottom: var(--size-500);
+      margin-top: var(--size-500);
+      margin-bottom: var(--size-200);
     }
 
     @include breakpoint-up(tablet-medium) {
-      margin-top: var(--size-600);
+      margin-top: var(--size-400);
+      margin-bottom: var(--size-200);
     }
   }
 
@@ -142,12 +146,30 @@
     font-size: var(--fs-400);
   }
 
-  &__description {
-    font-size: var(--fs-400);
+  &__tagline {
+    padding-top: var(--size-500);
+    text-transform: uppercase;
+    font-size: var(--fs-200);
+
+    @include breakpoint-up(mobile-small) {
+      padding-top: var(--size-600);
+    }
+    @include breakpoint-up(tablet-medium) {
+      padding-top: 0.55rem;
+    }
+    @include breakpoint-up(desktop-small) {
+      padding-top: 0.6rem;
+    }
+  }
+
+  &__subheading {
+    font-size: var(--fs-450);
+    font-weight: var(--fw-semi-bold);
     color: var(--clr-neutral-100);
 
     @include breakpoint-up(desktop-small) {
-      font-size: var(--fs-450);
+      font-size: var(--fs-500);
+      font-weight: var(--fw-bold);
     }
   }
 
@@ -159,7 +181,7 @@
     font-size: inherit;
     text-decoration: underline;
     transition: all 0.25s ease;
-    margin-block: 1rem;
+    margin-left: 0.15rem;
 
     svg {
       font-size: 1.2em;
