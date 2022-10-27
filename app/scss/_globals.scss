@@ -288,6 +288,7 @@ strong {
   color: white;
   transition: color 0.3s var(--animation-timing),
     background 0.3s var(--animation-timing);
+  justify-content: center;
 
   &__text {
     white-space: nowrap;
@@ -340,7 +341,7 @@ strong {
           transform: translateX(3rem) rotateX(90deg);
         }
         .button__prepend + .button__text {
-          transform: translateX(-0.5rem);
+          transform: translateX(-0.55rem);
         }
       }
     }
@@ -387,6 +388,11 @@ strong {
 
   &--contact {
     padding: 0.6rem 1.5rem;
+    width: 100%;
+
+    @include breakpoint-up(tablet-medium) {
+      width: auto;
+    }
   }
 }
 
