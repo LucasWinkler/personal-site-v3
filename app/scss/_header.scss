@@ -4,8 +4,9 @@
   left: 0;
   right: 0;
   z-index: 10;
-  transition: all 0.3s var(--animation-timing);
-  background-color: transparent;
+  transition: background-color 0.3s var(--animation-timing),
+    background-color 0.3s var(--animation-timing);
+  box-shadow: transparent;
 
   &--scrolled {
     background-color: var(--clr-neutral-800);
