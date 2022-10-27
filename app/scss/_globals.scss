@@ -495,7 +495,7 @@ strong {
   &::after {
     content: '';
     position: absolute;
-    aspect-ratio: 1 / 1;
+    // aspect-ratio: 1 / 1;
     z-index: 0;
     pointer-events: none;
   }
@@ -532,15 +532,14 @@ strong {
   &--hero::after {
     max-width: 264px;
     max-height: 736px;
-    height: 100%;
     width: 60%;
+    height: calc(100vh + 100%);
     right: 0;
     top: 0;
     opacity: 0.4;
 
     @include breakpoint-up(tablet-small) {
       opacity: 0.5;
-      height: 100%;
       width: 100%;
     }
   }

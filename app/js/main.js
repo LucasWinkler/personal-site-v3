@@ -9,52 +9,9 @@ const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
 
-// function validateEmail(email) {
-//   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.trim())) {
-//     return true;
-//   }
-
-//   return false;
-// }
-
-// function validateContactForm() {
-//   if (nameInput.value.trim() === '') {
-//     setInputError(nameInput, 'A name must be provided.');
-//   }
-
-//   if (emailInput.value.trim() === '') {
-//     setInputError(emailInput, 'An email must be provided.');
-//   }
-
-//   if (messageInput.value.trim() === '') {
-//     setInputError(messageInput, 'A message must be provided.');
-//   }
-// }
-
-// {
-//   document.querySelectorAll('input').forEach(e => {
-//     e.addEventListener(
-//       'blur',
-//       e.classList.add('contact__input--touched'),
-//       false
-//     );
-//     e.addEventListener(
-//       'keydown',
-//       e.classList.add('contact__input--touched'),
-//       false
-//     );
-//   });
-// }
-
-{
-  let f = function () {
-    this.classList.add('contact__input--touched');
-  };
-  document.querySelectorAll('input, textarea').forEach(e => {
-    e.addEventListener('blur', f, false);
-    e.addEventListener('keydown', f, false);
-  });
-}
+let addInputTouched = function () {
+  this.classList.add('contact__input--touched');
+};
 
 // Sets the --skill-colour css custom property using the
 // average colour of the skill logo
@@ -203,4 +160,9 @@ window.addEventListener('load', () => {
   checkBrowserScrolled();
   getAllSkillImageColour();
   toggleFloatingCta();
+
+  document.querySelectorAll('input, textarea').forEach(e => {
+    e.addEventListener('blur', addInputTouched, false);
+    e.addEventListener('keydown', addInputTouched, false);
+  });
 });
