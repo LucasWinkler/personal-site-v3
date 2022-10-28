@@ -9,6 +9,12 @@ const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
 
+function delay(url) {
+  setTimeout(() => {
+    window.location = url;
+  }, 500);
+}
+
 let addInputTouched = function () {
   this.classList.add('contact__input--touched');
 };

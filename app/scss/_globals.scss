@@ -143,6 +143,14 @@ strong {
         transform: rotateY(180deg);
       }
     }
+
+    &:active {
+      transform: scale(0.9);
+
+      > svg {
+        transform: rotateY(0deg);
+      }
+    }
   }
 
   @include breakpoint-up(tablet-small) {
