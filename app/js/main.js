@@ -32,7 +32,11 @@ function getAllSkillImageColour() {
 // Reveals elements on scroll
 // Thanks to: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {
-  let reveals = document.querySelectorAll('.reveal');
+  let reveals = document.querySelectorAll(
+    '.reveal, .reveal-tablet-md-up, .reveal-tablet-md-down'
+  );
+
+  console.log(reveals);
 
   for (var i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;

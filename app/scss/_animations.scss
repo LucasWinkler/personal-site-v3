@@ -2,15 +2,27 @@
  * Reveal on scroll
  *********************************************/
 
-.reveal {
-  position: relative;
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
-    position: relative;
+  @include breakpoint-down(tablet-medium) {
+    .reveal-tablet-md-down {
+      opacity: 0;
+    }
+  }
 
+  @include breakpoint-up(tablet-medium) {
+    .reveal-tablet-md-up {
+      opacity: 0;
+    }
+  }
+
+  .reveal {
     opacity: 0;
+  }
+
+  .reveal,
+  .reveal-tablet-md-down,
+  .reveal-tablet-md-up {
+    position: relative;
     animation-delay: calc(var(--animation-delay) * 100ms);
 
     &:not(&--active) {
@@ -26,14 +38,14 @@
       }
 
       &.reveal--fade-up-quick {
-        animation-name: fade-up-quick;
-        animation-duration: 0.2s;
+        animation-name: fade-up;
+        animation-duration: 0.3s;
         animation-fill-mode: both;
         animation-timing-function: var(--animation-timing);
       }
 
       &.reveal--fade-up {
-        animation-name: fade-up-quick;
+        animation-name: fade-up;
         animation-duration: 0.5s;
         animation-fill-mode: both;
         animation-timing-function: var(--animation-timing);
@@ -98,10 +110,22 @@
     }
   }
 
+  @include breakpoint-down(tablet-medium) {
+    .reveal-tablet-md-down {
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint-up(tablet-medium) {
+    .reveal-tablet-md-up {
+      opacity: 0;
+    }
+  }
+
   /*********************************************
  * Animations for reveal on scroll
  *********************************************/
-  @keyframes fade-up-quick {
+  @keyframes fade-up {
     0% {
       transform: translateY(20px);
       opacity: 0;
