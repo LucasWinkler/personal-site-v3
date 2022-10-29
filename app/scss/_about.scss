@@ -2,8 +2,19 @@
   background-color: var(--clr-neutral-800);
   padding-top: var(--size-700);
 
+  @include breakpoint-up(mobile-small) {
+    padding-top: var(--size-800);
+  }
+  @include breakpoint-up(mobile-medium) {
+    padding-top: var(--size-850);
+  }
+
   @include breakpoint-up(tablet-medium) {
-    padding-bottom: var(--size-500);
+    padding-top: var(--size-900);
+  }
+
+  @include breakpoint-up(desktop-small) {
+    padding-bottom: var(--size-400);
   }
 
   &__wrapper {
@@ -54,9 +65,6 @@
     border-radius: 3rem;
     min-width: 40%;
     align-self: flex-start;
-
-    @include breakpoint-up(tablet-medium) {
-    }
 
     &:hover {
       .about__image {
