@@ -13,6 +13,9 @@
     "test:firefox": "npx playwright test --headed --browser=firefox",
     "test:safari": "npx playwright test --headed --browser=webkit"
   },
+  "simple-webp-converter": {
+    "src": "public/images/*.{png,jpg}"
+  },
   "devDependencies": {
     "@playwright/test": "^1.27.1",
     "simple-webp-converter": "^1.0.3",
