@@ -420,10 +420,10 @@ strong {
 
   &__item {
     font-size: 1.6em;
-    transition: scale 0.3s var(--animation-timing);
+    transition: scale 0.15s var(--animation-timing);
 
     &:hover {
-      scale: 1.05;
+      scale: 1.025;
     }
   }
 
@@ -434,10 +434,10 @@ strong {
 
     svg,
     path {
-      transition: color 0.3s var(--animation-timing),
-        background 0.3s var(--animation-timing),
-        fill 0.3s var(--animation-timing), stroke 0.3s var(--animation-timing),
-        transform 0.3s var(--animation-timing);
+      transition: color 0.15s var(--animation-timing),
+        background 0.15s var(--animation-timing),
+        fill 0.15s var(--animation-timing), stroke 0.15s var(--animation-timing),
+        transform 0.15s var(--animation-timing);
     }
 
     &:hover,
