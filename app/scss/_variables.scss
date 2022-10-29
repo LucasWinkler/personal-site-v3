@@ -81,14 +81,14 @@
 // Change typography for small phones
 @include breakpoint-up(mobile-small) {
   :root {
-    --fs-hero-heading: var(--fs-600);
+    --fs-hero-heading: var(--fs-550);
   }
 }
 
 // Change typography for medium phones
 @include breakpoint-up(mobile-medium) {
   :root {
-    --fs-hero-heading: var(--fs-700);
+    --fs-hero-heading: var(--fs-600);
     --fs-footer: var(--fs-300);
   }
 }
