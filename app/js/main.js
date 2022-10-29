@@ -36,8 +36,6 @@ function reveal() {
     '.reveal, .reveal-tablet-md-up, .reveal-tablet-md-down'
   );
 
-  console.log(reveals);
-
   for (var i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
