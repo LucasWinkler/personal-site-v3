@@ -37,7 +37,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
-    let offset = 60;
+    let offset = 90;
 
     if (elementTop < windowHeight - offset) {
       reveals[i].classList.add('reveal--active');

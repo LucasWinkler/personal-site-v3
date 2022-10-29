@@ -26,9 +26,15 @@
       }
 
       &.reveal--fade-up-quick {
-        // animation: fade-up-quick 0.3s var(--animation-timing);
         animation-name: fade-up-quick;
-        animation-duration: 0.3s;
+        animation-duration: 0.2s;
+        animation-fill-mode: both;
+        animation-timing-function: var(--animation-timing);
+      }
+
+      &.reveal--fade-up {
+        animation-name: fade-up-quick;
+        animation-duration: 0.5s;
         animation-fill-mode: both;
         animation-timing-function: var(--animation-timing);
       }
@@ -95,8 +101,6 @@
   /*********************************************
  * Animations for reveal on scroll
  *********************************************/
-  //  transform: translateY(20px);
-  //     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   @keyframes fade-up-quick {
     0% {
       transform: translateY(20px);
@@ -174,18 +178,7 @@
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-delay: 1s;
-    // transform-origin: center;
-    // transform-box: fill box;
   }
-
-  // @keyframes hero-hand {
-  // 	0% {
-  // 		transform: translateX(0);
-  // 	}
-  // 	100% {
-  // 		transform: translateX(8px);
-  // 	}
-  // }
 
   @keyframes hero-hand {
     0% {
@@ -198,10 +191,10 @@
       transform: translateX(8px) translateY(0);
     }
     50% {
-      transform: translateX(0) translateY(-3px);
+      transform: translateX(0) translateY(-1px);
     }
     60% {
-      transform: translateX(5px) translateY(0);
+      transform: translateX(4px) translateY(0);
     }
     100% {
       transform: translateX(0) translateY(0);
