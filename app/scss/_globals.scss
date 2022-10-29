@@ -659,4 +659,47 @@ strong {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  &--contact::before {
+    max-width: 200px;
+    max-height: 689px;
+    height: 50%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.4;
+    transform: translateY(20%);
+
+    @include breakpoint-up(tablet-small) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &--contact.background-circle--visible::before {
+    background-image: url('/images/contact-left-circle-blue.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--contact::after {
+    max-width: 204px;
+    max-height: 738px;
+    width: 60%;
+    height: calc(100vh + 100%);
+    right: 0;
+    top: 0;
+    opacity: 0.6;
+
+    @include breakpoint-up(tablet-small) {
+      width: 100%;
+    }
+  }
+
+  &--contact.background-circle--visible::after {
+    background-image: url('/images/contact-right-circle-purple.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

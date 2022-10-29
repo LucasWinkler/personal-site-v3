@@ -39,6 +39,7 @@
     font-weight: var(--fw-bold);
     font-size: var(--fs-section-heading);
     margin-bottom: var(--size-700);
+    z-index: 5;
 
     @include breakpoint-up(mobile-small) {
       margin-bottom: var(--size-700);
@@ -62,10 +63,12 @@
     flex-direction: column;
     margin-bottom: var(--size-400);
     width: 100%;
+    z-index: 5;
   }
 
   &__info {
     width: 100%;
+    z-index: 5;
   }
 
   &__label {
@@ -73,6 +76,7 @@
     font-weight: var(--fw-bold);
     font-size: var(--fs-450);
     margin-block: var(--size-100);
+    z-index: 5;
   }
 
   &__input {
@@ -86,9 +90,11 @@
     transition: all 0.3s var(--animation-timing),
       outline-offset 0.1s var(--animation-timing),
       outline 0.1s var(--animation-timing);
+    z-index: 5;
 
     &--textarea {
       resize: none;
+      z-index: 5;
     }
 
     &:focus {
@@ -118,10 +124,12 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s var(--animation-timing);
+    z-index: 5;
   }
 
   &__buttons {
     margin-block: var(--size-300);
+    z-index: 5;
   }
 
   &__methods {
@@ -130,6 +138,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    z-index: 5;
 
     @include breakpoint-up(mobile-small) {
       margin-top: var(--size-500);
@@ -145,12 +154,14 @@
   &__method {
     color: var(--clr-neutral-200);
     font-size: var(--fs-400);
+    z-index: 5;
   }
 
   &__tagline {
     padding-top: var(--size-500);
     text-transform: uppercase;
     font-size: var(--fs-200);
+    z-index: 5;
 
     @include breakpoint-up(mobile-small) {
       padding-top: var(--size-600);
@@ -167,6 +178,7 @@
     font-size: var(--fs-450);
     font-weight: var(--fw-semi-bold);
     color: var(--clr-neutral-100);
+    z-index: 5;
 
     @include breakpoint-up(desktop-small) {
       font-size: var(--fs-500);
@@ -183,6 +195,7 @@
     text-decoration: underline;
     transition: all 0.25s ease;
     margin-left: 0.15rem;
+    z-index: 5;
 
     svg {
       font-size: 1.2em;
