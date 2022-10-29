@@ -19,8 +19,8 @@
 
   &__image {
     display: none;
-
     z-index: 5;
+
     @include breakpoint-up(tablet-medium) {
       display: block;
       margin-left: auto;
@@ -64,6 +64,14 @@
         }
       }
     }
+  }
+
+  &__tagline {
+    font-size: var(--fs-450);
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-headings);
+    z-index: 5;
   }
 
   &__title {
