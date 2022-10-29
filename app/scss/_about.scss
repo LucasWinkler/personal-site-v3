@@ -51,12 +51,24 @@
   }
 
   &__link {
-    text-decoration: underline;
-    color: var(--clr-neutral-100);
-    transition: color 0.3s var(--animation-timing);
+    display: inline-block;
+    color: var(--clr-accent-200);
+    transition: color 0.3s var (--animation-timing);
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      border-radius: 5px;
+      transition: width 0.3s var(--animation-timing);
+      background-color: var(--clr-accent-200);
+    }
 
     &:hover {
-      color: var(--clr-secondary-400);
+      &::after {
+        width: 100%;
+      }
     }
   }
 
