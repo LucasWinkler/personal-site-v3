@@ -8,12 +8,8 @@ const floatingCta = document.querySelector('.floating-cta');
 const contact = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav__link');
 const skillsImages = document.querySelectorAll('.skills__image');
-
-function delay(url) {
-  setTimeout(() => {
-    window.location = url;
-  }, 500);
-}
+const contactSubmit = document.querySelector('.button--contact');
+let contactInputs = document.querySelectorAll('.contact__input');
 
 let addInputTouched = function () {
   this.classList.add('contact__input--touched');
@@ -151,6 +147,12 @@ header.addEventListener('click', () => {
   }, 5);
 });
 
+contactSubmit.addEventListener('click', () => {
+  contactInputs.forEach(contactInput => {
+    contactInput.classList.add('contact__input--touched');
+  });
+});
+
 window.addEventListener('scroll', () => {
   toggleFloatingCta();
   reveal();
@@ -169,7 +171,7 @@ window.addEventListener('load', () => {
   getAllSkillImageColour();
   toggleFloatingCta();
 
-  document.querySelectorAll('input, textarea').forEach(e => {
+  contactInputs.forEach(e => {
     e.addEventListener('blur', addInputTouched, false);
     e.addEventListener('keydown', addInputTouched, false);
   });
