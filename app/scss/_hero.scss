@@ -87,6 +87,10 @@
     margin-block: var(--size-400);
     max-width: 40ch;
     z-index: 5;
+
+    @include breakpoint-up(desktop-medium) {
+      font-size: 1.125rem;
+    }
   }
 
   &__buttons {

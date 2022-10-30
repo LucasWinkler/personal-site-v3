@@ -19,6 +19,10 @@
     padding-block: 8rem;
   }
 
+  @include breakpoint-up(desktop-medium) {
+    padding-block: 12rem;
+  }
+
   &__title {
     font-size: var(--fs-section-heading);
     font-weight: var(--fw-bold);

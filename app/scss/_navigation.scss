@@ -119,11 +119,9 @@
       background-color: var(--clr-accent-200);
     }
 
-    @include breakpoint-up(tablet-small) {
-      &:hover {
-        &::after {
-          width: 100%;
-        }
+    &:hover {
+      &::after {
+        width: 100%;
       }
     }
   }

@@ -18,6 +18,10 @@
     padding-bottom: var(--size-400);
   }
 
+  @include breakpoint-up(desktop-medium) {
+    padding-top: 12rem;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -44,6 +48,10 @@
     @include breakpoint-up(mobile-small) {
       margin-bottom: var(--size-700);
     }
+
+    @include breakpoint-up(desktop-medium) {
+      margin-bottom: var(--size-800);
+    }
   }
 
   &__paragraph {
@@ -53,26 +61,37 @@
     @include breakpoint-up(tablet-medium) {
       max-width: 40ch;
     }
+
+    @include breakpoint-up(desktop-medium) {
+      font-size: 1.125rem;
+    }
   }
 
   &__link {
     display: inline-block;
     color: var(--clr-accent-200);
     transition: color 0.3s var (--animation-timing);
+    position: relative;
 
     &::after {
       content: '';
+      position: absolute;
       display: block;
       height: 1px;
-      width: 0;
+      width: 100%;
+      transform: scaleX(0);
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
       border-radius: 5px;
-      transition: width 0.3s var(--animation-timing);
       background-color: var(--clr-accent-200);
+      transition: transform 0.3s var(--animation-timing);
     }
 
     &:hover {
       &::after {
-        width: 100%;
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }
