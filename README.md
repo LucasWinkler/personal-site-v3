@@ -102,4 +102,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucas-winkler/
-[personal-website-v3-screenshot]: ./public/images/personal-website-v3-screenshot.png
+[personal-website-v3-screenshot]: ./public/og.png
