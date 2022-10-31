@@ -8,6 +8,7 @@
   &__logo {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 1.1rem;
 
     > svg {
@@ -23,8 +24,17 @@
       font-size: var(--fs-400);
       font-weight: var(--fw-semi-bold);
       color: var(--clr-neutral-100);
+      white-space: nowrap;
 
       @include breakpoint-up(mobile-medium) {
+        font-size: var(--fs-450);
+      }
+
+      @include breakpoint-up(tablet-medium) {
+        font-size: var(--fs-400);
+      }
+
+      @include breakpoint-up(tablet-large) {
         font-size: var(--fs-450);
       }
     }
@@ -65,8 +75,11 @@
 
       @media (orientation: landscape) {
         flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
         gap: 0.5rem;
+
+        align-content: center;
 
         .nav__link {
           padding: 1rem 1rem;
@@ -102,6 +115,8 @@
 
   &__item {
     list-style: none;
+    display: flex;
+    align-items: center;
   }
 
   &__link {
