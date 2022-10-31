@@ -32,13 +32,13 @@
 
 [[redirects]]
   from = "/lucas_winkler-resume.pdf"
-  to = "/lucas-winklers-resume.pdf"
+  to = "/lucas-winkler-resume.pdf"
   status = 301
   force = true
 
 [[redirects]]
   from = "/resume"
-  to = "/lucas-winklers-resume.pdf"
+  to = "/lucas-winkler-resume.pdf"
   status = 200
   force = true
 
@@ -50,9 +50,8 @@
 
 [[redirects]]
   from = "/404.html"
-  to = "/404.html"
+  to = "/404"
   status = 404
-  force = true
 
 [[headers]]
   for = "/manifest.webmanifest"
