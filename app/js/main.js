@@ -45,6 +45,10 @@ function reveal() {
 
 // Checks if the browser has been scrolled to change the header/nav styling
 function checkBrowserScrolled() {
+  if (!header) {
+    return;
+  }
+
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     header.classList.add('header--scrolled');
   } else {
@@ -54,7 +58,7 @@ function checkBrowserScrolled() {
 
 // Toggles floaing email cta when past the contact top
 function toggleFloatingCta() {
-  if (typeof contact == 'undefined' || contact == null) {
+  if (!contact || !floatingCta) {
     return;
   }
 
@@ -69,16 +73,6 @@ function toggleFloatingCta() {
   }
 }
 
-// Toggles the nav menu
-navToggle.addEventListener('click', () => {
-  navList.hasAttribute('data-visible')
-    ? navToggle.setAttribute('aria-expanded', false)
-    : navToggle.setAttribute('aria-expanded', true);
-  navList.toggleAttribute('data-visible');
-  header.toggleAttribute('data-overlay');
-  document.body.classList.toggle('overflow-hidden');
-});
-
 // Closes nav menu when a nav link is clicked
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', () => {
@@ -91,6 +85,10 @@ navLinks.forEach(navLink => {
 
 // Closes nav menu when screen size gets bigger than a 768px
 function checkBrowserWidth() {
+  if (!(navToggle || navList || header)) {
+    return;
+  }
+
   let browserWidth = window.innerWidth;
 
   if (browserWidth >= 768) {
@@ -100,16 +98,6 @@ function checkBrowserWidth() {
     document.body.classList.remove('overflow-hidden');
   }
 }
-
-// Checks if the user clicked outside of the mobile nav menu and if so closes the menu
-navList.addEventListener('click', function (e) {
-  if (e.offsetX < 0) {
-    navToggle.setAttribute('aria-expanded', false);
-    navList.removeAttribute('data-visible');
-    header.removeAttribute('data-overlay');
-    document.body.classList.remove('overflow-hidden');
-  }
-});
 
 // Lazy loads the background circles
 document.addEventListener('DOMContentLoaded', function () {
@@ -136,23 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Removes anchor hash from url
-header.addEventListener('click', () => {
-  setTimeout(() => {
-    history.replaceState(
-      '',
-      document.title,
-      window.location.origin + window.location.pathname + window.location.search
-    );
-  }, 5);
-});
-
-contactSubmit.addEventListener('click', () => {
-  contactInputs.forEach(contactInput => {
-    contactInput.classList.add('contact__input--touched');
-  });
-});
-
 window.addEventListener('scroll', () => {
   toggleFloatingCta();
   reveal();
@@ -170,6 +141,53 @@ window.addEventListener('load', () => {
   checkBrowserScrolled();
   getAllSkillImageColour();
   toggleFloatingCta();
+
+  if (header) {
+    // Removes anchor hash from url
+    header.addEventListener('click', () => {
+      setTimeout(() => {
+        history.replaceState(
+          '',
+          document.title,
+          window.location.origin +
+            window.location.pathname +
+            window.location.search
+        );
+      }, 5);
+    });
+  }
+
+  if (navToggle) {
+    // Toggles the nav menu
+    navToggle.addEventListener('click', () => {
+      navList.hasAttribute('data-visible')
+        ? navToggle.setAttribute('aria-expanded', false)
+        : navToggle.setAttribute('aria-expanded', true);
+      navList.toggleAttribute('data-visible');
+      header.toggleAttribute('data-overlay');
+      document.body.classList.toggle('overflow-hidden');
+    });
+  }
+
+  if (navList) {
+    // Checks if the user clicked outside of the mobile nav menu and if so closes the menu
+    navList.addEventListener('click', function (e) {
+      if (e.offsetX < 0) {
+        navToggle.setAttribute('aria-expanded', false);
+        navList.removeAttribute('data-visible');
+        header.removeAttribute('data-overlay');
+        document.body.classList.remove('overflow-hidden');
+      }
+    });
+  }
+
+  if (contactSubmit) {
+    contactSubmit.addEventListener('click', () => {
+      contactInputs.forEach(contactInput => {
+        contactInput.classList.add('contact__input--touched');
+      });
+    });
+  }
 
   contactInputs.forEach(e => {
     e.addEventListener('blur', addInputTouched, false);
