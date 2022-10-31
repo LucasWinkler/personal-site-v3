@@ -109,7 +109,15 @@
 
     @include breakpoint-up(tablet-medium) {
       display: flex;
+      gap: 0.4rem;
+    }
+
+    @include breakpoint-up(tablet-large) {
       gap: 1rem;
+    }
+
+    @include breakpoint-up(desktop-small) {
+      gap: 1.5rem;
     }
   }
 
