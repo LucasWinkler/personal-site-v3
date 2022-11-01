@@ -16,6 +16,9 @@
 
       @include breakpoint-up(tablet-medium) {
         gap: 1rem;
+      }
+
+      @include breakpoint-up(tablet-large) {
         max-width: 56px;
       }
     }
@@ -78,7 +81,6 @@
         flex-wrap: wrap;
         width: 100%;
         gap: 0.5rem;
-
         align-content: center;
 
         .nav__link {
