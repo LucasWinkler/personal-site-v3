@@ -31,14 +31,8 @@
   force = true
 
 [[redirects]]
-  from = "/lucas_winkler-resume.pdf"
-  to = "/lucas-winkler-resume.pdf"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/resume"
-  to = "/lucas-winkler-resume.pdf"
+  to = "/resume.pdf"
   status = 200
   force = true
 

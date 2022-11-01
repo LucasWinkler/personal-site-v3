@@ -12,13 +12,8 @@
   <image:image>
       <image:loc>https://www.lucaswinkler.dev/og.png</image:loc>
   </image:image>
-  <lastmod>2022-10-31</lastmod>
+  <lastmod>2022-11-01</lastmod>
   <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.lucaswinkler.dev/resume</loc>
-  <lastmod>2022-10-31</lastmod>
-  <priority>0.90</priority>
 </url>
 
 </urlset>
