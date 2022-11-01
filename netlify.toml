@@ -31,6 +31,12 @@
   force = true
 
 [[redirects]]
+  from = "/resume"
+  to = "/resume.pdf"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/404"
   to = "/404.html"
   status = 404
