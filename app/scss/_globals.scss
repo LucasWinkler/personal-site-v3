@@ -432,6 +432,10 @@ strong {
     display: inline-block;
     transition: color 0.3s var(--animation-timing);
 
+    svg {
+      border-radius: 100%;
+    }
+
     svg,
     path {
       transition: color 0.15s var(--animation-timing),
