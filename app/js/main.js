@@ -1,6 +1,6 @@
 import { FastAverageColor } from 'fast-average-color';
-const fac = new FastAverageColor();
 
+const fac = new FastAverageColor();
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('.nav__mobile-toggle');
 const navList = document.querySelector('.nav__list');

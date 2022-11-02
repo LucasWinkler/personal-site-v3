@@ -34,9 +34,17 @@
 - [Contact](#contact)
 - [License](#license)
 
+## Want to use this as your own portfolio?
+
+You're allowed! But wait...
+
+Please don't forget to give credit by linking back to https://www.lucaswinkler.dev/. Thanks!
+
 ## About
 
-Iteration 3 of my personal website which I built to help practice with HTML, CSS and JavaScript. This website was fully designed by myself using Figma after I was done binge watching Design Course on YouTube. I wanted to redesign my website because iteration 2 was finished in 2020 and it's very outdated. I've recently gotten back into web development and I wanted to create something that looked great and responded great with different device sizes. This project is being hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a> and I'm using <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite</a> to help make development easier.
+Iteration 3 of my personal website which I built to help practice with responsiveness, accessibility and because my last website wasn't the best. It was lacking in a lot of places.
+
+This website was fully designed by myself using Figma after I was done binge watching Design Course on YouTube. I've recently gotten back into web development and I wanted to create something that looked great and responded great with different device sizes. This project is being hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a> and I'm using <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite</a> to help make development easier.
 
 ## Getting Started
 
