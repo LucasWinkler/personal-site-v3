@@ -1,10 +1,6 @@
 .skills {
   background-color: var(--clr-neutral-800);
 
-  // @include breakpoint-up(desktop-medium) {
-  //   padding-bottom: 5rem;
-  // }
-
   &__item {
     height: 50px;
     width: 100px;
