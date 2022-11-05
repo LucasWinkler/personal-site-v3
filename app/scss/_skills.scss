@@ -30,18 +30,18 @@
     height: 100%;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%);
+    filter: grayscale(100%) drop-shadow(0 0 0em var(--skill-colour));
     opacity: 25%;
-    transition: filter 0.3s var(--animation-timing),
-      opacity 0.3s var(--animation-timing);
+    will-change: filter;
+    transition: opacity 0.3s var(--animation-timing),
+      filter 0.3s var(--animation-timing);
 
     &:hover {
-      filter: grayscale(0);
-      opacity: 100%;
-      filter: drop-shadow(0 0 1em var(--skill-colour));
+      filter: grayscale(0%) drop-shadow(0 0 1em var(--skill-colour));
+      opacity: 100;
 
       @include breakpoint-up(tablet-medium) {
-        filter: drop-shadow(0 0 1.5em var(--skill-colour));
+        filter: grayscale(0%) drop-shadow(0 0 1.5em var(--skill-colour));
       }
     }
   }
