@@ -95,6 +95,11 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
+            src: 'favicon.ico',
+            sizes: '48x48',
+            type: 'image/x-icon',
+          },
+          {
             src: 'android-chrome-144x144.png',
             sizes: '144x144',
             type: 'image/png',
