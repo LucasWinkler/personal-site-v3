@@ -5,6 +5,7 @@
     height: 50px;
     width: 100px;
     margin-block: var(--size-600);
+    user-select: none;
 
     @include breakpoint-up(mobile-small) {
       margin-block: var(--size-600);
@@ -30,6 +31,7 @@
     height: 100%;
     width: auto;
     object-fit: contain;
+    user-select: none;
     filter: grayscale(100%) drop-shadow(0 0 0em var(--skill-colour));
     opacity: 25%;
     will-change: filter;
