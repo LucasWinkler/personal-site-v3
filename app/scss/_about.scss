@@ -59,7 +59,7 @@
     margin-block: var(--size-500);
 
     @include breakpoint-up(tablet-medium) {
-      max-width: 40ch;
+      max-width: 45ch;
     }
 
     @include breakpoint-up(desktop-medium) {
