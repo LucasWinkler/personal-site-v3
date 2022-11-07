@@ -84,8 +84,8 @@
     outline: 0px dashed transparent;
     outline-offset: 0;
     transition: all 0.3s var(--animation-timing),
-      outline-offset 0.1s var(--animation-timing),
-      outline 0.1s var(--animation-timing);
+      outline-offset 0.125s var(--animation-timing),
+      outline 0.125s var(--animation-timing);
     z-index: 5;
 
     &--textarea {
