@@ -383,12 +383,12 @@
     </div>
   </header>
   <main id="main">
-    <section id="hero" class="hero background-circle background-circle--hero">
+    <section id="hero" class="hero background-circle background-circle--hero" aria-labelledby="heroHeading">
       <div class="container display-tablet-md-flex-up gap-2">
         <div class="column-55">
           <p class="hero__tagline reveal reveal--fade-up-quick">Hi, I'm Lucas<span
               class="visually-hidden">Winkler</span>.</p>
-          <h1 class="hero__title reveal reveal--fade-up-quick" style="--animation-delay: 1">
+          <h1 id="heroHeading" class="hero__title reveal reveal--fade-up-quick" style="--animation-delay: 1">
             I create
             <span class="hero__accent--secondary">captivating</span>
             <br>web
@@ -763,9 +763,10 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="projects background-circle background-circle--relative background-circle--projects">
+    <section id="projects" class="projects background-circle background-circle--relative background-circle--projects"
+      aria-labelledby="projectsHeading">
       <div class="container background-circle background-circle--projects-2">
-        <h2 class="projects__title heading-underline reveal reveal--fade-up">
+        <h2 id="projectsHeading" class="projects__title heading-underline reveal reveal--fade-up">
           My work
         </h2>
         <div class="projects__wrapper">
@@ -977,11 +978,11 @@
         </div>
       </div>
     </section>
-    <section id="about" class="about">
+    <section id="about" class="about" aria-labelledby="aboutHeading">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__information">
-            <h2 class="about__title heading-underline reveal reveal--fade-up">
+            <h2 id="aboutHeading" class="about__title heading-underline reveal reveal--fade-up">
               Want to get to know me?
             </h2>
             <p class="about__paragraph reveal reveal--fade-up" style="--animation-delay: 1">
@@ -1016,9 +1017,9 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" aria-labelledby="skillsHeading">
       <div class="container skills__slider reveal reveal--fade-in" style="--animation-delay: 1">
-        <h2 class="visually-hidden">My Skills</h2>
+        <h2 id="skillsHeading" class="visually-hidden">My Skills</h2>
         <ul class="skills__list" aria-label="Skills">
           <li class="skills__item">
             <img width="115" height="101" class="skills__image" src="/images/react-logo.webp" alt="react logo"
@@ -1088,9 +1089,10 @@
         </ul>
       </div>
     </section>
-    <section id="contact" class="contact background-circle background-circle--relative background-circle--contact">
+    <section id="contact" class="contact background-circle background-circle--relative background-circle--contact"
+      aria-labelledby="contactHeading">
       <div class="container">
-        <h2 class="contact__title heading-underline reveal reveal--fade-up">
+        <h2 id="contactHeading" class="contact__title heading-underline reveal reveal--fade-up">
           Get in touch!
         </h2>
         <div class="contact__wrapper">
