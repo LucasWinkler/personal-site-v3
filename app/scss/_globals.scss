@@ -351,16 +351,16 @@ strong {
     // If no motion preference, not disabled, has
     // sibling with prepend and is a button--primary
     // then animate the icon and text.
-    @media (prefers-reduced-motion: no-preference) {
-      &:hover:not(.disabled-link) {
-        .button__prepend {
-          transform: translateX(3rem) rotateX(90deg);
-        }
-        .button__prepend + .button__text {
-          transform: translateX(-0.55rem);
-        }
-      }
-    }
+    // @media (prefers-reduced-motion: no-preference) {
+    //   &:hover:not(.disabled-link) {
+    //     .button__prepend {
+    //       transform: translateX(3rem) rotateX(90deg);
+    //     }
+    //     .button__prepend + .button__text {
+    //       transform: translateX(-0.55rem);
+    //     }
+    //   }
+    // }
   }
 
   &--secondary {
