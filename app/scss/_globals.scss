@@ -420,17 +420,13 @@ strong {
 
   &__item {
     font-size: 1.6em;
-    transition: scale 0.15s var(--animation-timing);
-
-    &:hover {
-      scale: 1.025;
-    }
   }
 
   &__link {
     position: relative;
     display: inline-block;
-    transition: color 0.3s var(--animation-timing);
+    transition: color 0.3s var(--animation-timing),
+      transform 0.3s var(--animation-timing);
 
     svg {
       border-radius: 100%;
@@ -448,6 +444,7 @@ strong {
     &:focus-visible {
       color: var(--clr-neutral-200);
       border-color: var(--clr-neutral-200);
+      transform: translateY(-0.2em);
 
       &::before {
         border-color: var(--clr-neutral-200);
