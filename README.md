@@ -36,7 +36,7 @@
 
 ## Want to use this as your own portfolio?
 
-You're allowed! But wait...
+You're allowed! But...
 
 Please don't forget to give credit by linking back to https://www.lucaswinkler.dev/. Thanks!
 
