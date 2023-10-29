@@ -54,39 +54,20 @@
   &__slider {
     position: relative;
     overflow: hidden;
-
-    &::before,
-    &::after {
-      background: linear-gradient(
-        to right,
-        var(--clr-neutral-800) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      content: '';
-      height: 100%;
-      position: absolute;
-      width: 75px;
-      z-index: 2;
-
-      @include breakpoint-up(mobile-large) {
-        width: 100px;
-      }
-
-      @include breakpoint-up(tablet-medium) {
-        width: 150px;
-      }
-    }
-
-    &::after {
-      right: 0;
-      top: 0;
-      transform: rotateZ(180deg);
-    }
-
-    &::before {
-      left: 0;
-      top: 0;
-    }
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
   }
 
   &__list {
