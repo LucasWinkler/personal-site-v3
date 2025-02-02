@@ -1,33 +1,35 @@
+@use 'mixins';
+
 .contact {
   background-color: var(--clr-neutral-900);
   padding-top: var(--size-700);
   padding-bottom: var(--size-500);
   overflow: hidden;
 
-  @include breakpoint-up(mobile-small) {
+  @include mixins.breakpoint-up(mobile-small) {
     padding-top: var(--size-800);
     padding-bottom: var(--size-500);
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
+    padding-block: var(--size-850);
+
     &__wrapper {
       display: flex;
       gap: 4em;
     }
-
-    padding-block: var(--size-850);
   }
 
-  @include breakpoint-up(desktop-small) {
+  @include mixins.breakpoint-up(desktop-small) {
     padding-block: var(--size-900);
   }
 
   @media (min-width: 75em) {
+    padding-block: 8rem;
+
     &__wrapper {
       gap: 6em;
     }
-
-    padding-block: 8rem;
   }
 
   &__title {
@@ -37,15 +39,15 @@
     margin-bottom: var(--size-700);
     z-index: 5;
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-bottom: var(--size-700);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       margin-bottom: var(--size-850);
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       margin-bottom: var(--size-850);
     }
 
@@ -136,12 +138,12 @@
     gap: 1rem;
     z-index: 5;
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-top: var(--size-500);
       margin-bottom: var(--size-200);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       margin-top: var(--size-400);
       margin-bottom: var(--size-200);
     }
@@ -159,13 +161,13 @@
     font-size: var(--fs-200);
     z-index: 5;
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       padding-top: var(--size-600);
     }
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       padding-top: 0.55rem;
     }
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       padding-top: 0.6rem;
     }
   }
@@ -176,7 +178,7 @@
     color: var(--clr-neutral-100);
     z-index: 5;
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       font-size: var(--fs-500);
       font-weight: var(--fw-bold);
     }

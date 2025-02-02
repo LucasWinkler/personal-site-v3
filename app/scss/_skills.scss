@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .skills {
   background-color: var(--clr-neutral-800);
 
@@ -10,21 +12,21 @@
     margin-block: var(--size-600);
     user-select: none;
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-block: var(--size-600);
     }
 
-    @include breakpoint-up(mobile-large) {
+    @include mixins.breakpoint-up(mobile-large) {
       height: 75px;
       width: 100px;
       margin-block: var(--size-700);
     }
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       margin-block: var(--size-800);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       height: 100px;
       width: 250px;
     }
@@ -45,7 +47,7 @@
       filter: grayscale(0%) drop-shadow(0 0 1em var(--skill-colour));
       opacity: 100;
 
-      @include breakpoint-up(tablet-medium) {
+      @include mixins.breakpoint-up(tablet-medium) {
         filter: grayscale(0%) drop-shadow(0 0 1.5em var(--skill-colour));
       }
     }
@@ -77,11 +79,11 @@
     gap: var(--item-gap);
     width: calc(100px * 16);
 
-    @include breakpoint-up(mobile-large) {
+    @include mixins.breakpoint-up(mobile-large) {
       width: calc(100px * 16);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       width: calc(250px * 16);
       --item-gap: 4rem;
     }
@@ -95,7 +97,7 @@
       }
     }
 
-    @include breakpoint-up(mobile-large) {
+    @include mixins.breakpoint-up(mobile-large) {
       @keyframes scroll {
         0% {
           transform: translateX(0);
@@ -106,7 +108,7 @@
       }
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       @keyframes scroll {
         0% {
           transform: translateX(0);

@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "fast-average-color": "^9.1.1",
-    "sass": "^1.54.2"
+    "sass": "^1.83.4"
   }
 }

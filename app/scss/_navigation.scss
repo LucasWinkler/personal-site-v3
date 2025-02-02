@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -14,11 +16,11 @@
     > svg {
       max-width: 48px;
 
-      @include breakpoint-up(tablet-medium) {
+      @include mixins.breakpoint-up(tablet-medium) {
         gap: 1rem;
       }
 
-      @include breakpoint-up(tablet-large) {
+      @include mixins.breakpoint-up(tablet-large) {
         max-width: 56px;
       }
     }
@@ -29,15 +31,15 @@
       color: var(--clr-neutral-100);
       white-space: nowrap;
 
-      @include breakpoint-up(mobile-medium) {
+      @include mixins.breakpoint-up(mobile-medium) {
         font-size: var(--fs-450);
       }
 
-      @include breakpoint-up(tablet-medium) {
+      @include mixins.breakpoint-up(tablet-medium) {
         font-size: var(--fs-400);
       }
 
-      @include breakpoint-up(tablet-large) {
+      @include mixins.breakpoint-up(tablet-large) {
         font-size: var(--fs-450);
       }
     }
@@ -72,7 +74,7 @@
         padding: 2rem 4rem;
       }
 
-      @include breakpoint-up(mobile-large) {
+      @include mixins.breakpoint-up(mobile-large) {
         width: 50%;
       }
 
@@ -109,16 +111,16 @@
       }
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       display: flex;
       gap: 0.4rem;
     }
 
-    @include breakpoint-up(tablet-large) {
+    @include mixins.breakpoint-up(tablet-large) {
       gap: 1rem;
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       gap: 1.5rem;
     }
   }
@@ -202,7 +204,7 @@
       }
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       display: none;
     }
   }

@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .footer {
   background-color: var(--clr-neutral-900);
 
@@ -39,24 +41,24 @@
     justify-content: space-between;
     gap: 0.75rem;
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       padding-block: var(--size-700);
       gap: 0.5rem;
     }
 
-    @include breakpoint-up(mobile-medium) {
+    @include mixins.breakpoint-up(mobile-medium) {
       padding-block: var(--size-800);
     }
 
-    @include breakpoint-up(mobile-large) {
+    @include mixins.breakpoint-up(mobile-large) {
       padding-block: var(--size-850);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       padding-block: var(--size-850);
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       padding-block: var(--size-900);
     }
 

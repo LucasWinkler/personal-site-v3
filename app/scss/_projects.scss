@@ -1,17 +1,19 @@
+@use 'mixins';
+
 .projects {
   background-color: var(--clr-neutral-900);
   padding-block: var(--size-700);
   overflow: hidden;
 
-  @include breakpoint-up(mobile-small) {
+  @include mixins.breakpoint-up(mobile-small) {
     padding-block: var(--size-800);
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
     padding-block: var(--size-850);
   }
 
-  @include breakpoint-up(desktop-small) {
+  @include mixins.breakpoint-up(desktop-small) {
     padding-block: var(--size-900);
   }
 
@@ -19,7 +21,7 @@
     padding-block: 8rem;
   }
 
-  @include breakpoint-up(desktop-medium) {
+  @include mixins.breakpoint-up(desktop-medium) {
     padding-block: 12rem;
   }
 
@@ -29,15 +31,15 @@
     color: var(--clr-neutral-100);
     margin-bottom: var(--size-800);
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-bottom: var(--size-850);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       margin-bottom: var(--size-800);
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       margin-bottom: var(--size-800);
     }
 
@@ -52,17 +54,17 @@
     gap: 4rem;
     padding-block: var(--size-300);
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       gap: 5rem;
       padding-block: var(--size-400);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       gap: 8rem;
       padding-block: var(--size-500);
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       gap: 9rem;
       padding-block: var(--size-600);
     }
@@ -88,7 +90,7 @@
     order: 1;
     padding: 1.6rem;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       width: 100%;
       background-color: var(--clr-neutral-800);
       border-radius: 5px;
@@ -133,7 +135,7 @@
       }
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       position: relative;
       width: 100%;
       margin-right: 1.2rem;
@@ -184,7 +186,7 @@
       }
     }
 
-    @include breakpoint-up(desktop-small) {
+    @include mixins.breakpoint-up(desktop-small) {
       aspect-ratio: 16/9;
     }
   }
@@ -214,12 +216,12 @@
     // max-width: 45ch;
     margin-bottom: 1.2em;
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       font-size: var(--fs-400);
       line-height: var(--lh-700);
     }
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       font-size: var(--fs-400);
       line-height: var(--lh-600);
     }
@@ -248,7 +250,7 @@
     color: var(--clr-accent-200);
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
     flex-direction: row;
     display: flex;
     gap: 5em;
