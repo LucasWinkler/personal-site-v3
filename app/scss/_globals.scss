@@ -1,3 +1,5 @@
+@use 'mixins';
+
 html {
   background-color: var(--clr-neutral-800);
   scroll-padding-top: 6.25rem;
@@ -161,7 +163,7 @@ strong {
     }
   }
 
-  @include breakpoint-up(tablet-small) {
+  @include mixins.breakpoint-up(tablet-small) {
     padding: 1rem;
 
     > svg {
@@ -170,12 +172,12 @@ strong {
     }
   }
 
-  @include breakpoint-up(desktop-small) {
+  @include mixins.breakpoint-up(desktop-small) {
     right: 2rem;
     bottom: 2rem;
   }
 
-  @include breakpoint-up(desktop-medium) {
+  @include mixins.breakpoint-up(desktop-medium) {
     right: 4rem;
     bottom: 4rem;
   }
@@ -187,14 +189,14 @@ strong {
   }
 }
 
-@include breakpoint-up(tablet-small) {
+@include mixins.breakpoint-up(tablet-small) {
   .display-tablet-sm-flex-up {
     display: flex;
     flex-direction: row;
   }
 }
 
-@include breakpoint-up(tablet-medium) {
+@include mixins.breakpoint-up(tablet-medium) {
   .display-tablet-md-flex-up {
     display: flex;
     flex-direction: row;
@@ -315,7 +317,7 @@ strong {
     }
   }
 
-  @include breakpoint-up(mobile-small) {
+  @include mixins.breakpoint-up(mobile-small) {
     padding: 0.6rem 1.5rem;
   }
 
@@ -325,7 +327,7 @@ strong {
     font-size: 1.3em;
     transition: transform 0.3s var(--animation-timing);
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-right: 0.35em;
     }
 
@@ -386,7 +388,7 @@ strong {
       }
     }
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       padding: 0.6rem 0;
     }
   }
@@ -406,7 +408,7 @@ strong {
     padding: 0.6rem 1.5rem;
     width: 100%;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       width: auto;
     }
   }
@@ -532,13 +534,13 @@ strong {
     left: 0;
     opacity: 0.6;
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       opacity: 0.8;
       height: 100%;
       width: 100%;
     }
 
-    @include breakpoint-up(desktop-medium) {
+    @include mixins.breakpoint-up(desktop-medium) {
       max-width: 520px;
       max-height: 439px;
       height: 100%;
@@ -561,7 +563,7 @@ strong {
     top: 0;
     opacity: 0.4;
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       opacity: 0.5;
       width: 100%;
     }
@@ -582,7 +584,7 @@ strong {
     top: 0;
     opacity: 0.2;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       opacity: 0.5;
       height: 100%;
       width: 100%;
@@ -604,7 +606,7 @@ strong {
     top: 0;
     opacity: 0.5;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       opacity: 0.8;
       height: 100%;
       width: 100%;
@@ -626,7 +628,7 @@ strong {
     bottom: 0;
     opacity: 0.6;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       opacity: 0.8;
       height: 100%;
       width: 100%;
@@ -648,7 +650,7 @@ strong {
     bottom: 0;
     opacity: 0.2;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       opacity: 0.5;
       height: 100%;
       width: 100%;
@@ -672,7 +674,7 @@ strong {
     opacity: 0.4;
     transform: translateY(20%);
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       height: 100%;
       width: 100%;
     }
@@ -693,7 +695,7 @@ strong {
     top: 0;
     opacity: 0.6;
 
-    @include breakpoint-up(tablet-small) {
+    @include mixins.breakpoint-up(tablet-small) {
       width: 100%;
     }
   }

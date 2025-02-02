@@ -1,3 +1,5 @@
+@use 'mixins';
+
 // Colours
 :root {
   --clr-primary-400: #2f3dbb;
@@ -79,14 +81,14 @@
 }
 
 // Change typography for small phones
-@include breakpoint-up(mobile-small) {
+@include mixins.breakpoint-up(mobile-small) {
   :root {
     --fs-hero-heading: var(--fs-550);
   }
 }
 
 // Change typography for medium phones
-@include breakpoint-up(mobile-medium) {
+@include mixins.breakpoint-up(mobile-medium) {
   :root {
     --fs-hero-heading: var(--fs-600);
     --fs-footer: var(--fs-300);
@@ -94,14 +96,14 @@
 }
 
 // Change typography for large phones
-@include breakpoint-up(mobile-large) {
+@include mixins.breakpoint-up(mobile-large) {
   :root {
     --fs-hero-heading: var(--fs-700);
   }
 }
 
 // Change typography for small tablets
-@include breakpoint-up(tablet-small) {
+@include mixins.breakpoint-up(tablet-small) {
   :root {
     --fs-hero-heading: var(--fs-800);
     --fs-body: var(--fs-400);
@@ -110,7 +112,7 @@
 }
 
 // Change typography for medium tablets
-@include breakpoint-up(tablet-medium) {
+@include mixins.breakpoint-up(tablet-medium) {
   :root {
     --fs-hero-heading: var(--fs-700);
     --fs-body: var(--fs-400);
@@ -122,7 +124,7 @@
 }
 
 // Change typography for small desktops
-@include breakpoint-up(desktop-small) {
+@include mixins.breakpoint-up(desktop-small) {
   :root {
     --fs-hero-heading: var(--fs-800);
     --fs-section-heading: var(--fs-700);
@@ -138,7 +140,7 @@
   }
 }
 
-@include breakpoint-up(desktop-medium) {
+@include mixins.breakpoint-up(desktop-medium) {
   :root {
     --fs-hero-heading: var(--fs-900);
   }

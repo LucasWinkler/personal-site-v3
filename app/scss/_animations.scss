@@ -1,15 +1,18 @@
+@use 'sass:math';
+@use 'mixins';
+
 /*********************************************
  * Reveal on scroll
  *********************************************/
 
 @media (prefers-reduced-motion: no-preference) {
-  @include breakpoint-down(tablet-medium) {
+  @include mixins.breakpoint-down(tablet-medium) {
     .reveal-tablet-md-down {
       opacity: 0;
     }
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
     .reveal-tablet-md-up {
       opacity: 0;
     }
@@ -34,7 +37,7 @@
       opacity: 1;
 
       &.reveal--staggered-random {
-        animation-delay: calc(random(10) * 100ms);
+        animation-delay: calc(math.random(10) * 100ms);
       }
 
       &.reveal--fade-up-quick {
@@ -83,7 +86,7 @@
         animation-timing-function: var(--animation-timing);
       }
 
-      @include breakpoint-down(tablet-medium) {
+      @include mixins.breakpoint-down(tablet-medium) {
         &.reveal--fade-bottom-tablet-md-down {
           animation-name: fade-bottom;
           animation-duration: 0.5s;
@@ -92,7 +95,7 @@
         }
       }
 
-      @include breakpoint-up(tablet-medium) {
+      @include mixins.breakpoint-up(tablet-medium) {
         &.reveal--fade-left-tablet-md-up {
           animation-name: fade-left;
           animation-duration: 0.75s;
@@ -110,13 +113,13 @@
     }
   }
 
-  @include breakpoint-down(tablet-medium) {
+  @include mixins.breakpoint-down(tablet-medium) {
     .reveal-tablet-md-down {
       opacity: 0;
     }
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
     .reveal-tablet-md-up {
       opacity: 0;
     }

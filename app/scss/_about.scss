@@ -1,24 +1,26 @@
+@use 'mixins';
+
 .about {
   background-color: var(--clr-neutral-800);
   padding-top: var(--size-700);
   overflow: hidden;
 
-  @include breakpoint-up(mobile-small) {
+  @include mixins.breakpoint-up(mobile-small) {
     padding-top: var(--size-800);
   }
-  @include breakpoint-up(mobile-medium) {
+  @include mixins.breakpoint-up(mobile-medium) {
     padding-top: var(--size-850);
   }
 
-  @include breakpoint-up(tablet-medium) {
+  @include mixins.breakpoint-up(tablet-medium) {
     padding-top: var(--size-900);
   }
 
-  @include breakpoint-up(desktop-small) {
+  @include mixins.breakpoint-up(desktop-small) {
     padding-bottom: var(--size-400);
   }
 
-  @include breakpoint-up(desktop-medium) {
+  @include mixins.breakpoint-up(desktop-medium) {
     padding-top: 12rem;
   }
 
@@ -29,7 +31,7 @@
     align-items: center;
     gap: 2rem;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       flex-direction: row;
     }
   }
@@ -45,11 +47,11 @@
     line-height: 1.5;
     margin-bottom: var(--size-600);
 
-    @include breakpoint-up(mobile-small) {
+    @include mixins.breakpoint-up(mobile-small) {
       margin-bottom: var(--size-700);
     }
 
-    @include breakpoint-up(desktop-medium) {
+    @include mixins.breakpoint-up(desktop-medium) {
       margin-bottom: var(--size-800);
     }
   }
@@ -58,11 +60,11 @@
     color: var(--clr-neutral-200);
     margin-block: var(--size-500);
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       max-width: 45ch;
     }
 
-    @include breakpoint-up(desktop-medium) {
+    @include mixins.breakpoint-up(desktop-medium) {
       font-size: 1.125rem;
     }
   }
@@ -101,7 +103,7 @@
     border-radius: 3rem;
     min-width: 30%;
 
-    @include breakpoint-up(tablet-medium) {
+    @include mixins.breakpoint-up(tablet-medium) {
       align-self: flex-start;
     }
 
