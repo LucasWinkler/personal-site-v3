@@ -1,6 +1,8 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5b78ae9f-6887-468c-8cd3-33a2a05738dc/deploy-status)](https://app.netlify.com/sites/lucaswinkler/deploys)
+[![Build Status](https://github.com/LucasWinkler/personal-site-v3/actions/workflows/node.js.yml/badge.svg)](https://github.com/LucasWinkler/personal-site-v3/actions/workflows/node.js.yml)
+[![E2E Tests](https://github.com/LucasWinkler/personal-site-v3/actions/workflows/test.yml/badge.svg)](https://github.com/LucasWinkler/personal-site-v3/actions/workflows/test.yml)
 
 <br />
 <p align="center">
