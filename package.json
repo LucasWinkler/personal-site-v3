@@ -16,10 +16,10 @@
     "src": "public/images/*.{png,jpg}"
   },
   "devDependencies": {
-    "@playwright/test": "^1.27.1",
+    "@playwright/test": "^1.50.1",
     "simple-webp-converter": "^1.0.3",
-    "vite": "^3.0.0",
-    "vite-plugin-pwa": "^0.13.1"
+    "vite": "^6.0.11",
+    "vite-plugin-pwa": "^0.21.1"
   },
   "dependencies": {
     "fast-average-color": "^9.1.1",
