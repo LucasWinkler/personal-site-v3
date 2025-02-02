@@ -12,7 +12,9 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
-    "test:e2e": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && npm run test\""
+    "test:e2e": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && npm run test\"",
+    "test:ci": "playwright install --with-deps && npm run build && concurrently \"npm run preview\" \"wait-on http://localhost:4173 && npm run test\" --kill-others --success first",
+    "test:all": "npm run build && npm run test:ci"
   },
   "simple-webp-converter": {
     "src": "public/images/*.{png,jpg}"
