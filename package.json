@@ -23,7 +23,7 @@
     "vite-plugin-pwa": "^0.21.1"
   },
   "dependencies": {
-    "fast-average-color": "^9.1.1",
+    "fast-average-color": "^9.4.0",
     "sass": "^1.83.4"
   }
 }
