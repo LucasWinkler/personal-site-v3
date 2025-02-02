@@ -216,6 +216,11 @@
     // max-width: 45ch;
     margin-bottom: 1.2em;
 
+    &-note {
+      font-size: var(--fs-300);
+      color: var(--clr-accent-300);
+    }
+
     @include mixins.breakpoint-up(tablet-small) {
       font-size: var(--fs-400);
       line-height: var(--lh-700);
