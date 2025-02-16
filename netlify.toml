@@ -3,30 +3,6 @@
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [[redirects]]
-  from = "https://w.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://ww.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
-  
-[[redirects]]
-  from = "https://wwww.lucaswinkler.dev/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://lucaswinkler.netlify.app/*"
-  to = "https://www.lucaswinkler.dev/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/resume"
   to = "/resume.pdf"
   status = 200

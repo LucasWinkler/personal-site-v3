@@ -6,23 +6,23 @@
 
 <br />
 <p align="center">
- <a href="https://www.lucaswinkler.dev/">
+ <a href="https://lucaswinkler.netlify.app/">
     <img src="./public/apple-touch-icon-precomposed.png" alt="LW logo" width="80" height="80">
   </a>
 </p>
 
 <h1 align="center">
-  lucaswinkler.dev - v3
+  lucaswinkler.netlify.app - v3
 </h1>
 <p align="center">
-  The third iteration of <a href="https://www.lucaswinkler.dev" target="_blank"rel="noopener noreferrer">lucaswinkler.dev</a> built with HTML, and CSS.
+  The third iteration of <a href="https://lucaswinkler.netlify.app" target="_blank"rel="noopener noreferrer">lucaswinkler.netlify.app</a> built with HTML, and CSS.
 </p>
 <p align="center">
   Previous iterations:
   <a href="https://github.com/LucasWinkler/personal-site-v1" target="_blank" rel="noopener noreferrer">v1</a>,
   <a href="https://github.com/LucasWinkler/personal-site-v2" target="_blank" rel="noopener noreferrer">v2</a>
 
-[![https://www.lucaswinkler.dev/][personal-website-v3-screenshot]](https://www.lucaswinkler.dev/)
+[![https://lucaswinkler.netlify.app/][personal-website-v3-screenshot]](https://lucaswinkler.netlify.app/)
 
 </p>
 
@@ -40,7 +40,7 @@
 
 You're allowed! But...
 
-Please don't forget to give credit by linking back to https://www.lucaswinkler.dev/. Thanks!
+Please don't forget to give credit by linking back to https://lucaswinkler.netlify.app/. Thanks!
 
 ## About
 

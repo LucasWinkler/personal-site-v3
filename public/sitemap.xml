@@ -8,16 +8,16 @@
 
 
 <url>
-  <loc>https://www.lucaswinkler.dev/</loc>
+  <loc>http://lucaswinkler.netlify.app/</loc>
   <image:image>
-      <image:loc>https://www.lucaswinkler.dev/og.png</image:loc>
+      <image:loc>http://lucaswinkler.netlify.app/og.png</image:loc>
   </image:image>
   <lastmod>2023-04-29</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://www.lucaswinkler.dev/resume</loc>
+  <loc>http://lucaswinkler.netlify.app/resume</loc>
   <lastmod>2023-04-29</lastmod>
   <priority>0.90</priority>
 </url>
