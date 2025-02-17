@@ -15,7 +15,7 @@
   lucaswinkler.netlify.app - v3
 </h1>
 <p align="center">
-  The third iteration of <a href="https://lucaswinkler.netlify.app" target="_blank"rel="noopener noreferrer">lucaswinkler.netlify.app</a> built with HTML, and CSS.
+  The third iteration of <a href="https://www.lucaswinkler.dev" target="_blank"rel="noopener noreferrer">lucaswinkler.dev</a> built with HTML, and CSS.
 </p>
 <p align="center">
   Previous iterations:
@@ -40,7 +40,7 @@
 
 You're allowed! But...
 
-Please don't forget to give credit by linking back to https://lucaswinkler.netlify.app/. Thanks!
+Please don't forget to give credit by linking back to https://www.lucaswinkler.dev/ or my repo. Thanks!
 
 ## About
 
